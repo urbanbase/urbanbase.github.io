@@ -1,8 +1,17 @@
-<header id="top" class="header">
-  <div class="text-vertical-center">
-    <h1>Start Bootstrap</h1>
-    <h3>Free Bootstrap Themes &amp; Templates</h3>
-    <br>
-    <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+<header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+
+    <nav class="site-nav">
+        {% for page in site.pages %}
+          {% if page.title %}
+          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          {% endif %}
+        {% endfor %}
+    </nav>
+
   </div>
+
 </header>
