@@ -1,10 +1,18 @@
 ---
 layout: home
 ---
-# About Theme
+# Urbanbase
 
-This theme is Jekyll port of [vangeltzo.com](http://vangeltzo.com/) (by [Vangelis Tzortzis](https://github.com/srekoble)).
+실내공간의 가치를 VR로 재해석 합니다.
 
-To learn how to install and use this theme check out the [installation guide](http://taylantatli.me/Halve/halve-theme/) for more information.
 
-If you have a question, find a bug, or just want to say hi, please open an [issue on GitHub](https://github.com/TaylanTatli/Halve/issues/new).
+Urbanbase는 지구상의 모든 실내공간을 가상현실 세계로 연결하려고 합니다.
+
+
+이를 통해 사람들이 시공간의 제약 없이 공간을 통한 소통과 공간에 대한 소통
+
+
+그리고 공간을 위한 새로운 소통을 하기를 꿈 꿉니다.
+
+
+ [Urbanbase](https://www.urbanbase.com/).
