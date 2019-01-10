@@ -4,16 +4,17 @@
     z-index: 1;
     position: relative;
   }
+  width: 30%;
 }
 
 .block-right {
   float: right;
   overflow-y: auto;
+  width: 70%;
 }
 
 .block-left,
 .block-right {
-  width: 50%;
   height: 100%;
   position: relative;
   display: table;
