@@ -1,12 +1,12 @@
 ---
-bg: "rails.jpg"
+bg: "default_background.jpeg"
 layout: default
-crawlertitle: "Jekyll blog"
-title: "Voyager"
-summary: "main page"
+crawlertitle: "Urbanbase Tech Blog"
+title: "Urbanbase Tech Blog"
+summary: "개요가 있으면 적어주세요."
 ---
 
-{% for post in site.posts limit: 5 %}
+{% for post in site.posts limit: 3 %}
   <article class="index-page">
     <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
     {{ post.excerpt }}
