@@ -2,10 +2,10 @@
 bg: "default_background.jpeg"
 layout: page
 permalink: /posts/
-title: "Tech"
+title: "Tech.Dev"
 crawlertitle: "타이틀"
 summary: "개요가 있으면 적어주세요."
-active: tech
+active: dev
 ---
 
 {% for tag in site.tags %}
