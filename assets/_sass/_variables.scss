@@ -1,15 +1,13 @@
-$white: #FFFFFF;
-$black: #000000;
-$gray: #d4d4d4;
-$overlay-color: #2c2d33;
-$green: #72cc96;
+$lg-break-point: 1200px;
+$break-point: 960px;
+$md-break-point: 640px;
+$sm-break-point: 320px;
 
-$red: #ee5f5b;
-$blue: #19B5FE;
-$yellow: #f89406;
-$aqua: #7FDBFF;
+$aside-width: 35%;
+$content-wrapper-width: 62%;
+$article-max-width: 740px;
+$post-margin-left: 38%;
 
-$base-font: "weblysleek_uilight", sans-serif;
-$code-font: "LiberationMonoRegular",monospace;
-// break point
-$small: 750px;
+$img: "../img";
+$js: "../js";
+$font: "../font";

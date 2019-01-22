@@ -1,65 +1,45 @@
-# Site
-title: Urbanbase
-description: Urbanbase 기술 블로그
-url: https://urbanbase.github.io
-logo: urbanbase.png                                       # Site logo
-locale: ko_kr
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# Left Block Images
-background:
-  homepage: images/home.png                           # this image will be shown on homepage's left block
-  post-list: images/unsplash-image-10.jpg             # this image will be shown on post list page
-  default-post: images/unsplash-gallery-image-3.jpg   # this image will be shown when post's front matter doesn't specify any image
+# Site settings
+title: Urbanbase Tech Blog
+email: 어반베이스이메일입력@urbanbase.com
+description: > # this means to ignore newlines until "baseurl:"
+  소개를 문구 작성하세요.
+baseurl: "" 
+lang: "ko"
+url: "http://urbanbase.github.io"
+twitter_username: 
+github_username:  urbanbase
+disqus_username:
 
-# Jekyll
-permalink:          /:title/
-markdown:           kramdown
-highlighter:        rouge
-kramdown:
-  auto_ids:         true
-  footnote_nr:      1
-  entity_output:    as_char
-  toc_levels:       1..6
-  enable_coderay:   false
+avatar: 'urbanbase.png'
+favicon: 'favicon.ico'
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:title/
+
+# Posts settings
+future: true
+safe: false
+lsi: false
+excerpt_separator: "\n\n"
+
+# Theme settings
+compress_html:
+  comments: ["<!-- ", " -->"]
+  clippings: all
+  endings: all
+
+
 sass:
-  sass_dir:         assets/_sass
-  style:            compressed
+  sass_dir: assets/_sass
+  style: compressed
 
-# Google Analytics
-#google-analytics: UA-XXXXX-Y
 
-# Social Links
-#email:             email
-#google.plus:        username
-#twitter:            username
-#facebook:           username
-github:             urbanbase
-#stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
-#linkedin:          username
-#xing:              username
-#instagram:          username
-#lastfm:            username
-#tumblr:            username
-#pinterest:         username
-#foursquare:        username
-#steam:              username
-#dribbble:          username
-#youtube:           username
-#soundcloud:        username
-#weibo:             username
-#flickr:            username
-#codepen:           username
-#keybase:           username
-#xmpp:              username@server.com
-#hackernews:        username
-#behance:           username
-
-# Gems
-gems:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-gist
-
-# Exclude list
-include: [_pages]
-exclude: [README.md, Gemfile, Gemfile.lock, _site, src, vendor, CNAME, LICENSE, Rakefile, .sass-cache, .DS_Store]
+images: '/assets/images'

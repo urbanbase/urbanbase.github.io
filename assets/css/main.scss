@@ -1,13 +1,15 @@
 ---
-sitemap: false
+# Only the main Sass file needs front matter (the dashes are enough)
 ---
+@charset "utf-8";
 
-@import "variables";
-@import "reset";
-@import "base";
-@import "site";
-@import "utilities";
-@import "syntax";
-@import "vendor/fonts";
-@import "vendor/font-awesome/font-awesome";
-@import "vendor/magnific-popup/magnific-popup";
+
+// Import partials from `sass_dir` (defaults to `assets/_sass`)
+@import
+  "normalize",
+  "variables",
+  "base",
+  "layout",
+  "media-queries",
+  "syntax-highlighting"
+;
