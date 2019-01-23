@@ -8,6 +8,39 @@ summary: ""
 active: tech
 ---
 
+
+<div id="search-container">
+<center>
+<input type="text" id="search-input" placeholder="Search..." style="width:500px;">
+</center>
+<ul id="results-container"></ul>
+</div>
+
+<!-- Script pointing to jekyll-search.js -->
+<script src="{{site.baseurl}}/dest/jekyll-search.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+      SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '{{ site.baseurl }}/search2.json',
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        noResultsText: '검색결과가 없습니다.',
+        limit: 10,
+        fuzzy: false,
+        exclude: ['Welcome']
+      })
+</script>
+
+
+
+
+
+
+
+
+
+
 {% for tag in site.tags %}
   {% assign t = tag | first %}
   {% assign posts = tag | last %}
