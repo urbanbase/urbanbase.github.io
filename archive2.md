@@ -50,11 +50,12 @@ active: dev
 {% for post in site.posts %}
   {% if count < 3 %} 
   {% if post.categories contains "dev" %}
+  {% assign count = count | plus: 1 %}
   
   <div class="post-content">
     <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
     {{ post.content }}
-  {% increment count %}
+  
   </div>
 
   <br>
