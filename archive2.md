@@ -1,9 +1,9 @@
 ---
 bg: "default_background.jpeg"
 layout: page
-permalink: /posts/
+permalink: /dev/
 title: "Developer"
-crawlertitle: "타이틀"
+crawlertitle: "Developer"
 summary: ""
 active: dev
 ---
