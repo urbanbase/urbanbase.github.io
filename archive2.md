@@ -1,7 +1,7 @@
 ---
 bg: "default_background.jpeg"
 layout: page
-permalink: /dev/
+permalink: /posts/
 title: "Developer"
 crawlertitle: "타이틀"
 summary: ""
