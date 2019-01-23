@@ -1,5 +1,5 @@
 ---
-bg: "default_background.jpeg"
+bg: "skin_3.png"
 layout: page
 permalink: /tech/
 title: "Technology"
@@ -12,12 +12,18 @@ active: tech
   {% assign t = tag | first %}
   {% assign posts = tag | last %}
 
-  <h2 class="category-key" id="{{ t | downcase }}">{{ t | capitalize }}</h2>
+  {% for post in posts  limit: 1 %}
+    {% if post.tags contains t %}
+      {% if post.categories contains "tech" %}
+        <h2 class="category-key" id="{{ t | downcase }}">{{ t | capitalize }}</h2>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
 
   <ul class="year">
     {% for post in posts %}
       {% if post.tags contains t %}
-        {% if post.categories contains "Technology" %}
+        {% if post.categories contains "tech" %}
           <li>
             {% if post.lastmod %}
               <a href="{{ post.url | relative_url}}">{{ post.title }}</a>

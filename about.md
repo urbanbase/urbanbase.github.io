@@ -1,5 +1,5 @@
 ---
-bg: "default_background.jpeg"
+bg: "skin_2.png"
 layout: page
 title: "ABOUT"
 crawlertitle: "최상단 타이틀"

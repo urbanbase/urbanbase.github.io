@@ -1,5 +1,5 @@
 ---
-bg: "default_background.jpeg"
+bg: "skin_4.png"
 layout: page
 permalink: /dev/
 title: "Developer"
@@ -12,7 +12,13 @@ active: dev
   {% assign t = tag | first %}
   {% assign posts = tag | last %}
 
-  <h2 class="category-key" id="{{ t | downcase }}">{{ t | capitalize }}</h2>
+  {% for post in posts  limit: 1 %}
+    {% if post.tags contains t %}
+      {% if post.categories contains "dev" %}
+        <h2 class="category-key" id="{{ t | downcase }}">{{ t | capitalize }}</h2>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
 
   <ul class="year">
     {% for post in posts %}
