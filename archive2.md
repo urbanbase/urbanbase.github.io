@@ -47,7 +47,7 @@ active: dev
 <br>
 
 {% for post in site.posts limit: 3 %}
-  
+  {% if post.categories contains "dev" %}
   
   <div class="post-content">
     <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
@@ -56,6 +56,9 @@ active: dev
 
   <br>
   <br>
-  --------------
+
+--------------
+
   <br>
+  {% endif %}
 {% endfor %}
