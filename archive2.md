@@ -48,7 +48,7 @@ active: dev
 
 {% assign count = 0 %}
 {% for post in site.posts %}
-  {% if count == 3 %} 
+  {% if count < 3 %} 
   {% if post.categories contains "dev" %}
   
   <div class="post-content">
