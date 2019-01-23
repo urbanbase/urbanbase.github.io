@@ -4,7 +4,7 @@ layout: page
 permalink: /posts/
 title: "Developer"
 crawlertitle: "타이틀"
-summary: "개요가 있으면 적어주세요."
+summary: ""
 active: dev
 ---
 
