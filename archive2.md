@@ -15,7 +15,7 @@ active: dev
   {% for post in posts  limit: 1 %}
     {% if post.tags contains t %}
       {% if post.categories contains "dev" %}
-      <h2 class="category-key" id="{{ t | downcase }}">{{ t | capitalize }}</h2>
+  <h2 class="category-key" id="{{ t | downcase }}">{{ t | capitalize }}</h2>
       {% endif %}
     {% endif %}
   {% endfor %}
