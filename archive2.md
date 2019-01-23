@@ -17,7 +17,7 @@ active: dev
   <ul class="year">
     {% for post in posts %}
       {% if post.tags contains t %}
-        {% if post.categories contains "Developer" %}
+        {% if post.categories contains "dev" %}
           <li>
             {% if post.lastmod %}
               <a href="{{ post.url | relative_url}}">{{ post.title }}</a>
