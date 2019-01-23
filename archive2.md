@@ -39,3 +39,12 @@ active: dev
   </ul>
 
 {% endfor %}
+
+--------------
+
+{% for post in site.posts limit: 3 %}
+  <article class="index-page">
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    {{ post }}
+  </article>
+{% endfor %}
