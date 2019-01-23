@@ -32,14 +32,8 @@ active: tech
       })
 </script>
 
-
-
-
-
-
-
-
-
+<br>
+<br>
 
 {% for tag in site.tags %}
   {% assign t = tag | first %}
