@@ -54,7 +54,7 @@ active: dev
   <div class="post-content">
     <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
     {{ post.content }}
-    {% count = count + 1 %}
+  {% increment count %}
   </div>
 
   <br>
