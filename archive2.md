@@ -40,11 +40,22 @@ active: dev
 
 {% endfor %}
 
+<br>
+
 --------------
 
+<br>
+
 {% for post in site.posts limit: 3 %}
+  
+  
   <div class="post-content">
     <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
     {{ post.content }}
   </div>
+
+  <br>
+  <br>
+  --------------
+  <br>
 {% endfor %}
