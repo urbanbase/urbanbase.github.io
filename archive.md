@@ -1,7 +1,7 @@
 ---
 bg: "default_background.jpeg"
 layout: page
-permalink: /posts/
+permalink: /tech/
 title: "Technology"
 crawlertitle: "타이틀"
 summary: "개요가 있으면 적어주세요."
