@@ -261,7 +261,10 @@ pre code.hljs {
 */
 .page-content {
 	.wrapper {
-		@include outer-container;
+		// @include outer-container;
+		max-width: 72em;
+		margin-left: auto;
+		margin-right: auto;
 		padding: 1em;
 	}
 	/*
@@ -272,7 +275,10 @@ pre code.hljs {
 		@extend %default-ul;
 	}
 	.post-meta {
-		@include outer-container;
+		// @include outer-container;
+		max-width: 72em;
+		margin-left: auto;
+		margin-right: auto;
 		// padding: 1em 0;
 		color: $medium-gray;
 		.post-date {
