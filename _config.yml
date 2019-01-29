@@ -6,7 +6,7 @@ imageurl: "https://source.unsplash.com/category/nature/2600x500" #"https://unspl
 # THEME-SPECIFIC CONFIGURATION
 theme:
   # Meta
-  title: YOUR TITLE
+  title: Urbanbase
   #avatar: avatar.png
   hometitle: Home #display on navigation menu.
   yoursitetitle: YOUR LOGO
