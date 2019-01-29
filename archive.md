@@ -2,8 +2,8 @@
 bg: "skin_3.png"
 layout: page
 permalink: /tech/
-title: "Technology"
-crawlertitle: "Technology"
+title: "Tech"
+crawlertitle: "Tech"
 summary: ""
 active: tech
 ---

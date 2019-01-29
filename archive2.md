@@ -2,8 +2,8 @@
 bg: "skin_4.png"
 layout: page
 permalink: /dev/
-title: "Developer"
-crawlertitle: "Developer"
+title: "Dev"
+crawlertitle: "Dev"
 summary: ""
 active: dev
 ---

@@ -1,7 +1,7 @@
 ---
 bg: "skin_2.png"
 layout: page
-title: "ABOUT"
+title: "We"
 crawlertitle: "최상단 타이틀"
 permalink: /about/
 summary: ""
