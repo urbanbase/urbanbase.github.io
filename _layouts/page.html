@@ -1,16 +1,19 @@
 ---
 layout: default
 ---
-<div id="cover" class="container-fluid"
-     {% if page.image %}style="background-image: url({{ page.image }});"{% endif %}>
-    <div>
-        <h1>{{ page.title }}</h1>
-        <p>{{ page.description | newline_to_br }}</p>
-    </div>
-</div>
+<article class="feature-image">
+  	<div style="background-image: url('{{ site.baseurl }}/{{ site.theme.place_holder_image }}')"/>
+  	<header style="background-image: url('{{ site.imageurl }}')">
+    <h1 class="call-out-title">{{ page.title }}</h1>
+    </header>
+</article>
 
-<div id="content" class="container">
-    <div id="post-content" class="post page" role="main">
-        {{ content }}
-    </div>
-</div>
+<article>
+	<section class="post-content">{{ content }}</section>
+</article>
+<!--article {% if page.feature-img %}class="feature-image"{% endif %}>
+  <header style="background-image: url('{{ site.baseurl }}/{{ page.feature-img }}')">
+    <h1 class="call-out-title">{{ page.title }}</h1>
+  </header>
+  <section class="post-content">{{ content }}</section>
+</article-->
