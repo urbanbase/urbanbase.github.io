@@ -14,10 +14,10 @@ permalink: /we/
   </div>
 </div>
 
-
 <!-- <img src="{{ site.baseurl }}/assets/profile-placeholder.gif" title="Profile Picture" class="profile"> -->
 
 <center>
+<br>
 <br>
 <h2>“Invent the Next World!”</h2>
 <br>
@@ -38,8 +38,6 @@ permalink: /we/
 <a href="https://developer.urbanbase.com">어반베이스에 대해 더 알고 싶으시다고요?</a>
 <br>
 <br>
-
-
+<br>
+<br>
 </center>
-
-[Developer]: https://developer.urbanbase.com
