@@ -6,18 +6,16 @@ title: "Urbanbase"
 summary: ""
 ---
 
+
+`Main_Page`
+
+
 {% for post in site.posts limit: 3 %}
   <article class="index-page">
     <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
     {{ post.excerpt }}
   </article>
 {% endfor %}
-
-<br>
-
-<br>
-
-무엇인가 넣는 장소
 
 <br>
 
