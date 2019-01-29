@@ -12,6 +12,15 @@ layout: default
   </div>
 </div>
 
+<div class="site-header-container {% if site.cover %}has-cover{% endif %}" {% if site.cover %}style="background-image: url({{ site.cover | prepend: site.baseurl }});"{% endif %}>
+  <div>
+    <header class="site-header">
+      <h4 class="title">어반베이스 개발팀 소개 >></h4>
+    </header>
+  </div>
+</div>
+
+
 <div class="wrapper">
 <ul class="post-list">
   {% for post in paginator.posts %}

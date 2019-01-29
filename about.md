@@ -38,6 +38,4 @@ permalink: /we/
 <a href="https://developer.urbanbase.com" target="_blank">어반베이스에 대해 더 알고 싶으시다고요?</a>
 <br>
 <br>
-<br>
-<br>
 </center>
