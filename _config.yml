@@ -1,45 +1,28 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-title: Urbanbase Tech Blog
-email: 어반베이스이메일입력@urbanbase.com
-description: > # this means to ignore newlines until "baseurl:"
-  소개를 문구 작성하세요.
-baseurl: "" 
-lang: "ko"
-url: "http://urbanbase.github.io"
-twitter_username: 
-github_username:  urbanbase
-disqus_username:
-
-avatar: 'urbanbase.png'
-favicon: 'favicon.ico'
-
-# Build settings
-markdown: kramdown
-permalink: /:categories/:title/
-
-# Posts settings
-future: true
-safe: false
-lsi: false
-excerpt_separator: "\n\n"
-
-# Theme settings
-compress_html:
-  comments: ["<!-- ", " -->"]
-  clippings: all
-  endings: all
-
-
+---
+title: Jekyll Materialize
+email: your-email@domain.com
+author: hugocarreira
+author_github: hugocarreira
+description: |
+  a simple theme for Jekyll using Materializecss
+baseurl: "/"
+url: http://hugocarreira.github.io/jekyll-materializecss
+paginate: 12
+github:
+  user: hugocarreira
+  repository: jekyll-materializecss
+  url: http://hugocarreira.github.io/jekyll-materializecss/
+  status: true
+home_bgfile: bg.jpg
 sass:
-  sass_dir: assets/_sass
+  sass_dir: assets/css
   style: compressed
-
-
-images: '/assets/images'
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+highlighter: rouge
+gems:
+- jekyll-paginate
+exclude:
+- vendor
