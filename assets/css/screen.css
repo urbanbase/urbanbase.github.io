@@ -259,7 +259,7 @@ for small screen(<720px):
     padding: 0 30px 0 15px; /* 30px(right-padding) = 15(right-padding) + 10(icon-width) + 5(@@iolo) */
     font-size: 14px;
     color: #505050;
-    background: url(../images/pc/icon_search.png) no-repeat right;
+    background: url(../images/icon/search.png) no-repeat right;
     background-size: 13px 13px;
     background-position-x: 135px; /* 135px = 160 - 15(right-padding) + 10(icon-width) */
 }
@@ -317,7 +317,7 @@ for small screen(<720px):
     right: 30px;
     bottom: 20px;
     z-index: 999;
-    background: url(../images/pc/icon_uarrow.png) no-repeat;
+    background: url(../images/icon/top_view.png) no-repeat;
     background-size: 29px 29px;
 }
 
@@ -378,19 +378,19 @@ for small screen(<720px):
 }
 
 #link-github {
-    background-image: url(../images/pc/icon_git.png);
+    background-image: url(../images/icon/git.png);
 }
 
 #link-facebook {
-    background-image: url(../images/pc/icon_face.png);
+    background-image: url(../images/icon/facebook.png);
 }
 
 #link-twitter {
-    background-image: url(../images/pc/icon_twit.png);
+    background-image: url(../images/icon/twitter.png);
 }
 
 #link-rss {
-    background-image: url(../images/pc/icon_rss.png);
+    background-image: url(../images/icon/rss.png);
 }
 
 #copyright {
@@ -491,7 +491,7 @@ for small screen(<720px):
 
 #link-back {
     padding-left: 17px; /* 17px = 10(spacing) + 7(icon width) */
-    background: url(../images/pc/icon_larrow.png) no-repeat left;
+    background: url(../images/icon/left_arrow.png) no-repeat left;
     background-size: 7px 11px;
 }
 
@@ -518,28 +518,28 @@ for small screen(<720px):
     display: none;
 }
 
-#kakao-link-btn {
+/* #kakao-link-btn {
     background: url(../images/pc/share_talk.png) no-repeat;
     background-size: 20px 20px;
-}
+} */
 
-#share-kakaostory {
+/* #share-kakaostory {
     background: url(../images/pc/share_story.png) no-repeat;
     background-size: 20px 20px;
-}
+} */
 
 #share-facebook {
-    background: url(../images/pc/share_face.png) no-repeat;
+    background: url(../images/icon/facebook_color.png) no-repeat;
     background-size: 20px 20px;
 }
 
 #share-twitter {
-    background: url(../images/pc/share_twit.png) no-repeat;
+    background: url(../images/icon/twitter_color.png) no-repeat;
     background-size: 20px 20px;
 }
 
 #share-google {
-    background: url(../images/pc/share_goo.png) no-repeat;
+    background: url(../images/icon/google_color.png) no-repeat;
     background-size: 20px 20px;
 }
 
