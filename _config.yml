@@ -35,8 +35,10 @@ highlightjs_theme: "monokai-sublime"
 # Archive settings (see https://github.com/jekyll/jekyll-archives/)
 jekyll-archives:
   enabled:
-    - categories
-    - tags
+    # - categories
+    # - tags
+    - dev
+    - tech
   layout: 'archive'
   permalinks:
     category: '/category/:name/'
@@ -50,10 +52,10 @@ jekyll-archives:
 
 # Category descriptions (for archive pages)
 descriptions:
-  - cat: jekyll
+  - cat: dev
     desc: "Posts describing Jekyll setup techniques."
 
-  - cat: dummy
+  - cat: tech
     desc: "Just some placeholder posts, lorem ipsum and the rest."
 
 # Social icons and sharing options
@@ -81,14 +83,14 @@ social:
 
   - name: Facebook
     icon: facebook
-    username: Urbanbase
+    username: Urbanbase Facebook
     url: https://ko-kr.facebook.com/urbanbaseinc/
     desc: Friend me on Facebook
     share: true
 
   - name: GitHub
     icon: github
-    username: Urbanbase
+    username: Urbanbase GitHub
     url: https://github.com/urbanbase/
     desc: Fork me on GitHub
     share: false
@@ -119,7 +121,7 @@ social:
     username:
     url:
     desc: Follow me on Instagram
-    share: false
+    share: true
 
   - name: Pinterest
     icon: pinterest
@@ -175,7 +177,7 @@ social:
     username:
     url:
     desc: Share to Reddit
-    share: true
+    share: false
 
   - name: "Hacker News"
     icon: hacker-news
