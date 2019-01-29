@@ -18,8 +18,9 @@ permalink: /we/
 <!-- <img src="{{ site.baseurl }}/assets/profile-placeholder.gif" title="Profile Picture" class="profile"> -->
 
 <center>
+<br>
 <h2>“Invent the Next World!”</h2>
-
+<br>
 어반베이스는 전 세계의 모든 실내공간정보를 하나의 플랫폼안에서 자유롭게 활용할 수 있는
 <br>
 도면변환 기술 및 AR, VR 뷰어 서비스를 개발하고 있는 3D 공간데이터 플랫폼입니다.
@@ -34,7 +35,7 @@ permalink: /we/
 어반베이스의 기술과 개발팀에 대한 애정 어린 조언, 날카로운 피드백, 언제나 대환영입니다!
 <br>
 <br>
-[어반베이스에 대해 더 알고 싶으시다고요?][Developer]
+<a href="https://developer.urbanbase.com">어반베이스에 대해 더 알고 싶으시다고요?</a>
 <br>
 <br>
 
