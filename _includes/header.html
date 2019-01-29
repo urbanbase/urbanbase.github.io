@@ -5,12 +5,6 @@
       <img src="{{ site.logo | prepend: site.baseurl }}" alt="{{ site.title }}">
       {% else %}
       <span>{{ site.title }}</span>
-      
-      <div id="search">
-        <input id="search-input" type="search" placeholder="Search..." value="" />
-      </div>
-      <ul class="search__results" id="results-container"></ul> 
-
       {% endif %}
     </a>
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
@@ -25,10 +19,10 @@
         {% endfor %}
       </ul>
     </nav>
-    {% comment %} <div id="search">
+    <div id="search">
         <input id="search-input" type="search" placeholder="Search..." value="" />
     </div>
-    <ul class="search__results" id="results-container"></ul> {% endcomment %}
+    <ul class="search__results" id="results-container"></ul>
   </div>
 
 
