@@ -1,17 +1,44 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: We
+permalink: /we/
 ---
 
-<img src="{{ site.baseurl }}/assets/profile-placeholder.gif" title="Profile Picture" class="profile">
 
-Centrarium is a custom theme for Jekyll, made by [Ben Centra][bencentra] for his own blog. He'd be humbled if you liked it enough to use it as well! Installation and configuration instructions can be found in the [GitHub repository](https://github.com/bencentra/centrarium).
+<div class="site-header-container {% if site.cover %}has-cover{% endif %}" {% if site.cover %}style="background-image: url({{ site.cover | prepend: site.baseurl }});"{% endif %}>
+  <div class="scrim {% if site.cover %}has-cover{% endif %}">
+    <header class="site-header">
+      <h1 class="title">{{ site.title }}</h1>
+      {% if site.subtitle %}<p class="subtitle">{{ site.subtitle }}</p>{% endif %}
+    </header>
+  </div>
+</div>
 
-This page is a good place to write about yourself, your project, your product, or whatever it is your site is for. You can replace the image above, or you can get rid of it entirely. 
 
-You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/). And you can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+<!-- <img src="{{ site.baseurl }}/assets/profile-placeholder.gif" title="Profile Picture" class="profile"> -->
 
-[centrarium]: https://github.com/bencentra/centrarium
-[bencentra]: http://bencentra.com
-[jekyll]: https://github.com/jekyll/jekyll
+<center>
+<h2>“Invent the Next World!”</h2>
+
+어반베이스는 전 세계의 모든 실내공간정보를 하나의 플랫폼안에서 자유롭게 활용할 수 있는
+
+도면변환 기술 및 AR, VR 뷰어 서비스를 개발하고 있는 3D 공간데이터 플랫폼입니다.
+
+<br>
+
+어반베이스 테크 블로그를 통해 
+
+머신러닝, AR, VR 등 우리가 다루고 있는 핵심 기술에 대한 이야기
+
+그리고, 해당 기술을 담당하고 있는 개발자들의 개발 라이프를 차근차근 기록해 나갈 예정입니다. 
+
+어반베이스의 기술과 개발팀에 대한 애정 어린 조언, 날카로운 피드백, 언제나 대환영입니다!
+
+<br>
+
+[어반베이스에 대해 더 알고 싶으시다고요?][Developer]
+
+<br>
+
+[Developer]: https://developer.urbanbase.com
+</center>
