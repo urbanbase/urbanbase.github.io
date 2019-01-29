@@ -13,11 +13,11 @@ permalink: /tech/
   </div>
 </div>
 
-tech_test3
+tech_test4
 
 {% for category in site.categories %}
-  {% if desc.cat == "Tech" %}
     {% capture cat %}{{ category | first }}{% endcapture %}
+    {% if "{{cat}}" == "Tech" %}
     <h2 id="{{cat}}">{{ cat | capitalize }}</h2>
     {% for desc in site.descriptions %}
       {% if desc.cat == cat %}
