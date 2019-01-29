@@ -445,7 +445,7 @@ pre code.hljs {
 	*	Site Navigation (left)
 	*/
 	.site-navigation {
-		@include span-columns(18); //12
+		@include span-columns(12); //12
 		@include media ($mobile) {
 			@include span-columns(6);
 		}
