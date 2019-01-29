@@ -119,8 +119,10 @@ pre code.hljs {
   }
   // Nav menu
   .navigation-wrapper {
-  	@include outer-container;
-    @include clearfix;
+  	// @include outer-container;
+		@include clearfix;
+		margin-left: auto;
+		margin-right: auto;
     position: relative;
   }
   .logo {

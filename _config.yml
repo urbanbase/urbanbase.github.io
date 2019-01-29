@@ -9,7 +9,7 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: Urbanbase TECH BLOG
+title: URBANBASE TECH BLOG
 subtitle: ""
 email: dev@urbanbase.com
 name: Urbanbase
