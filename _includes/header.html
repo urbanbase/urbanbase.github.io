@@ -3,7 +3,9 @@
     <a href="{{ site.baseurl }}/" class="logo">
       {% if site.logo %}
       <img src="{{ site.logo | prepend: site.baseurl }}" alt="{{ site.title }}">
-      {% elif {{ site.title}} != "Welcome to Urbanbase!" %}
+      {% elif site.title != "Welcome to Urbanbase!" %}
+        
+      {% comment %} {% else %} {% endcomment %}
       <span>{{ site.title }}</span>
       {% endif %}
     </a>
