@@ -9,8 +9,13 @@ active: tech
 ---
 
 <br>
-<!-- 
-[![skin-new]({{ site.images | relative_url }}/skin-new.jpg)]({{ site.images | relative_url }}/skin-new.jpg) -->
+test
+
+[![railroad]({{ site.images | relative_url }}/rails.jpg)]({{ site.images | relative_url }}/rails.jpg)
+
+<!-- [![skin-new]({{ site.images | relative_url }}/skin-new.jpg)]({{ site.images | relative_url }}/skin-new.jpg) -->
+
+<br>
 
 
 <div id="search-container">
