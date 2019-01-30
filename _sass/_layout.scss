@@ -25,18 +25,7 @@ html, body {
 	padding: 1em 1em 2em 1em;
 	background-color: $highlight-color;
 	color: $white;
-	a {
-	  color: $link-color;
-	  &:active,
-	  &:focus,
-	  &:hover {
-	    color: darken($link-color, 10%);
-	  }
-	  &:active,
-	  &:focus {
-	    outline: none;
-	  }
-	}
+}
 
 #search {
 	position: absolute;
