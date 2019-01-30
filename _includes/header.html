@@ -4,9 +4,7 @@
       {% if site.logo %}
       <img src="{{ site.logo | prepend: site.baseurl }}" alt="{{ site.title }}">
       {% else %}
-      {% if site.title != "Welcome to Urbanbase!"%}
       <span>{{ site.title }}</span>
-      {% endif %}
       {% endif %}
     </a>
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
@@ -15,7 +13,7 @@
     <nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
         {% for page in site.pages %}
-          {% if page.title and page.main_nav != false %}
+          {% if page.title and page.main_nav != false and page.title != "Welcome to Urbanbase!" %}
           <li class="nav-link"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
           {% endif %}
         {% endfor %}
