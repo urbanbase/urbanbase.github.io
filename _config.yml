@@ -45,8 +45,8 @@ jekyll-archives:
     category: '/name/'
     tag: '/tag/:name/'
 
-# Disqus comments
-# disqus_shortname: bencentra
+Disqus comments
+disqus_shortname: urbanbase
 
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
