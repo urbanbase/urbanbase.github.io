@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="post">
-<div class="wrapper">
+
 <div class="post-header-container {% if page.cover %}has-cover{% endif %}" {% if page.cover %}style="background-image: url({{ page.cover | prepend: site.baseurl }});"{% endif %}>
   <div class="scrim {% if page.cover %}has-cover{% endif %}">
     <header class="post-header">
@@ -12,7 +12,7 @@ layout: default
   </div>
 </div>
 
-{% comment %} <div class="wrapper"> {% endcomment %}
+<div class="wrapper">
 
 {% unless page.cover %} {% include page_divider.html %} {% endunless %}
 
