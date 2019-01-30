@@ -4,7 +4,9 @@
       {% if site.logo %}
       <img src="{{ site.logo | prepend: site.baseurl }}" alt="{{ site.title }}">
       {% else %}
+      {% if site.title != "Welcome to Urbanbase!"%}
       <span>{{ site.title }}</span>
+      {% endif %}
       {% endif %}
     </a>
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
