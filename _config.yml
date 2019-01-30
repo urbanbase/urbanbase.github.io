@@ -46,7 +46,7 @@ jekyll-archives:
     tag: '/tag/:name/'
 
 # Disqus comments
-disqus_shortname: urbanbase
+disqus_shortname: https-urbanbase-github-io
 
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
