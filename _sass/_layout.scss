@@ -21,10 +21,17 @@ html, body {
 
 .introduce {
 	$link-color: $white;
-	margin-top: 1em;
-	padding: 1em 1em 2em 1em;
-	background-color: $highlight-color;
-	color: $white;
+	padding: 1em 0em 0px 1em;
+	// background-color: $highlight-color;
+	max-width: 23em;
+	margin-left: 2em;
+	color: $highlight-color;
+
+	border-radius: 500px;
+	border-color: cornflowerblue;
+	border-style: outset;
+
+
 }
 
 #search {
