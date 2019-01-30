@@ -45,7 +45,7 @@ jekyll-archives:
     category: '/name/'
     tag: '/tag/:name/'
 
-Disqus comments
+# Disqus comments
 disqus_shortname: urbanbase
 
 # Google analytics
