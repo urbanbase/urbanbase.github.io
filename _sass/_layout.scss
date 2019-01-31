@@ -445,11 +445,11 @@ pre code.hljs {
 	background-color: $highlight-color;
 	color: $white;
 	a {
-	  color: black;// $link-color;
+	  color: $link-color;
 	  &:active,
 	  &:focus,
 	  &:hover {
-	    color: darken($link-color, 10%);
+	    color: #FFC438;//darken($link-color, 10%);
 	  }
 	  &:active,
 	  &:focus {
