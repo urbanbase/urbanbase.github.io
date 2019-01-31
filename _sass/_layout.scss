@@ -21,18 +21,18 @@ html, body {
 
 .introduce {
 	$link-color: $white;
-	padding: 1em 0em 0px 1em;
-	// background-color: $highlight-color;
-	max-width: 28em;
-	min-width: 26em;
-	// margin-left: 2em;
-	margin-bottom: 2em;
-	color: $highlight-color;
+	// padding: 1em 0em 0px 1em;
+	// // background-color: $highlight-color;
+	// max-width: 28em;
+	// min-width: 26em;
+	// // margin-left: 2em;
+	// margin-bottom: 2em;
+	// color: $highlight-color;
 
-	border-radius: 500px;
-	border-color: cornflowerblue;
-	border-style: outset;
-
+	// border-radius: 500px;
+	// border-color: cornflowerblue;
+	// border-style: outset;
+	color: black;
 
 }
 
@@ -445,7 +445,7 @@ pre code.hljs {
 	background-color: $highlight-color;
 	color: $white;
 	a {
-	  color: $link-color;
+	  color: black;// $link-color;
 	  &:active,
 	  &:focus,
 	  &:hover {
