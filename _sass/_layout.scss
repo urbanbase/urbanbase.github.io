@@ -24,11 +24,12 @@ html, body {
 	@media screen and (min-width: 767px) {
 		float: right;
 		width: 20%;
+		min-width: 175px;
 		height:20em;
 		border: #FFC438;
 		border-width: thin;
 		border-style: outset;
-		margin: 10% 2% 2% 2%;
+		margin: 400px 2% 2% 2%;
 	  }
 }
 
