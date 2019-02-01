@@ -17,11 +17,11 @@ layout: default
     <div class="recent_title">
       <strong>Recent Posts</strong>
       <br>
-      {% set count = 0 %}
+      {% assign count = 0 %}
       {% for category in site.categories %}  
         {% capture cat %}{{ category | first }}{% endcapture %}
         {% for post in site.categories[cat] %}
-          {% set count = count + 1 %}
+          {% increment count %}
           {% if count < 5 %}
             <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} {{ count }}</a>
             <br>
