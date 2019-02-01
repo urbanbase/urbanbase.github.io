@@ -3,15 +3,16 @@ layout: default
 ---
 <div class="post">
 
-<div class="post-header-container {% if page.cover %}has-cover{% endif %}" {% if page.cover %}style="background-image: url({{ page.cover | prepend: site.baseurl }});"{% endif %}>
-  <div class="scrim {% if page.cover %}has-cover{% endif %}">
-    <header class="post-header">
-      <h1 class="title">{{ page.title }}</h1>
-      {% comment %} <p class="info">by <strong>{{ page.author }}</strong></p> {% endcomment %}
+<div class="site-header-container {% if site.cover %}has-cover{% endif %}" {% if site.cover %}style="background-image: url({{ site.cover | prepend: site.baseurl }});"{% endif %}>
+  <div class="scrim {% if site.cover %}has-cover{% endif %}">
+    <header class="site-header">
+      <h1 class="title">{{ site.title }}</h1>
+      {% if site.subtitle %}<p class="subtitle">{{ site.subtitle }}</p>{% endif %}
     </header>
   </div>
 </div>
 
+<br>
 <article class="post-content">
   {{ content }}
 </article>
