@@ -43,6 +43,10 @@ html, body {
 		// border-style: outset;
 		margin-bottom: 5em;
 	  }
+	
+	.post{
+		font-size: 14px;
+	}
 }
 
 .recent_tags{
@@ -356,10 +360,6 @@ pre code.hljs {
 	*/
 	.post-list {
 		padding-top: 1em !important;
-		@extend %default-ul;
-	}
-	.recent_post-list {
-		padding-top: -22px !important;
 		@extend %default-ul;
 	}
 	.post-meta {
