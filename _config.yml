@@ -80,7 +80,7 @@ social:
     username: 
     url: 
     desc: Follow me on Twitter
-    share: true
+    share: false
 
   - name: Facebook
     icon: facebook
@@ -112,8 +112,8 @@ social:
 
   - name: YouTube
     icon: youtube
-    username:
-    url:
+    username: Urbanbase YouTube
+    url: https://www.youtube.com/channel/UCjah6C5Z-s5yX8-Z10bRbDw
     desc: Subscribe on YouTube
     share: true
 

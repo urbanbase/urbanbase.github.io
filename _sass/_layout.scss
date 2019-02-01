@@ -449,7 +449,7 @@ pre code.hljs {
 	  &:active,
 	  &:focus,
 	  &:hover {
-	    color: darken($link-color, 10%);
+	    color: white;//darken($link-color, 10%);
 	  }
 	  &:active,
 	  &:focus {
