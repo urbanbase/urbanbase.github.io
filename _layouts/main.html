@@ -19,7 +19,7 @@ layout: default
       <br>
       {% assign count = 0 %}
       {% for post in site.posts %}
-        {% if count < 6 %}
+        {% if count < 5 %}
           <a class="post" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
           <br>
           {% assign count = count | plus: 1 %}
@@ -31,7 +31,11 @@ layout: default
     <div class="recent_title">
       <strong>Tags</strong>
       <br>
-
+      {% for post in site.posts.tags %}
+          <a class="post" href="{{ post.url | prepend: site.baseurl }}">{{ post.tags }}</a>
+          <br>
+        {% endif %}
+      {% endfor %}
 
     </div>
   </div>
