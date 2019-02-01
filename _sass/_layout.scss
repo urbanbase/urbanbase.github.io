@@ -21,7 +21,9 @@ html, body {
 
 
 .recent_box {
+	display: none;
 	@media screen and (min-width: 767px) {
+		display: inline;
 		float: right;
 		width: 20%;
 		min-width: 175px;
@@ -36,9 +38,9 @@ html, body {
 .recent_posts{
 	@media screen and (min-width: 767px) {
 		height:15em;
-		border: #FFC438;
-		border-width: thin;
-		border-style: outset;
+		// border: #FFC438;
+		// border-width: thin;
+		// border-style: outset;
 		margin-bottom: 5em;
 	  }
 }
@@ -46,9 +48,9 @@ html, body {
 .recent_tags{
 	@media screen and (min-width: 767px) {
 		height:15em;
-		border: #FFC438;
-		border-width: thin;
-		border-style: outset;
+		// border: #FFC438;
+		// border-width: thin;
+		// border-style: outset;
 		margin-top: 5em;
 	  }
 }
