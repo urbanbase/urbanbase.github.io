@@ -18,9 +18,6 @@ layout: default
       <strong>Recent Posts</strong>
       <br>
       {% assign count = 0 %}
-      {% comment %} {% for category in site.categories %}  
-        {% capture cat %}{{ category | first }}{% endcapture %}
-        {% for post in site.categories[cat] %} {% endcomment %}
       {% for post in site.categories %}
         {% assign count = count | plus: 1 %}
         {% if count < 6 %}
@@ -28,7 +25,6 @@ layout: default
           <br>
         {% endif %}
       {% endfor %}
-      {% comment %} {% endfor %} {% endcomment %}
     </div>
   </div>
   <div class="recent_tags">
