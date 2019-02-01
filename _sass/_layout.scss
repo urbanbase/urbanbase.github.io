@@ -71,8 +71,8 @@ html, body {
 	background-position-x: 10px; /* 135px = 160 - 15(right-padding) + 10(icon-width) */
 	margin-top: 1.2em;
 	@media screen and (max-width: 767px) {
-	  margin-top: 15px;
-	  margin-right: -20px;
+	  margin-top: 10%;
+	  margin-right: -5%;
 	}
 }
 
@@ -98,7 +98,7 @@ html, body {
 	z-index: 999; top: 45px; right: 0px;
 	line-height: 22px;
 	@media screen and (max-width: 767px) {
-		margin-top: 60px;
+		margin-top: 20%;
 	}
 
 }
