@@ -31,8 +31,8 @@ layout: default
     <div class="recent_title">
       <strong>Tags</strong>
       <br>
-      {% for post in site.posts.tags %}
-          <a class="post" href="{{ post.url | prepend: site.baseurl }}">{{ post.tags }}</a>
+      {% for tag in site.tags %}
+          {{ tag }}
           <br>
         {% endif %}
       {% endfor %}
