@@ -12,6 +12,30 @@ layout: default
   </div>
 </div>
 
+<div class="recent_box">
+  <div class="recent_posts">
+    <div class="recent_title">
+      <strong>Recent Posts</strong>
+      <br>
+      {% assign count = 0 %}
+      {% for post in site.posts %}
+        {% if count < 5 %}
+          <a class="post" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <br>
+          {% assign count = count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="recent_tags">
+    <div class="recent_title">
+      <strong>Tags</strong>
+      <br>
+    </div>
+  </div>
+</div>
+
+
 <div class="wrapper">
 
 {% unless page.cover %} {% include page_divider.html %} {% endunless %}
