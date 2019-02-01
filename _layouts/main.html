@@ -31,9 +31,9 @@ layout: default
     <div class="recent_title">
       <strong>Tags</strong>
       <br>
-      {% for tag in site.tags %}
-        {{ tag }}
-      {% endfor %}
+      {% comment %} {% for tag in site.tags %}
+        {{ tag.tag }}
+      {% endfor %} {% endcomment %}
     </div>
   </div>
 </div>
