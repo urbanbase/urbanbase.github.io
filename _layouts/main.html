@@ -17,17 +17,17 @@ layout: default
     <div class="recent_title">
       <strong>Recent Posts</strong>
       <br>
-      {% for category in site.categories %}
-        {% capture cat %}{{ category | first }}{% endcapture %}
+      {% for category in site.categories %}  
         <ul class="posts-list">
+        {% capture cat %}{{ category | first }}{% endcapture %}
         {% for post in site.categories[cat] %}
           <li>
             <strong>
               <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
             </strong>
           </li>
-        {% endfor %}
         </ul>
+        {% endfor %}
       {% endfor %}
     </div>
   </div>
