@@ -71,7 +71,7 @@ html, body {
 	background-position-x: 10px; /* 135px = 160 - 15(right-padding) + 10(icon-width) */
 	margin-top: 1.2em;
 	@media screen and (max-width: 767px) {
-	  margin-top: 10%;
+	  margin-top: 5%;
 	  margin-right: -5%;
 	}
 }
@@ -483,7 +483,8 @@ pre code.hljs {
 		max-width: 68em;
 		margin-left: auto;
 		margin-right: auto;
-		min-height: 11em;
+		overflow: hidden;
+		// min-height: 11em;
 		// @include outer-container;
 	}
 	.footer-heading {
