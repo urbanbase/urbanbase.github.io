@@ -80,7 +80,7 @@ social:
     username: 
     url: 
     desc: Follow me on Twitter
-    share: false
+    share: true
 
   - name: Facebook
     icon: facebook
