@@ -18,13 +18,12 @@ layout: default
       <strong>Recent Posts</strong>
       <br>
       {% assign count = 0 %}
-
       {% for category in site.categories %}  
         {% capture cat %}{{ category | first }}{% endcapture %}
         {% for post in site.categories[cat] %}
+          {% assign count = count + 1 %}
           {% if count < 5 %}
-            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            {% assign count = count + 1 %}
+            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} {{ count }}</a>
             <br>
           {% endif %}
         {% endfor %}
