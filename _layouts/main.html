@@ -16,11 +16,19 @@ layout: default
   <div class="recent_posts">
     <div class="recent_title">
       <strong>Recent Posts</strong>
+      <br>
+      {% for category in site.categories %}
+      {% capture cat %}{{ category | first }}{% endcapture %}
+      <h4 id="{{cat}}">{{ cat | capitalize }}</h4>  
+      {% endfor %}
     </div>
   </div>
   <div class="recent_tags">
     <div class="recent_title">
       <strong>Tags</strong>
+      <br>
+
+
     </div>
   </div>
 </div>
