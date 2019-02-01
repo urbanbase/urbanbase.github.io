@@ -18,13 +18,28 @@ layout: default
       <strong>Recent Posts</strong>
       <br>
       {% assign count = 0 %}
-      {% for post in site.categories %}
-        {% assign count = count | plus: 1 %}
+      {% for post in paginator.posts %}
         {% if count < 6 %}
           <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
           <br>
         {% endif %}
       {% endfor %}
+
+      {% comment %} {% for category in site.categories %}  
+        {% capture cat %}{{ category | first }}{% endcapture %}
+        {% for post in site.categories[cat] %}
+          {% assign count = count | plus: 1 %}
+          {% if count < 6 %}
+            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            <br>
+          {% endif %}
+        {% endfor %}
+      {% endfor %} {% endcomment %}
+
+
+
+
+
     </div>
   </div>
   <div class="recent_tags">
