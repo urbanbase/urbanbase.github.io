@@ -22,8 +22,8 @@ layout: default
         {% capture cat %}{{ category | first }}{% endcapture %}
         {% for post in site.categories[cat] %}
           {% assign count = count | plus: 1 %}
-          {% if count < 5 %}
-            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} {{ count }}</a>
+          {% if count < 6 %}
+            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
             <br>
           {% endif %}
         {% endfor %}
