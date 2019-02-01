@@ -20,11 +20,8 @@ layout: default
       {% for category in site.categories %}  
         {% capture cat %}{{ category | first }}{% endcapture %}
         {% for post in site.categories[cat] %}
-        <ul class="posts-list">
-          <li>
-            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </li>
-        </ul>
+          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <br>
         {% endfor %}
       {% endfor %}
     </div>

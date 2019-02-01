@@ -358,6 +358,10 @@ pre code.hljs {
 		padding-top: 1em !important;
 		@extend %default-ul;
 	}
+	.recent_post-list {
+		padding-top: -22px !important;
+		@extend %default-ul;
+	}
 	.post-meta {
 		// @include outer-container;
 		max-width: 72em;
