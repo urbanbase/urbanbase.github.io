@@ -52,6 +52,12 @@ html, body {
 		margin-top: 5em;
 	  }
 }
+.recent_title{
+	@media screen and (min-width: 767px) {
+		padding: 0.5em;
+		margin-left: 0.5em;
+	  }
+}
 
 
 .introduce_icon {
