@@ -55,6 +55,8 @@ html, body {
 	line-height: 60px;
 }
 
+
+
 #search > input {
 	margin: 0;
 	width: 135px;
@@ -68,6 +70,9 @@ html, body {
 	background-size: 13px 13px;
 	background-position-x: 10px; /* 135px = 160 - 15(right-padding) + 10(icon-width) */
 	margin-top: 1.2em;
+	@include media ($tablet) {
+	  margin-top: 0;
+	}
 }
 
 #search > input:focus {
@@ -232,7 +237,10 @@ pre code.hljs {
     float: none;
     padding: 1.25em 0;
     @include media ($tablet) {
-      float: left;
+	//   float: left;
+	  position: absolute;
+	  left:50%;
+	  margin-left: -3%;
       line-height: 1.5em;
     }
   }
