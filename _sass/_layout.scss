@@ -44,7 +44,8 @@ html, body {
 }
 
 #search {
-	position: absolute;
+	position: relative;
+	float: left;
 	z-index: 99;
 	top: 0;
 	right: 30px;
@@ -196,7 +197,7 @@ pre code.hljs {
   // Mobile view
   .navigation-menu-button {
     display: block;
-    float: right;
+    float: left;
     margin: 0;
     font-size: 1.5em;
     padding-top: 0.5em;
@@ -245,7 +246,8 @@ pre code.hljs {
     @include media ($tablet) {
       display: block;
       margin: 0px 200px 0px 0px;
-      padding: 0;
+	  padding: 0;
+	  font-size: larger;
     }
     &.show {
       display: block;
@@ -261,7 +263,8 @@ pre code.hljs {
       background: transparent;
       display: inline;
       text-decoration: none;
-      width: auto;
+	  width: auto;
+	  font-size: large;
     }
   }
   li.nav-link {
