@@ -27,7 +27,7 @@ html, body {
 		float: right;
 		width: 20%;
 		min-width: 175px;
-		height:35em;
+		height:25em;
 		// border: #FFC438;
 		// border-width: thin;
 		// border-style: outset;
@@ -37,7 +37,7 @@ html, body {
 
 .recent_posts{
 	@media screen and (min-width: 767px) {
-		height:15em;
+		height: 10em;
 		// border: #FFC438;
 		// border-width: thin;
 		// border-style: outset;
@@ -51,7 +51,7 @@ html, body {
 
 .recent_tags{
 	@media screen and (min-width: 767px) {
-		height:15em;
+		height: 10em;
 		// border: #FFC438;
 		// border-width: thin;
 		// border-style: outset;
