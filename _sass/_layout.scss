@@ -71,7 +71,8 @@ html, body {
 	background-position-x: 10px; /* 135px = 160 - 15(right-padding) + 10(icon-width) */
 	margin-top: 1.2em;
 	@media screen and (max-width: 767px) {
-	  margin-top: 0;
+	  margin-top: 15px;
+	  margin-right: -20px;
 	}
 }
 
@@ -89,13 +90,17 @@ html, body {
 	font-size: 14px;
 	transition: 0.2s ease;
 	position: absolute;
-	width: 550px;
+	width: 50%;
 	-webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
 	box-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
 	border-radius: 2px;
 	border: 0;
 	z-index: 999; top: 45px; right: 0px;
 	line-height: 22px;
+	@media screen and (max-width: 767px) {
+		margin-top: 60px;
+	}
+
 }
 .search__results.is-hidden {
 	opacity: 0;
