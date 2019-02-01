@@ -25,29 +25,31 @@ html, body {
 		float: right;
 		width: 20%;
 		min-width: 175px;
-		height:20em;
-		border: #FFC438;
-		border-width: thin;
-		border-style: outset;
+		height:35em;
+		// border: #FFC438;
+		// border-width: thin;
+		// border-style: outset;
 		margin: 2% 2% 2% 2%;
 	  }
 }
 
 .recent_posts{
 	@media screen and (min-width: 767px) {
-		height:10em;
+		height:15em;
 		border: #FFC438;
 		border-width: thin;
 		border-style: outset;
+		margin-bottom: 5em;
 	  }
 }
 
 .recent_tags{
 	@media screen and (min-width: 767px) {
-		height:10em;
+		height:15em;
 		border: #FFC438;
 		border-width: thin;
 		border-style: outset;
+		margin-top: 5em;
 	  }
 }
 
