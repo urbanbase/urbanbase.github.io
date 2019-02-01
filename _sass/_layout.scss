@@ -70,7 +70,7 @@ html, body {
 	background-size: 13px 13px;
 	background-position-x: 10px; /* 135px = 160 - 15(right-padding) + 10(icon-width) */
 	margin-top: 1.2em;
-	@include media ($tablet) {
+	@media screen and (min-width: 768px) {
 	  margin-top: 0;
 	}
 }
