@@ -47,8 +47,8 @@ layout: default
 테스틓2
 
 
-{% for url in site %}
-  {{ url.posts }}
+{% for post in site.posts %}
+  {{ post.tag }}
 {% endfor %}
 
 
