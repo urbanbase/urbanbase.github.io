@@ -47,7 +47,7 @@ layout: default
 
 {% for tag in site.tags %}
   {% assign t = tag | first %}
-  {% if page.url == "/tags/{{ t }}/" %}
+  {% if {{ page.url }} == "/tags/{{ t }}/" %}
     {{ tag }}
   {% endif %}
 {% endfor %}
@@ -55,8 +55,8 @@ layout: default
 <br>
 <br>
 <br>
-asdf
-
+테스트
+<br>
 {% for tag in site.tags %}
   {% assign t = tag | first %}
   {{ t }}
