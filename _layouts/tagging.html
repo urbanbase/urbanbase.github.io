@@ -42,7 +42,7 @@ layout: default
 <br>
 <article class="post-content">
 
-test3
+test4s
 <br>
 
 {% assign tag = page.url | replace:'/',' ' | replace:'tags',' | truncatewords: 3,"" %}
@@ -53,7 +53,7 @@ test3
 
 <br>
 {% for post in site.posts %}
-  {% if post contains {{ tag }} %}
+  {% if post.tags contains tag %}
     {{ post.tags }}
     <br>
   {% endif %}
