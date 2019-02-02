@@ -42,18 +42,18 @@ layout: default
 <br>
 <article class="post-content">
 
-test51
+test512
 <br>
 
-{% assign tag = page.url | replace:'/',' ' | replace:'tags',' | truncatewords: 3,"" %}
+{% assign tagname = page.url | replace:'/',' ' | replace:'tags',' | truncatewords: 3,"" %}
 
-{{ tag }}
+{{ tagname }}
 <br>
 -----------
 
 <br>
 {% for post in site.posts %}
-  {% if post.tags contains "{{ tag }}" %}
+  {% if post.tags contains tagname %}
     {{ post.tags }}
     <br>
   {% endif %}
