@@ -48,7 +48,8 @@ layout: default
 
 
 {% for post in site.posts %}
-  {{ post.tag }}
+  {% assign t = post | first %}
+  {{ t }}
 {% endfor %}
 
 
