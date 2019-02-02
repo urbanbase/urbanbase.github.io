@@ -45,16 +45,16 @@ layout: default
 
 <br>
 
-테스트3
+테스트33
 <br>
 
 {{ page.url }}
-{% assign tagurl = page.url | split: '/' %}
-{% assign tag = tagurl | split: 'tags' %}
+{% assign tag = page.url | split: '/' | split: 'tags' %}
+
 
 
 <br>
-{{ tag }}
+{{ tag[2] }}
 <br>
 
 
