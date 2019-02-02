@@ -45,12 +45,13 @@ layout: default
 
 <br>
 
-테스트2
+테스트3
 
-{{ site.url }}
+{{ page.url }}
 
 {% for post in site.posts %}
-  {{ post }}
+  {% assign t = tag | first %}
+  {{ t }}
   <!-- {{ post.excerpt }} -->
 {% endfor %}
 
