@@ -51,8 +51,12 @@ layout: default
     <div class="tag_show">
       {% for post in site.posts %}
         {% if post.tags contains tagname %}
-          {{ post.title }}
-          <br>
+          <li>
+            <h2>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+          </li>
+          <hr>
         {% endif %}
       {% endfor %}
     </div>
