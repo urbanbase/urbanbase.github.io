@@ -42,37 +42,18 @@ layout: default
 <br>
 <article class="post-content">
 
-
-<br>
-
-테스트12
-<br>
-
-{{ page.url }}
+test1
 
 {% assign tag = page.url | replace:'/',' ' | replace:'tags',' | truncatewords: 3,"" %}
 
 
-<br>
-태그
-<br>
-
 {{ tag }}
-
-
---------------
 
 <br>
 {% for post in site.posts %}
-  {% if post.tags contains page.url %}  
+  {% if post.tags contains tag %}  
     {{ post.tags }}
     ㅎㅎ
-    <br>
-  {% endif %}
-
-  {% if page.url contains post.tags %}  
-    {{ post.tags }}
-    ㅋㅋ
     <br>
   {% endif %}
 {% endfor %}
