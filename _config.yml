@@ -43,7 +43,7 @@ jekyll-archives:
   permalinks:
     # category: '/category/:name/'
     category: '/name/'
-    tag: '/tag/:name/'
+    tag: '/tags/:name/'
 
 collections:
   tag:

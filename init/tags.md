@@ -5,7 +5,12 @@ permalink: /tags/
 
 <div class="wrapper">
 
-tags
-
+    <strong>Tags</strong>
+    <br>
+    {% for tag in site.tags %}
+        {% assign t = tag | first %}
+        {{ t }}
+        <br>
+    {% endfor %}
 
 </div>
