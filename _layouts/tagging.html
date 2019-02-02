@@ -45,7 +45,7 @@ layout: default
 
 <br>
 
-테스트4
+테스트5
 <br>
 
 {{ page.url }}
@@ -54,8 +54,10 @@ layout: default
 
 
 {% for post in site.posts %}
+  {% if page.url contains post.tags %}
   {{ post.tags }}
-  <!-- {{ post.excerpt }} -->
+  <br>
+  {{% endif %}}
 {% endfor %}
 
 
