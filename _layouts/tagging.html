@@ -45,20 +45,22 @@ layout: default
 
 <br>
 
-테스트33
+테스트123
 <br>
 
 {{ page.url }}
-{% assign tag = page.url | split: '/' | split: 'tags' %}
+{% assign tag = page.url | replace:'/',' ' | truncatewords: 1,"" %}
+{% assign tagg page.url | replace:'/',' ' | truncatewords: 1 | remove:'...' %}
 
+<br>
 
-{{ tag[1] }}
-<br>
-{{ tag[2] }}
-<br>
 {{ tag }}
+
 <br>
-{{ tag }}[2]
+
+{{ tagg }}
+
+--------------
 
 <br>
 {% for post in site.posts %}
