@@ -49,16 +49,19 @@ layout: default
     </center>
     {% unless page.cover %} {% include page_divider.html %} {% endunless %}
     <div class="tag_show">
-      {% for post in site.posts %}
-        {% if post.tags contains tagname %}
-          <li>
-            <h2>
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </h2>
-          </li>
-          <hr>
-        {% endif %}
-      {% endfor %}
+      <ul class="post-list">
+        {% for post in site.posts %}
+          {% if post.tags contains tagname %}
+            <li>
+              <h2>
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+              </h2>
+              {{ post.excerpt }}
+            </li>
+            <hr>
+          {% endif %}
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </article>
