@@ -45,17 +45,14 @@ layout: default
 
 <br>
 
-테스트1
+테스트2
 <br>
 
 {{ page.url }}
-{% assign depth = page.url | split: '/' | size | minus: 1 %}
-{% assign af = page.url | split: '/' %}
+{% assign tag = page.url | split: '/' | split: 'tags' %}
 
 <br>
-{{ depth }}
-<br>
-{{ af }}
+{{ tag }}
 <br>
 
 
