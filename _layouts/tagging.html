@@ -43,59 +43,15 @@ layout: default
 <article class="post-content">
 
 
-테스트1
-
-<br>
-
-{{ page.url }}
-
-------------
-
-{{ site }}
-
-------------
-
-{{ site.posts }}
-
-------------
-
-{{ site.tags }}
-
-------------
-
-
-
-<br>
-<!-- 
-{% for post in site.posts %}
-  
-  <a class="post" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-  <br>
-{% endfor %}
-
-<br>
-
-for2 테스트
-
 <br>
 
 {% for tag in site.tags %}
   {% assign t = tag | first %}
   {% if page.url contains t %}
-    {{ tag }}
+    {{ tag.title }}
   {% endif %}
 {% endfor %}
 
-<br>
-<br>
-<br>
-테스트
-<br>
-{% for tag in site.tags %}
-  {% assign t = tag | first %}
-  {{ t }}
-{% endfor %}
- -->
 
 </article>
 
