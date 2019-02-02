@@ -41,7 +41,14 @@ layout: default
 
 <br>
 <article class="post-content">
-  {{ content }}
+
+
+{% for post in site.posts %}
+  {{ post.tille }}, {{ post.url }}
+  <br>
+{% endfor %}
+
+
 </article>
 
 </div>
