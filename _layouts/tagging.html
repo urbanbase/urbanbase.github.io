@@ -45,12 +45,21 @@ layout: default
 
 {{ page.url }}
 
-
 {% for tag in site.tags %}
   {% assign t = tag | first %}
   {% if page.url == "/tags/{{ t }}/" %}
     {{ tag }}
   {% endif %}
+{% endfor %}
+
+<br>
+<br>
+<br>
+asdf
+
+{% for tag in site.tags %}
+  {% assign t = tag | first %}
+  {{ t }}
 {% endfor %}
 
 
