@@ -1,5 +1,6 @@
 ---
 layout: main
+permalink: /tag/
 ---
 
 
