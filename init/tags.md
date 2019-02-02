@@ -4,9 +4,10 @@ permalink: /tags/
 ---
 
 <div class="wrapper">
-
-    <h3>Tags</h3>
-    <br>
+    <center>
+    <h3>Tags List</h3>
+    </center>
+    {% unless page.cover %} {% include page_divider.html %} {% endunless %}
     <br>
     {% for tag in site.tags %}
         {% assign t = tag | first %}
