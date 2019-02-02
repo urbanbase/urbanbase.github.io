@@ -44,7 +44,17 @@ layout: default
 
 
 <br>
-테스틓
+테스틓2
+
+
+{% for url in site %}
+  {{ url.posts }}
+{% endfor %}
+
+
+
+<!-- {% for post in site.posts %}
+
 
 {% for tag in site.tags %}
   {% assign t = tag | first %}
@@ -52,7 +62,7 @@ layout: default
   {% if page.url contains t %}
     {{ posts }}
   {% endif %}
-{% endfor %}
+{% endfor %} -->
 
 
 </article>
