@@ -42,7 +42,8 @@ layout: default
 <br>
 <article class="post-content">
 
-test2
+test3
+<br>
 
 {% assign tag = page.url | replace:'/',' ' | replace:'tags',' | truncatewords: 3,"" %}
 
@@ -50,10 +51,8 @@ test2
 
 <br>
 {% for post in site.posts %}
-  {% if post.tags == tag %}  
-    {{ post.tags }}
-    ㅎㅎ
-    <br>
+  {{ post.tags }}
+  <br>
   {% endif %}
 {% endfor %}
 
