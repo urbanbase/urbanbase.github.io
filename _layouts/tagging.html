@@ -49,10 +49,14 @@ layout: default
 <br>
 
 {{ page.url }}
-{% assign tag = page.url | replace:'/',' ' | truncatewords: 2,"" %}
+{% assign tag = page.url | replace:'/',' ' | truncatewords: 1,"" %}
 {% assign tagg = page.url | replace:'/',' ' | truncatewords: 2 | remove:'...' %}
 {% assign tag2 = page.url | replace:'/',' ' | truncatewords: 3,"" %}
 {% assign tagg2 = page.url | replace:'/',' ' | truncatewords: 3 | remove:'...' %}
+{% assign tag3 = page.url | replace:'/',' ' | replace:'tags',' | truncatewords: 3,"" %}
+{% assign tagg3 = page.url | replace:'/',' ' | replace:'tags',' | truncatewords: 3 | remove:'...' %}
+{% assign tag4 = page.url | replace:'/',' ' | replace:'tags',' | truncatewords: 3,"" %}
+{% assign tagg4 = page.url | replace:'/',' ' | replace:'tags',' | truncatewords: 3 | remove:'...' %}
 <br>
 
 {{ tag }}
@@ -68,6 +72,21 @@ layout: default
 
 {{ tagg2 }}
 
+<br>
+
+{{ tag3 }}
+
+<br>
+
+{{ tagg3 }}
+
+<br>
+
+{{ tag4 }}
+
+<br>
+
+{{ tagg4 }}
 --------------
 
 <br>
