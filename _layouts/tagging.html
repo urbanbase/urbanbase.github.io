@@ -42,25 +42,19 @@ layout: default
 <br>
 <article class="post-content">
 
-test51234
-<br>
+  <div class="tag_show">
 
-{% assign tagname = page.url | replace:'/',' ' | replace:'tags',' | truncatewords: 1,"" %}
+    {% assign tagname = page.url | replace:'/',' ' | replace:'tags',' | truncatewords: 1,"" %}
 
-{{ tagname }}
-<br>
------------
-
-
------------
-<br>
-{% for post in site.posts %}
-  {% if post.tags contains tagname %}
-    {{ post.title }}
     <br>
-  {% endif %}
-{% endfor %}
+    {% for post in site.posts %}
+      {% if post.tags contains tagname %}
+        {{ post.title }}
+        <br>
+      {% endif %}
+    {% endfor %}
 
 
+  </div>
 </article>
 </div>
