@@ -48,8 +48,7 @@ layout: default
 
 
 {% for post in site.posts %}
-  {% assign t = post | first %}
-  {{ t }}
+  {{ post.content | truncatewords: 50 }}
 {% endfor %}
 
 
