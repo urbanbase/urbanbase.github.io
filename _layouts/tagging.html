@@ -52,12 +52,15 @@ layout: default
 {% assign tag = page.url | split: '/' | split: 'tags' %}
 
 
-
+{{ tag[1] }}
 <br>
 {{ tag[2] }}
 <br>
+{{ tag }}
+<br>
+{{ tag }}[2]
 
-
+<br>
 {% for post in site.posts %}
   {% if post.tags contains page.url %}  
     {{ post.tags }}
