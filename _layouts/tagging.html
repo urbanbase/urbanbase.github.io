@@ -49,9 +49,11 @@ test3
 
 {{ tag }}
 
+-----------
+
 <br>
 {% for post in site.posts %}
-  {% if post contains tag %}
+  {% if post contains {{ tag }} %}
     {{ post.tags }}
     <br>
   {% endif %}
