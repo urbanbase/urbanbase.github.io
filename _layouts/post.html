@@ -36,9 +36,11 @@ layout: default
 </div>
 
 
-<div class="wrapper">
-
 {% unless page.cover %} {% include page_divider.html %} {% endunless %}
+
+<div class="wrapper">
+<!-- 
+{% unless page.cover %} {% include page_divider.html %} {% endunless %} -->
 
 <section class="post-meta">
   <div class="post-date">{{ page.date | date: "%B %-d, %Y" }}</div>
