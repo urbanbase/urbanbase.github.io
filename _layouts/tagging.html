@@ -38,19 +38,16 @@ layout: default
     </div>
   </div>
 </div>
-
-<br>
 <article class="post-content">
+  {% assign tagname = page.url | replace:'/',' ' | replace:'tags',' | truncatewords: 1,"" %}
   <div class="wrapper">
     <div class="tag_show">
       <center>
         <h3>
-          <a href="/tags/">Tag List</a>
+          <a href="/tags/">{{ tagname }}</a>
         </h3>
       </center>
       {% unless page.cover %} {% include page_divider.html %} {% endunless %}
-      {% assign tagname = page.url | replace:'/',' ' | replace:'tags',' | truncatewords: 1,"" %}
-
       <br>
       {% for post in site.posts %}
         {% if post.tags contains tagname %}
@@ -58,7 +55,6 @@ layout: default
           <br>
         {% endif %}
       {% endfor %}
-
     </div>
   </div>
 </article>
