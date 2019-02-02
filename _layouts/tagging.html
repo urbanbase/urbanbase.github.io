@@ -42,16 +42,15 @@ layout: default
 <br>
 <article class="post-content">
 
-test1
+test2
 
 {% assign tag = page.url | replace:'/',' ' | replace:'tags',' | truncatewords: 3,"" %}
-
 
 {{ tag }}
 
 <br>
 {% for post in site.posts %}
-  {% if post.tags contains tag %}  
+  {% if post.tags == tag %}  
     {{ post.tags }}
     ㅎㅎ
     <br>
