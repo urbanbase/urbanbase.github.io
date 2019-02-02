@@ -1,11 +1,11 @@
 ---
 layout: main
-permalink: /tag/
+permalink: /tags/
 ---
 
 <div class="wrapper">
 
-tag
+tags
 
 
 </div>

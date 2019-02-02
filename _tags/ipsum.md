@@ -1,5 +1,5 @@
 ---
-layout: tag
+layout: tags
 ---
 
 <div class="wrapper">

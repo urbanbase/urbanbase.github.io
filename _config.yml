@@ -45,6 +45,12 @@ jekyll-archives:
     category: '/name/'
     tag: '/tag/:name/'
 
+collections:
+  tags:
+    output: true
+    permalink: /tags/:path/
+
+
 # Disqus comments
 disqus_shortname: https-urbanbase-github-io
 
