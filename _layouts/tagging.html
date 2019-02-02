@@ -43,9 +43,14 @@ layout: default
 <article class="post-content">
 
 
-{% for post in site.posts %}
-  {{ page }}, {{ page.url }}
-  <br>
+{{ page.url }}
+
+
+{% for tag in site.tags %}
+  {% assign t = tag | first %}
+  {% if page.url == "/tags/{{ t }}/" %}
+    {{ t }}
+  {% endif %}
 {% endfor %}
 
 
