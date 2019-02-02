@@ -42,16 +42,14 @@ layout: default
 <br>
 <article class="post-content">
 
-test512
+test5123
 <br>
 
-{% assign tagname = page.url | replace:'/',' ' | replace:'tags',' | truncatewords: 2,"" %}
-{% assign tagname1 = page.url | replace:'/',' ' | replace:'tags',' | truncatewords: 1,"" %}
-{% assign tagname2 = page.url | replace:'/',' ' | replace:'tags',' | truncatewords: 3,"" %}
+{% assign tagname = page.url | replace:'/',' ' | replace:'tags',' | truncatewords: 1,"" %}
+
 {{ tagname }}
 <br>
 -----------
-{{ tagname }}/{{ tagname1 }}/{{ tagname2 }}/
 
 
 -----------
