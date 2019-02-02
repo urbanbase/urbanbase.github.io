@@ -33,7 +33,7 @@ layout: default
       <br>
       {% for tag in site.tags %}
         {% assign t = tag | first %}
-        {{ t }}
+        <a class="post" href="/tags/{{ t }}">{{ t }}</a>
       {% endfor %}
     </div>
   </div>
