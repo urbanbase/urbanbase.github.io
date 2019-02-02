@@ -54,10 +54,12 @@ layout: default
 
 
 {% for post in site.posts %}
+  {{ for tag in post.tags }}
   
-  {{ post.tags }}
+    {{ tag }}
+  
+  {{% endfor %}}
   <br>
-
 {% endfor %}
 
 
