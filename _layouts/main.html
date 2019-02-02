@@ -31,7 +31,7 @@ layout: default
     <div class="recent_title">
       <strong>Tags</strong>
       <br>
-      {% for tag in site.tags %}
+      {% for tag in site.posts.tags %}
         {% assign t = tag | first %}
         {{ t }}
       {% endfor %}
