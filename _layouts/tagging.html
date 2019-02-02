@@ -44,11 +44,13 @@ layout: default
 
 
 <br>
+테스틓
 
 {% for tag in site.tags %}
   {% assign t = tag | first %}
+  {% assign posts = tag | last %}
   {% if page.url contains t %}
-    {{ tag.title }}
+    {{ posts }}
   {% endif %}
 {% endfor %}
 
