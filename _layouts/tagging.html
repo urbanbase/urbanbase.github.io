@@ -53,6 +53,8 @@ test512
 
 <br>
 {% for post in site.posts %}
+  {{ tagname }}, {{ post.tags }}
+  <br>
   {% if post.tags contains tagname %}
     {{ post.tags }}
     <br>
