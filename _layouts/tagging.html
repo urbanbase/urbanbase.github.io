@@ -45,13 +45,14 @@ layout: default
 
 <br>
 
-테스트123
+테스트1234
 <br>
 
 {{ page.url }}
-{% assign tag = page.url | replace:'/',' ' | truncatewords: 1,"" %}
-{% assign tagg = page.url | replace:'/',' ' | truncatewords: 1 | remove:'...' %}
-
+{% assign tag = page.url | replace:'/',' ' | truncatewords: 2,"" %}
+{% assign tagg = page.url | replace:'/',' ' | truncatewords: 2 | remove:'...' %}
+{% assign tag2 = page.url | replace:'/',' ' | truncatewords: 3,"" %}
+{% assign tagg2 = page.url | replace:'/',' ' | truncatewords: 3 | remove:'...' %}
 <br>
 
 {{ tag }}
@@ -59,6 +60,13 @@ layout: default
 <br>
 
 {{ tagg }}
+<br>
+
+{{ tag2 }}
+
+<br>
+
+{{ tagg2 }}
 
 --------------
 
