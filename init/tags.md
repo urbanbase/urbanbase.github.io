@@ -5,12 +5,12 @@ permalink: /tags/
 
 <div class="wrapper">
 
-    <strong>Tags</strong>
+    <h3>Tags</h3>
     <br>
     <br>
     {% for tag in site.tags %}
         {% assign t = tag | first %}
-        <a class="post" href="https://urbanbase.github.io/tags/{{ t }}">{{ t }}</a>
+        <a class="post" href="/tags/{{ t }}">{{ t }}</a>
         <br>
     {% endfor %}
 

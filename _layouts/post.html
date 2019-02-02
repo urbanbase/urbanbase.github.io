@@ -31,6 +31,10 @@ layout: default
     <div class="recent_title">
       <strong>Tags</strong>
       <br>
+      {% for tag in site.tags %}
+        {% assign t = tag | first %}
+        <a class="post" href="/tags/{{ t }}">{{ t }}</a>
+      {% endfor %}
     </div>
   </div>
 </div>
