@@ -46,7 +46,7 @@ jekyll-archives:
     tag: '/tag/:name/'
 
 collections:
-  tags:
+  tag:
     output: true
     permalink: /tags/:path/
 
