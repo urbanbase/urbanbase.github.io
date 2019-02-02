@@ -45,10 +45,13 @@ layout: default
 
 <br>
 
-테스트 테스트
+테스트2
+
+{{ site.url }}
 
 {% for post in site.posts %}
-  {{ post.excerpt }}
+  {{ post }}
+  <!-- {{ post.excerpt }} -->
 {% endfor %}
 
 
