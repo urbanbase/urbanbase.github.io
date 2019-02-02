@@ -48,15 +48,25 @@ layout: default
 <br>
 
 {{ page.url }}
+
+------------
+
 {{ site }}
 
+------------
+
+{{ site.posts }}
+
+------------
+
+{{ site.tags }}
+
+------------
+
+
+
 <br>
-
-for 테스트
-
-<br>
-
-
+<!-- 
 {% for post in site.posts %}
   
   <a class="post" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
@@ -85,7 +95,7 @@ for2 테스트
   {% assign t = tag | first %}
   {{ t }}
 {% endfor %}
-
+ -->
 
 </article>
 
