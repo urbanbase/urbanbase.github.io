@@ -1,6 +1,5 @@
 ---
-layout: main
-permalink: /tag/
+layout: tag
 ---
 
 <div class="wrapper">

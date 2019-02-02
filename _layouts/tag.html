@@ -1,0 +1,48 @@
+---
+layout: default
+---
+<div class="post">
+
+<div class="site-header-container {% if site.cover %}has-cover{% endif %}" {% if site.cover %}style="background-image: url({{ site.cover | prepend: site.baseurl }});"{% endif %}>
+  <div class="scrim {% if site.cover %}has-cover{% endif %}">
+    <header class="site-header">
+      <h1 class="title">{{ site.title }}</h1>
+      {% if site.subtitle %}<p class="subtitle">{{ site.subtitle }}</p>{% endif %}
+    </header>
+  </div>
+</div>
+
+<div class="recent_box">
+  <div class="recent_posts">
+    <div class="recent_title">
+      <strong>Recent Posts</strong>
+      <br>
+      {% assign count = 0 %}
+      {% for post in site.posts %}
+        {% if count < 5 %}
+          <a class="post" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <br>
+          {% assign count = count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="recent_tags">
+    <div class="recent_title">
+      <strong>Tags</strong>
+      <br>
+      {% for tag in site.tags %}
+        {% assign t = tag | first %}
+        {{ t }}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+<br>
+<article class="post-content">
+  {{ content }}
+</article>
+
+</div>
