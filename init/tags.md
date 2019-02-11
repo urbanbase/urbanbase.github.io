@@ -5,7 +5,7 @@ permalink: /tags/
 
 <div class="wrapper">
     <center>
-    <h3>Tags List</h3>
+    <h2>Tags List</h2>
     {% unless page.cover %} {% include page_divider.html %} {% endunless %}
     <br>
     /
