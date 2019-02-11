@@ -279,7 +279,7 @@ pre code.hljs {
     float: right;
     margin: 0;
     font-size: 1.5em;
-    padding-top: 0.5em;
+    padding-top: 0.3em;
     @include media ($tablet) {
       display: none;
     }
@@ -301,7 +301,7 @@ pre code.hljs {
     img {
       max-height: 2.5em;
       margin-top: 0.75em;
-      padding-right: 1em;
+      // padding-right: 1em;
     }
     span {
     	font-size: 1.25em;
@@ -372,13 +372,14 @@ pre code.hljs {
 	.wrapper {
 		// @include outer-container;
 		max-width: 82em;
-		margin-left: 15%;
-		margin-right: 3%;
+		margin-left: 0%;
+		margin-right: 0%;
 		padding: 1em;
 		overflow: auto;
 		@media screen and (min-width: 767px) {
-			margin-left: 0%;
-			margin-right: 0%;
+			max-width: 82em;
+			margin-left: 15%;
+			margin-right: 3%;
 			overflow: auto;
 			padding: 1em;
 		}
