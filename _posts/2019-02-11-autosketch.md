@@ -14,7 +14,8 @@ Auto sketch는 세계 유일의 실시간 도면 자동 변환 서비스입니�
 <br>
 
 ### Auto Sketch Demo <br>
-[![autosketch]({{ site.images \| relative_url }}/assets/tech(demo)/auto sketch (thumbnail).png)](https://youtu.be/sHmokPYTp2Q) {:target="_blank"}
+이미지를 클릭하면 영상으로 이동합니다.
+[![autosketch]({{ site.images \| relative_url }}/assets/tech(demo)/auto sketch (thumbnail).png)](https://youtu.be/sHmokPYTp2Q){:target="_blank"}
 <br>
 <br>
 <br>
