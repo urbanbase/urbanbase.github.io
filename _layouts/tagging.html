@@ -6,7 +6,7 @@ layout: default
 <div class="site-header-container {% if site.cover %}has-cover{% endif %}" {% if site.cover %}style="background-image: url({{ site.cover | prepend: site.baseurl }});"{% endif %}>
   <div class="scrim {% if site.cover %}has-cover{% endif %}">
     <header class="site-header">
-      <h1 class="title">{{ page.title }}</h1>
+      <h1 class="title">{{ site.title }}</h1>
       {% if site.subtitle %}<p class="subtitle">{{ site.subtitle }}</p>{% endif %}
     </header>
   </div>
@@ -38,11 +38,31 @@ layout: default
     </div>
   </div>
 </div>
-
-
-<br>
 <article class="post-content">
-  {{ content }}
+  {% assign tagname = page.url | replace:'/',' ' | replace:'tags',' | truncatewords: 1,"" %}
+  <div class="wrapper">
+    <br>
+    <center>
+      <h3>
+        <a href="/tags/">{{ tagname }}</a>
+      </h3>
+    </center>
+    {% unless page.cover %} {% include page_divider.html %} {% endunless %}
+    <div class="tag_show">
+      <ul class="post-list">
+        {% for post in site.posts %}
+          {% if post.tags contains tagname %}
+            <li>
+              <h2>
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+              </h2>
+              {{ post.excerpt }}
+            </li>
+            <hr>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
 </article>
-
 </div>
