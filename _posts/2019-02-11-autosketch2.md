@@ -1,13 +1,11 @@
 ﻿﻿---
 layout: post
-title:  "TEST"
-date:   2019-02-02 08:43:59
+title: "TEST"
+date: 2019-02-02 08:43:59
 categories: tech
 tags: jekyll welcome
 cover:  "/assets/instacode.png"
 ---
-
-<br>
 
 # Auto Sketch
 Auto sketch는 세계 유일의 실시간 도면 자동 변환 서비스입니다.
