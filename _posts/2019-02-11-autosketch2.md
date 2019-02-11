@@ -1,11 +1,10 @@
-<<<<<<< HEAD
-﻿﻿---
+---
 layout: post
 title: "TEST"
 date: 2019-02-02 08:43:59
 categories: tech
 tags: jekyll welcome
-cover:  "/assets/instacode.png"
+cover: "/assets/instacode.png"
 ---
 
 # Auto Sketch
