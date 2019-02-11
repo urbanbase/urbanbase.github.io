@@ -7,6 +7,7 @@ permalink: /tags/
     <center>
     <h3>Tags List</h3>
     {% unless page.cover %} {% include page_divider.html %} {% endunless %}
+    <br>
     /
     {% for tag in site.tags %}
         {% assign t = tag | first %}
