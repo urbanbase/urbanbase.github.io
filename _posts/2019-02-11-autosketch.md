@@ -1,19 +1,23 @@
-﻿---
+---
 layout: post
-title: "실시간 도면 자동 변환 서비스 Auto Sketch"
-date: 2019-02-11 08:43:59
-tags: auto_sketch urbanbase
+title: "TEST"
+date: 2019-02-02 08:43:59
+categories: tech
+tags: jekyll welcome
+cover: "/assets/instacode.png"
 ---
 
 # Auto Sketch
 Auto sketch는 세계 유일의 실시간 도면 자동 변환 서비스입니다.
 
+<br>
+
 어반베이스는 특허받은 2D 도면의 3D 도면 변환 기술로 세계 최대의 3D 공간 DB를 구축했습니다. Auto desk CAD, SketchUp에 플러그인을 제공하여 확장성을 넓혀가고, Live sketch 기술을 고도화하여 사용자가 직접 그린 도면을 자유롭게 2D 또는 3D로 변환할 수 있는 서비스를 예정 중입니다.
 
 <br>
-
-### Auto Sketch Demo
 <br>
+
+Auto Sketch Demo <br>
 [![Auto Sketch Demo](https://img.youtube.com/vi/sHmokPYTp2Q/0.jpg)](https://youtu.be/sHmokPYTp2Q)
 <Br>
 <br>
@@ -62,14 +66,13 @@ Auto sketch는 세계 유일의 실시간 도면 자동 변환 서비스입니�
 
 --------
 <h3>
-Auto Sketch 기술을 보유한 어반베이스는 3D 공간데이터 플랫폼입니다. <br>
+`Auto Sketch` 기술을 보유한 어반베이스는 3D 공간데이터 플랫폼입니다. <br>
 전 세계의 모든 공간정보를 하나의 플랫폼 안에서 자유롭게 활용할 수 있도록 도면 변환 기술 및 AR, VR 뷰어 기술이 담긴 API와 ADK를 제공하고 있습니다.<br>
 <br>
 Auto Sketch : API, Engine <br>
 <Br>
+어반베이스 개발자 사이트 [자세히 보기][Urbanbase-dev]
 </h3>
-
-**어반베이스 개발자 사이트 [자세히 보기][Urbanbase-dev]**
 [Urbanbase-dev]: https://developer.urbanbase.com
 
 <Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br>
@@ -149,42 +152,4 @@ print (a + b)
 | 1      | 2     | 3     | 4     | 5     |
 | 6<br>7 | 8     | 9     | 10    | 11    |
 |  ㅁㄴㅇㄹ       || ㅁ     | ㄴ    | ㅇ     |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
