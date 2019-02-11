@@ -1,10 +1,8 @@
 ---
 layout: post
-title: "TEST"
-date: 2019-02-02 08:43:59
-categories: tech
-tags: jekyll welcome
-cover: "/assets/instacode.png"
+title: "실시간 도면 자동 변환 서비스 Auto Sketch"
+date: 2019-02-11 16:43:59
+tags: auto_sketch urbanbase
 ---
 
 # Auto Sketch
@@ -19,7 +17,7 @@ Auto sketch는 세계 유일의 실시간 도면 자동 변환 서비스입니�
 
 Auto Sketch Demo <br>
 [![Auto Sketch Demo](https://img.youtube.com/vi/sHmokPYTp2Q/0.jpg)](https://youtu.be/sHmokPYTp2Q)
-<Br>
+<br>
 <br>
 <br>
 ## 기술 설명
@@ -41,7 +39,7 @@ Auto Sketch Demo <br>
 [![after]({{ site.images | relative_url }}/assets/tech(demo)/studio_auto sketch (after).png)]({{ site.images | relative_url }}/assets/tech(demo)/studio_auto sketch (after).png)
 
 <br>
-<Br>
+<br>
 기존에는 3D로 변환 시 치수 수정, 영역 분리, 개별 모델링 생성, 예외 처리 등 다소 복잡한 처리 과정을 거쳐야 했습니다. <br />
 하지만 이 과정에서 `Auto Sketch`를 활용할 경우, 사용자가 이미지 파일을 **Drag and Drop** 하여 바로 결과를 확인할 수 있습니다. <br />
 <br>
@@ -55,7 +53,7 @@ Auto Sketch Demo <br>
 <br>
 ### 응용 프로그램 빌드, 실행 및 테스트
 `Auto Sketch`에서 도면 이미지를 불러와 `Computer Vision`, `Machine Learning` 등을 통하여 3D 모델링 파일로 불러올 수 있습니다.<br>
-**저용량 이미지 파일 (.jpg, .png, .bmp) 등의 도면 이미지**만 입력하여 3D 모델링 결과를 손쉽게 확인할 수 있습니다.
+**저용량 이미지 파일 (\*.jpg, \*.png, \*.bmp) 등의 도면 이미지**만 입력하여 3D 모델링 결과를 손쉽게 확인할 수 있습니다.
 ### 실시간 다자간 온라인 화상 회의
 `Auto Sketch`를 통해 실시간으로 도면 이미지를 3D 모델링 파일로 불러올 수 있습니다. 온라인 화상 회의를 통하여 공간적 한계가 사라지고 실물 목업 운반 등의 문제점을 해결 할 수 있습니다.<br>
 또한, 해당 응용 프로그램을 Web으로 구현하여 도면 이미지 파일만 보유하여도 **3D 모델링 파일을 시각적으로 확인** 할 수 있습니다.<br>
@@ -66,13 +64,15 @@ Auto Sketch Demo <br>
 
 --------
 <h3>
-`Auto Sketch` 기술을 보유한 어반베이스는 3D 공간데이터 플랫폼입니다. <br>
+Auto Sketch 기술을 보유한 어반베이스는 3D 공간데이터 플랫폼입니다. <br>
 전 세계의 모든 공간정보를 하나의 플랫폼 안에서 자유롭게 활용할 수 있도록 도면 변환 기술 및 AR, VR 뷰어 기술이 담긴 API와 ADK를 제공하고 있습니다.<br>
 <br>
 Auto Sketch : API, Engine <br>
-<Br>
-어반베이스 개발자 사이트 [자세히 보기][Urbanbase-dev]
 </h3>
+<Br>
+
+어반베이스 개발자 사이트 [자세히 보기][Urbanbase-dev]
+
 [Urbanbase-dev]: https://developer.urbanbase.com
 
 <Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br><Br>
