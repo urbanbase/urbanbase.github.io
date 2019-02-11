@@ -2,7 +2,7 @@
 layout: post
 title: "실시간 도면 자동 변환 서비스 Auto Sketch"
 date: 2019-02-11 16:43:59
-tags: auto_sketch urbanbase
+tags: auto_sketch urbanbase floorplan computervision machinelearning 3D_converting 3D_modeling 오토스케치 어반베이스 도면 컴퓨터비전 머신러닝 도면변환 3D모델링 
 ---
 
 # Auto Sketch
@@ -14,7 +14,7 @@ Auto sketch는 세계 유일의 실시간 도면 자동 변환 서비스입니�
 <br>
 
 ### Auto Sketch Demo <br>
-[![Auto Sketch Demo](https://img.youtube.com/vi/sHmokPYTp2Q/0.jpg)](https://youtu.be/sHmokPYTp2Q)
+[![autosketch]({{ site.images \| relative_url }}/assets/tech(demo)/auto sketch (thumbnail).png)] (https://youtu.be/sHmokPYTp2Q)
 <br>
 <br>
 <br>
@@ -30,9 +30,9 @@ Auto sketch는 세계 유일의 실시간 도면 자동 변환 서비스입니�
 <Br>
 ## 프로세스
 
-| Before  | After | 
+| <center>Before  | After | 
 |--------|-------|
-| [![before]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (before).jpg)]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (before).jpg)|[![after]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (after).png)]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (after).png)|
+| [![before]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (before).jpg)]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (before).jpg)|[![after]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (after).png)]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (after).png)</center>|
 
 
 
@@ -62,12 +62,13 @@ Auto sketch는 세계 유일의 실시간 도면 자동 변환 서비스입니�
 --------
 <h3>
 Auto Sketch 기술을 보유한 어반베이스는 3D 공간데이터 플랫폼입니다.
-
+</h3>
 <br>
+<h4>
 전 세계의 모든 공간정보를 하나의 플랫폼 안에서 자유롭게 활용할 수 있도록 도면 변환 기술 및 AR, VR 뷰어 기술이 담긴 API와 ADK를 제공하고 있습니다.<br>
 <br>
 Auto Sketch : API, Engine <br>
-</h3>
+</h4>
 <Br>
 
 어반베이스 개발자 사이트 [자세히 보기][Urbanbase-dev]
