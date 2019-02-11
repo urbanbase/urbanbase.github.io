@@ -14,7 +14,7 @@ Auto sketch는 세계 유일의 실시간 도면 자동 변환 서비스입니�
 <br>
 
 ### Auto Sketch Demo <br>
-[![autosketch]({{ site.images \| relative_url }}/assets/tech(demo)/auto sketch (thumbnail).png)] (https://youtu.be/sHmokPYTp2Q)
+[![autosketch]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (before).jpg)](https://youtu.be/sHmokPYTp2Q)
 <br>
 <br>
 <br>
@@ -30,9 +30,9 @@ Auto sketch는 세계 유일의 실시간 도면 자동 변환 서비스입니�
 <Br>
 ## 프로세스
 
-| <center>Before  | After | 
+| <center>Before  | After </center>| 
 |--------|-------|
-| [![before]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (before).jpg)]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (before).jpg)|[![after]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (after).png)]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (after).png)</center>|
+| [![before]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (before).jpg)]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (before).jpg)|[![after]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (after).png)]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (after).png)|
 
 
 
@@ -40,7 +40,7 @@ Auto sketch는 세계 유일의 실시간 도면 자동 변환 서비스입니�
 
 <br>
 <br>
-기존에는 2D 도면에서 3D로 변환 시 치수 수정, 영역 분리, 개별 모델링 등 다소 복잡한 처리 과정을 거쳐야 했지만 `Auto Sketch`를 활용할 경우, 이미지 파일을 **Drag and Drop** 하여 바로 결과를 확인할 수 있어 작업 처리 시간을 단축할 수 있습니다. <br />
+기존에는 2D 도면에서 3D로 변환 시 치수 수정, 영역 분리, 개별 모델링 등 다소 복잡한 처리 과정을 거쳐야 했지만 `Auto Sketch`를 활용할 경우, 이미지 파일을 **Drag and Drop**하여 바로 결과를 확인할 수 있어 작업 처리 시간을 단축할 수 있습니다. <br />
 <br>
 또한 `Auto Sketch` 엔진은 각 구역의 특징을 분석하여 바닥재 및 벽재 등을 기본적으로 분석하여 제공해주며, `Computer Vision`, `Machine Learning`, `Auto Sketch` 알고리즘을 통하여 유의미한 의미를 가지는 3D 모델링 파일을 제공할 수 있습니다. <br>
 <br>
@@ -48,10 +48,12 @@ Auto sketch는 세계 유일의 실시간 도면 자동 변환 서비스입니�
 ## 응용분야
 ### 목업 제작
 `Auto Sketch`를 이용하여 실물 목업 제작 시 보여질 모습을 3D로 미리 확인해 볼 수 있으며 제작한 도면을 확인한 후 보완 및 수정이 용이 해 집니다.
+
 <br>
 ### 응용 프로그램 빌드, 실행 및 테스트
 `Auto Sketch`에서 도면 이미지를 불러와 `Computer Vision`, `Machine Learning` 등을 통하여 3D 모델링 파일로 불러올 수 있습니다.<br>
 **저용량 이미지 파일 (\*.jpg, \*.png, \*.bmp) 등의 도면 이미지**만 입력하여 3D 모델링 결과를 손쉽게 확인할 수 있습니다.
+
 <br>
 ### 실시간 다자간 온라인 화상 회의
 `Auto Sketch`를  Web으로 구현하여 실시간으로 도면 이미지를 **3D 모델링 파일을 시각적으로 확인**할 수 있습니다. 따라서 온라인 화상 회의를 통하여 공간적 한계가 사라지고 실물 목업 운반 등의 문제점을 해결 할 수 있습니다.<br>
@@ -60,6 +62,7 @@ Auto sketch는 세계 유일의 실시간 도면 자동 변환 서비스입니�
 
 
 --------
+<br>
 <h3>
 Auto Sketch 기술을 보유한 어반베이스는 3D 공간데이터 플랫폼입니다.
 </h3>
@@ -71,7 +74,6 @@ Auto Sketch : API, Engine <br>
 </h4>
 <Br>
 
-어반베이스 개발자 사이트 [자세히 보기][Urbanbase-dev]
 
-[Urbanbase-dev]: https://developer.urbanbase.com
+어반베이스 개발자 사이트 <a href="https://developer.urbanbase.com" target="_blank" style="color: #0366d6;"> 자세히 보기</a>
 <br><br><br>
