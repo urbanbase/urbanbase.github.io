@@ -43,6 +43,7 @@ html, body {
 		// border-width: thin;
 		// border-style: outset;
 		margin: 4% 2% 2% 2%;
+		margin-right: 15%;
 	  }
 }
 
@@ -361,7 +362,7 @@ pre code.hljs {
 	.wrapper {
 		// @include outer-container;
 		max-width: 82em;
-		margin-left: auto;
+		margin-left: 15%;
 		margin-right: 3%;
 		padding: 1em;
 		overflow: auto;

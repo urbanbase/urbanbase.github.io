@@ -35,7 +35,7 @@ permalink: /we/
 어반베이스의 기술과 개발팀에 대한 애정 어린 조언, 날카로운 피드백, 언제나 대환영입니다!
 <br>
 <br>
-<a href="https://developer.urbanbase.com" target="_blank">어반베이스에 대해 더 알고 싶으시다고요?</a>
+<a href="https://developer.urbanbase.com" target="_blank" style="color: #0366d6;">어반베이스에 대해 더 알고 싶으시다고요?</a>
 <br>
 <br>
 </center>
