@@ -21,11 +21,11 @@ html, body {
 
 .main_title {
 	font-size: modular-scale(6);
-	margin-right: 5em;
-	padding-right: 20%;
+	margin-right: 0%;
+	padding-right: 0%;
 	@media screen and (min-width: 767px) {
-		margin-right: 0em;
-		padding-right: 0em;
+		margin-right: 5em;
+		padding-right: 20%;
 	  }
 }
 
@@ -377,9 +377,11 @@ pre code.hljs {
 		padding: 1em;
 		overflow: auto;
 		@media screen and (min-width: 767px) {
-				overflow: auto;
-				padding: 1em;
-			}
+			margin-left: 0%;
+			margin-right: 0%;
+			overflow: auto;
+			padding: 1em;
+		}
 	}
 	/*
 	*	index.html
