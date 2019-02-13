@@ -58,10 +58,11 @@ Live Sketch는 사용자가 깊은 전문적인 지식이 없이도 스스로 �
   | 창문 생성 | 2D 평면도에서 작성된 선의 원하는 위치를 더블 클릭하여 창문을 생성합니다. |
   | 창문 삭제 | 삭제하고자 하는 창문을 클릭하여 컨텍스트 메뉴의 삭제버튼을 누릅니다. |
 
-<tbody><tr><td>Create Door</td> <td>Double-click on the desired location of the line created in the 2D floorplan to create the door.</td></tr> <tr><td>Delete Door</td> <td>Click the door you want to delete and click the Delete button in the Context menu.</td></tr></tbody>
+
 
 ### Camera Control
-| 기능 <a style="width:50px"> |           입력키 <a style="width:400px">          |      보조키 <a style="width:300px">      |                 설명                |
+
+| 기능  |           입력키           |      보조키      |                 설명                |
 |:----:|:-------------------------:|:----------------:|:-----------------------------------:|
 | 확대 | 'Zoom in' button          | Mouse wheel Up   | 화면을 확대합니다.                  |
 | 축소 | 'Zoom out'button          | Mouse wheel Down | 화면을 축소합니다.                  |
@@ -69,7 +70,7 @@ Live Sketch는 사용자가 깊은 전문적인 지식이 없이도 스스로 �
 | 원점 | Mouse right button + drag | -                | 뷰 화면을 잡고 뷰를 이동시킵니다.   |
 
 
-
+<table><thead><tr></tr></thead> <tbody><tr><td>Create Door</td> <td>Double-click on the desired location of the line created in the 2D floorplan to create the door.</td></tr> <tr><td>Delete Door</td> <td>Click the door you want to delete and click the Delete button in the Context menu.</td></tr></tbody></table>
 
 <hr>
 <br>
