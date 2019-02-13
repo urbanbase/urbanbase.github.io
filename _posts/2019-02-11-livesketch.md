@@ -1,66 +1,70 @@
 ---
 layout: post
-title: "실시간 도면 자동 변환 서비스 Auto Sketch"
+title: "2D도면을 직접 그리고 이를 3D도면으로 변환해서 보여주는 Live Sketch"
 date: 2019-02-11 16:43:59
-tags: autosketch urbanbase floorplan computervision machinelearning 3D_converting 3D_modeling
+tags: autosketch urbanbase floorplan computervision machinelearning 3D_converting 3D_modeling irbanbasestudio
 ---
 
-# Auto Sketch (API, Engine)
-Auto sketch는 세계 유일의 실시간 도면 자동 변환 서비스입니다.
+# Live Sketch (API, Interface)
+Live Sketch는 사용자가 웹상에서 직접 설계도면을 그리고 아이템들을 배치할 수 있는 Sketch 서비스입니다.
 <br>
-어반베이스는 특허받은 2D 도면의 3D 도면 변환 기술로 세계 최대의 3D 공간 DB를 구축했습니다. Auto desk CAD, SketchUp에 플러그인을 제공하여 확장성을 넓혀가고, Live sketch 기술을 고도화하여 사용자가 직접 그린 도면을 자유롭게 2D 또는 3D로 변환할 수 있는 서비스를 예정 중입니다.
+제작된 2D를 실시간으로 3D 변환해서 보여줌으로 사용자의 경험치를 극대화 시킵니다.
+기존에는 AutoCAD, SketchUp 등은 일반인들이 다루기 어려워 전문인력 고용을 통해 설계 도면을 제작을 했기에 비용. 시간. 인력 등의 소비가 불가피 하였습니다.
+하지만 Live Sketch를 통하여 일반사용자들이 웹상에서 쉽게 도면을 그리고 그대로 3D 모델링 된 건축물을 바로 볼 수 있으며 해당 도면상에 직접 아이템들을 배치하여 인테리어를 계획할 수 있게 되었습니다.
+## Live Sketch Demo <br>
+[Live Sketch 데모](http://3d.floorplanner.urbanbase.com.s3-website.ap-northeast-2.amazonaws.com)
 
-<br>
-<br>
 
-## Auto Sketch Demo <br>
-이미지를 클릭하면 영상으로 이동합니다.
-[![autosketch]({{ site.images \| relative_url }}/assets/tech(demo)/auto sketch (thumbnail).png)](https://youtu.be/sHmokPYTp2Q){:target="_blank"}
-<br>
-<br>
-<br>
 ## 기술 설명
+Live Sketch는 사용자가 깊은 전문적인 지식이 없이도 스스로 건축물의 평면도를 그리고 3D화 하여 확인해 볼 수 있는 서비스입니다. \
+고가의 3D 모델링 툴을 사용하거나 익힐 필요 없이 간단한 조작만으로 건물모델링을 제작, 편집이 가능하여, 집 구조의 프로토타입 제작 시 시간단축에 큰 이점이 있습니다. \
+3D화 한 오브젝트를 여러 각도로 둘러보고, 임의로 창과 문을 배치해 볼 수 있습니다. 
 
-`Auto Sketch`를 사용할 경우, 도면 이미지를 활용하여 **다양한 3D 확장자(\*.obj, \*.dae 등)의 3D 모델링 파일** 로 변환할 수 있습니다. <br>
-`2D-3D Converting` 기술로 인하여 직접 3D 모델링 파일을 제작하거나, 2D CAD 도면 (*.dwg) 등을 공유하지 않아도 시각적으로 바로 확인할 수 있습니다. <br>
-실물 모형 및 도면 파일은, 보안, 모형 및 파일 손상 등의 문제가 발생할 수 있지만 `Auto Sketch` 는 인터넷과 jpg 파일만 있으면 언제 어디서나 **3D 모델링 결과를 확인 할 수 있습니다.** <br>
-<br>
-`Auto Sketch`를 활용할 경우 **파일 용량 감소, 보안상의 문제 해결, 비용 절감, 편의성 증대**가 가능해집니다.
-<br>
-<Br>
-<Br>
-## 프로세스
+## 라이브 스케치 모드
+|Mode|설명|
+|---|---|
+| Edit Mode  | 건축물의 2D 평면도를 그리고 문과 창을 배치합니다. |
+| View Mode | 작성한 평면도를 바탕으로 3D화 하여 확인합니다. |
 
-| <center>Before  | <center>After | 
-|--------|-------|
-| [![before]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (before).jpg)]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (before).jpg)|[![after]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (after).png)]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (after).png)|
-
-
-<br>
-<br>
-기존에는 2D 도면에서 3D로 변환 시 치수 수정, 영역 분리, 개별 모델링 등 다소 복잡한 처리 과정을 거쳐야 했지만 `Auto Sketch`를 활용할 경우, 이미지 파일을 **Drag and Drop**하여 바로 결과를 확인할 수 있어 작업 처리 시간을 단축할 수 있습니다. <br />
-<br>
-또한 `Auto Sketch` 엔진은 각 구역의 특징을 분석하여 바닥재 및 벽재 등을 기본적으로 분석하여 제공해주며, `Computer Vision`, `Machine Learning`, `Auto Sketch` 알고리즘을 통하여 유의미한 의미를 가지는 3D 모델링 파일을 제공할 수 있습니다. 
-<br>
-<br>
-<br>
-## 응용분야
-### 목업 제작
-`Auto Sketch`를 이용하여 실물 목업 제작 시 보여질 모습을 3D로 미리 확인해 볼 수 있으며 제작한 도면을 확인한 후 보완 및 수정이 용이 해 집니다.
-<br>
-<br>
-### 응용 프로그램 빌드, 실행 및 테스트
-`Auto Sketch`에서 **저용량 이미지 파일 (\*.jpg, \*.png, \*.bmp) 등의 도면 이미지**만 입력하면 `Computer Vision`, `Machine Learning` 등을 통하여 3D 모델링 파일로 불러올 수 있습니다.
-<br>
-<br>
-### 실시간 다자간 온라인 화상 회의
-`Auto Sketch`를  Web으로 구현하여 실시간으로 도면 이미지를 **3D 모델링 파일을 시각적으로 확인**할 수 있습니다. 따라서 온라인 화상 회의를 통하여 공간적 한계가 사라지고 실물 목업 운반 등의 문제점을 해결 할 수 있습니다.
-<br>
-<br>
-<br>
+### Edit Mode
+- Wall Editing \
+  벽 구조물을 수정합니다.
+  |||
+  |---|---|
+  | 벽 생성 <a style="width:50px">  | 2D 평면도에서 Wall 편집 버튼이 활성화 되어있으면, 빈 공간을 클릭하여 벽생성을 시작하고, 다음 지점을 클릭하여 이어 나가는 방식으로 진행합니다. 종료지점에서 더블클릭을 하여 그리기를 중단합니다. |
+  | 벽 이동 | 2D평면도 상에 그려진 선이나 점을 클릭하여 컨텍스트 메뉴를 띄운 후, 이동버튼을 누릅니다. 이 때 벽은 마우스에 스냅이 되고, 이동시킬 목표지점에서 클릭을 하면 벽이동이 완료됩니다. |
+  | 벽 삭제 | 삭제하고자 하는 선이나 점을 클릭하여 컨텍스트 메뉴를 띄운 후, 삭제버튼을 누릅니다. |
 
 
---------
+
+- Door Editing \
+  작성한 벽 위에 문을 배치합니다.
+  |<span style="font-weight:normal">문 생성</span>|<span style="font-weight:normal">2D 평면도에서 작성된 선의 원하는 위치를 더블 클릭하여 문을 생성합니다.</span>|
+  |---|---|
+  | 문 삭제 | 삭제하고자 하는 문을 클릭하여 컨텍스트 메뉴의 삭제버튼을 누릅니다. |
+
+
+- Window Editing \
+  작성한 벽 위에 창문을 배치합니다.
+  |||
+  |---|---|
+  | 창문 생성 | 2D 평면도에서 작성된 선의 원하는 위치를 더블 클릭하여 창문을 생성합니다. |
+  | 창문 삭제 | 삭제하고자 하는 창문을 클릭하여 컨텍스트 메뉴의 삭제버튼을 누릅니다. |
+
+  <tbody><tr><td>Create Door</td> <td>Double-click on the desired location of the line created in the 2D floorplan to create the door.</td></tr> <tr><td>Delete Door</td> <td>Click the door you want to delete and click the Delete button in the Context menu.</td></tr></tbody>
+
+### Camera Control
+| 기능 <a style="width:50px"> |           입력키 <a style="width:400px">          |      보조키 <a style="width:300px">      |                 설명                |
+|:----:|:-------------------------:|:----------------:|:-----------------------------------:|
+| 확대 | 'Zoom in' button          | Mouse wheel Up   | 화면을 확대합니다.                  |
+| 축소 | 'Zoom out'button          | Mouse wheel Down | 화면을 축소합니다.                  |
+| 원점 | 'Origin'button            | -                | 기본 시작점과 스케일로 회귀 합니다. |
+| 원점 | Mouse right button + drag | -                | 뷰 화면을 잡고 뷰를 이동시킵니다.   |
+
+
+
+
+<hr>
 <br>
 <br>
 <h3>
