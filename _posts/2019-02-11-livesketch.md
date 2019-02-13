@@ -16,19 +16,25 @@ Live Sketch는 사용자가 웹상에서 직접 설계도면을 그리고 아이
 
 
 ## 기술 설명
-Live Sketch는 사용자가 깊은 전문적인 지식이 없이도 스스로 건축물의 평면도를 그리고 3D화 하여 확인해 볼 수 있는 서비스입니다. \
-고가의 3D 모델링 툴을 사용하거나 익힐 필요 없이 간단한 조작만으로 건물모델링을 제작, 편집이 가능하여, 집 구조의 프로토타입 제작 시 시간단축에 큰 이점이 있습니다. \
+
+Live Sketch는 사용자가 깊은 전문적인 지식이 없이도 스스로 건축물의 평면도를 그리고 3D화 하여 확인해 볼 수 있는 서비스입니다.
+
+고가의 3D 모델링 툴을 사용하거나 익힐 필요 없이 간단한 조작만으로 건물모델링을 제작, 편집이 가능하여, 집 구조의 프로토타입 제작 시 시간단축에 큰 이점이 있습니다.
+
 3D화 한 오브젝트를 여러 각도로 둘러보고, 임의로 창과 문을 배치해 볼 수 있습니다. 
 
 ## 라이브 스케치 모드
+
 |Mode|설명|
 |---|---|
 | Edit Mode  | 건축물의 2D 평면도를 그리고 문과 창을 배치합니다. |
 | View Mode | 작성한 평면도를 바탕으로 3D화 하여 확인합니다. |
 
 ### Edit Mode
+
 - Wall Editing \
   벽 구조물을 수정합니다.
+
   |||
   |---|---|
   | 벽 생성 <a style="width:50px">  | 2D 평면도에서 Wall 편집 버튼이 활성화 되어있으면, 빈 공간을 클릭하여 벽생성을 시작하고, 다음 지점을 클릭하여 이어 나가는 방식으로 진행합니다. 종료지점에서 더블클릭을 하여 그리기를 중단합니다. |
@@ -51,7 +57,7 @@ Live Sketch는 사용자가 깊은 전문적인 지식이 없이도 스스로 �
   | 창문 생성 | 2D 평면도에서 작성된 선의 원하는 위치를 더블 클릭하여 창문을 생성합니다. |
   | 창문 삭제 | 삭제하고자 하는 창문을 클릭하여 컨텍스트 메뉴의 삭제버튼을 누릅니다. |
 
-  <tbody><tr><td>Create Door</td> <td>Double-click on the desired location of the line created in the 2D floorplan to create the door.</td></tr> <tr><td>Delete Door</td> <td>Click the door you want to delete and click the Delete button in the Context menu.</td></tr></tbody>
+<tbody><tr><td>Create Door</td> <td>Double-click on the desired location of the line created in the 2D floorplan to create the door.</td></tr> <tr><td>Delete Door</td> <td>Click the door you want to delete and click the Delete button in the Context menu.</td></tr></tbody>
 
 ### Camera Control
 | 기능 <a style="width:50px"> |           입력키 <a style="width:400px">          |      보조키 <a style="width:300px">      |                 설명                |
