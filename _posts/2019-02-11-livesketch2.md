@@ -33,10 +33,10 @@ Live Sketch는 사용자가 깊은 전문적인 지식이 없이도 스스로 �
 
 ### Edit Mode
 
-- Wall Editing \
+- Wall Editing 
   벽 구조물을 수정합니다.
 
-  | <a style="width:50px">| <a style="width:50px">|
+  | <span style="width:100px">| <span style="width:100px">|
   |---|---|
   | 벽 생성  | 2D 평면도에서 Wall 편집 버튼이 활성화 되어있으면, 빈 공간을 클릭하여 벽생성을 시작하고, 다음 지점을 클릭하여 이어 나가는 방식으로 진행합니다. 종료지점에서 더블클릭을 하여 그리기를 중단합니다. |
   | 벽 이동 | 2D평면도 상에 그려진 선이나 점을 클릭하여 컨텍스트 메뉴를 띄운 후, 이동버튼을 누릅니다. 이 때 벽은 마우스에 스냅이 되고, 이동시킬 목표지점에서 클릭을 하면 벽이동이 완료됩니다. |
@@ -44,7 +44,7 @@ Live Sketch는 사용자가 깊은 전문적인 지식이 없이도 스스로 �
 
 - Door Editing
 
-  작성한 벽 위에 문을 배치합니다.
+  작성한 벽 위에 문을 배치합니다. 수정2
 
   |<span style="font-weight:normal">문 생성</span>|<span style="font-weight:normal">2D 평면도에서 작성된 선의 원하는 위치를 더블 클릭하여 문을 생성합니다.</span>|
   |---|---|
@@ -71,7 +71,7 @@ Live Sketch는 사용자가 깊은 전문적인 지식이 없이도 스스로 �
 | 원점 | Mouse right button + drag | -                | 뷰 화면을 잡고 뷰를 이동시킵니다.   |
 
 'DEV'
-<table><thead><tr></tr></thead> <tbody><tr><td>Create Door</td> <td>Double-click on the desired location of the line created in the 2D floorplan to create the door.</td></tr> <tr><td>Delete Door</td> <td>Click the door you want to delete and click the Delete button in the Context menu.</td></tr></tbody></table>
+<table><thead><tr></tr></thead> <tbody><tr><td style="width:200px">Create Door</td> <td>Double-click on the desired location of the line created in the 2D floorplan to create the door.</td></tr> <tr><td>Delete Door</td> <td>Click the door you want to delete and click the Delete button in the Context menu.</td></tr></tbody></table>
 
 
 
