@@ -73,18 +73,17 @@ Live Sketch는 사용자가 깊은 전문적인 지식이 없이도 스스로 �
 'DEV'
 <table><thead><tr></tr></thead> <tbody><tr><td style="width:200px">Create Door</td> <td>Double-click on the desired location of the line created in the 2D floorplan to create the door.</td></tr> <tr><td>Delete Door</td> <td>Click the door you want to delete and click the Delete button in the Context menu.</td></tr></tbody></table>
 
-<table>
-  <thead>
-    <tr>
-      <th style="
-    width: 200px;
-">Mode</th>
-      <th>설명</th>
-    </tr>
-  </thead>
+<table style="
+    text-align: left;
+">
+  
   <tbody>
-    <tr>
-      <td>Edit Mode</td>
+    <tr style="
+    width: 200px;
+">
+      <td style="
+    width: 200px;
+">Edit Mode</td>
       <td>건축물의 2D 평면도를 그리고 문과 창을 배치합니다.</td>
     </tr>
     <tr>
