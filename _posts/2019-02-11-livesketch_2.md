@@ -18,9 +18,9 @@ Live Sketch는 사용자가 웹상에서 직접 설계도면을 그리고 아이
 
 [![live sketch]({{ site.images \| relative_url }}/assets/tech(demo)/2. live sketch.gif)]({{ site.images \| relative_url }}/assets/tech(demo)/2. live sketch.gif)
 
-<h4> Live Sketch를 직접 만나보세요.</h4>
+<h4> Live Sketch를 직접 만나보세요.
 
-<a href="http://3d.floorplanner.urbanbase.com.s3-website.ap-northeast-2.amazonaws.com" target="_blank" style="color: #0366d6;"> >Live Sketch 경험 하기</a>
+<a href="http://3d.floorplanner.urbanbase.com.s3-website.ap-northeast-2.amazonaws.com" target="_blank" style="color: #0366d6;"> >Live Sketch 경험 하기</a> </h4>
 
 <br>
 
@@ -36,23 +36,24 @@ Live Sketch는 사용자가 깊은 전문적인 지식이 없이도 스스로 �
 
 ## 라이브 스케치 모드
 
-    <table style="text-align: left;">
-    <tbody>
-    <tr style="width: 220px;">
-        <td style="width: 220px;">Edit Mode</td>
-        <td>건축물의 2D 평면도를 그리고 문과 창을 배치합니다.</td>
-    </tr>
-    <tr>
-        <td>View Mode</td>
-        <td>작성한 평면도를 바탕으로 3D화 하여 확인합니다.</td>
-    </tr>
-    </tbody>
-    </table>
+<table style="text-align: left;">
+<tbody>
+<tr style="width: 220px;">
+    <td style="width: 220px;">Edit Mode</td>
+    <td>건축물의 2D 평면도를 그리고 문과 창을 배치합니다.</td>
+</tr>
+<tr>
+    <td>View Mode</td>
+    <td>작성한 평면도를 바탕으로 3D화 하여 확인합니다.</td>
+</tr>
+</tbody>
+</table>
 
 <br>
 ### Edit Mode
 
-- Wall Editing 
+- Wall Editing
+
   벽 구조물을 수정합니다.
 
     <table style="text-align: left;">
