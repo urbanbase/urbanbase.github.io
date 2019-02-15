@@ -18,15 +18,15 @@ Live Sketch는 사용자가 웹상에서 직접 설계도면을 그리고 아이
 
 [![live sketch]({{ site.images \| relative_url }}/assets/tech(demo)/2. live sketch.gif)]({{ site.images \| relative_url }}/assets/tech(demo)/2. live sketch.gif)
 
-<h4> Live Sketch를 직접 만나보세요.
-
+<h4> Live Sketch를 직접 만나보세요. 
+<br>
 <a href="http://3d.floorplanner.urbanbase.com.s3-website.ap-northeast-2.amazonaws.com" target="_blank" style="color: #0366d6;"> >Live Sketch 경험 하기</a> </h4>
 
 <br>
 
 ## 기술 설명
 
-Live Sketch는 사용자가 깊은 전문적인 지식이 없이도 스스로 건축물의 평면도를 그리고 3D화 하여 확인해 볼 수 있는 서비스입니다.
+`Live Sketch`는 사용자가 깊은 전문적인 지식이 없이도 스스로 건축물의 평면도를 그리고 3D화 하여 확인해 볼 수 있는 서비스입니다.
 
 고가의 3D 모델링 툴을 사용하거나 익힐 필요 없이 간단한 조작만으로 건물모델링을 제작, 편집이 가능하여, 집 구조의 프로토타입 제작 시 시간단축에 큰 이점이 있습니다.
 
