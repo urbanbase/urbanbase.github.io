@@ -15,7 +15,7 @@ Auto sketch는 세계 유일의 실시간 도면 자동 변환 서비스입니�
 
 ## Auto Sketch Demo <br>
 이미지를 클릭하면 영상으로 이동합니다.
-[![autosketch]({{ site.images \| relative_url }}/assets/tech(demo)/auto sketch (thumbnail).png)](https://youtu.be/sHmokPYTp2Q){:target="_blank"}
+[![autosketch]({{ site.images \| relative_url }}/assets/tech(demo)/1. auto sketch (thumbnail).png)](https://youtu.be/sHmokPYTp2Q){:target="_blank"}
 <br>
 <br>
 <br>
@@ -33,7 +33,7 @@ Auto sketch는 세계 유일의 실시간 도면 자동 변환 서비스입니�
 
 | <center>Before  | <center>After | 
 |--------|-------|
-| [![before]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (before).jpg)]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (before).jpg)|[![after]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (after).png)]({{ site.images \| relative_url }}/assets/tech(demo)/studio_auto sketch (after).png)|
+| [![before]({{ site.images \| relative_url }}/assets/tech(demo)/1. auto sketch (before).jpg)]({{ site.images \| relative_url }}/assets/tech(demo)/1.auto sketch (before).jpg)|[![after]({{ site.images \| relative_url }}/assets/tech(demo)/1. auto sketch (after).png)]({{ site.images \| relative_url }}/assets/tech(demo)/1. auto sketch (after).png)|
 
 
 <br>

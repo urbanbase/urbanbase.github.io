@@ -14,6 +14,7 @@ Live Sketch는 사용자가 웹상에서 직접 설계도면을 그리고 아이
 
 ## Live Sketch Demo <br>
 
+[![live sketch]({{ site.images \| relative_url }}/assets/tech(demo)/2. live sketch.gif)]({{ site.images \| relative_url }}/assets/tech(demo)/2. live sketch.gif)
 
 <h5> Live Sketch를 직접 만나보세요.</h5>
 
@@ -102,7 +103,8 @@ Live Sketch는 사용자가 깊은 전문적인 지식이 없이도 스스로 �
 | 원점 | Mouse right button + drag | -                | 뷰 화면을 잡고 뷰를 이동시킵니다.   |
 
 
-
+<br>
+<br>
 
 <hr>
 <br>
