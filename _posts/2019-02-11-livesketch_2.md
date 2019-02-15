@@ -12,11 +12,13 @@ Live Sketch는 사용자가 웹상에서 직접 설계도면을 그리고 아이
 기존에는 AutoCAD, SketchUp 등은 일반인들이 다루기 어려워 전문인력 고용을 통해 설계 도면을 제작을 했기에 비용, 시간, 인력의 소비가 불가피 하였습니다.
 하지만 Live Sketch를 통하여 일반사용자들이 웹상에서 쉽게 도면을 그리고 그대로 3D 모델링 된 건축물을 바로 볼 수 있으며 해당 도면상에 직접 아이템들을 배치하여 인테리어를 계획할 수 있게 되었습니다.
 
+<br>
+
 ## Live Sketch Demo <br>
 
 [![live sketch]({{ site.images \| relative_url }}/assets/tech(demo)/2. live sketch.gif)]({{ site.images \| relative_url }}/assets/tech(demo)/2. live sketch.gif)
 
-<h5> Live Sketch를 직접 만나보세요.</h5>
+<h4> Live Sketch를 직접 만나보세요.</h4>
 
 <a href="http://3d.floorplanner.urbanbase.com.s3-website.ap-northeast-2.amazonaws.com" target="_blank" style="color: #0366d6;"> >Live Sketch 경험 하기</a>
 
@@ -34,18 +36,18 @@ Live Sketch는 사용자가 깊은 전문적인 지식이 없이도 스스로 �
 
 ## 라이브 스케치 모드
 
-<table style="text-align: left;">
-<tbody>
-  <tr style="width: 250px;">
-    <td style="width: 250px;">Edit Mode</td>
-    <td>건축물의 2D 평면도를 그리고 문과 창을 배치합니다.</td>
-  </tr>
-  <tr>
-    <td>View Mode</td>
-    <td>작성한 평면도를 바탕으로 3D화 하여 확인합니다.</td>
-  </tr>
-</tbody>
-</table>
+    <table style="text-align: left;">
+    <tbody>
+    <tr style="width: 220px;">
+        <td style="width: 220px;">Edit Mode</td>
+        <td>건축물의 2D 평면도를 그리고 문과 창을 배치합니다.</td>
+    </tr>
+    <tr>
+        <td>View Mode</td>
+        <td>작성한 평면도를 바탕으로 3D화 하여 확인합니다.</td>
+    </tr>
+    </tbody>
+    </table>
 
 <br>
 ### Edit Mode
@@ -55,8 +57,8 @@ Live Sketch는 사용자가 깊은 전문적인 지식이 없이도 스스로 �
 
     <table style="text-align: left;">
     <tbody>
-        <tr style="width: 250px;">
-        <td style="width: 250px;">벽 생성</td>
+        <tr style="width: 220px;">
+        <td style="width: 220px;">벽 생성</td>
         <td>2D 평면도에서 Wall 편집 버튼이 활성화 되어있으면, 빈 공간을 클릭하여 벽생성을 시작하고, 다음 지점을 클릭하여 이어 나가는 방식으로 진행합니다. 종료지점에서 더블클릭을 하여 그리기를 중단합니다.</td>
         </tr>
         <tr>
@@ -79,8 +81,8 @@ Live Sketch는 사용자가 깊은 전문적인 지식이 없이도 스스로 �
 
     <table style="text-align: left;">
     <tbody>
-    <tr style="width: 250px;">
-        <td style="width: 250px;">문/창문 생성</td>
+    <tr style="width: 220px;">
+        <td style="width: 220px;">문/창문 생성</td>
         <td>2D 평면도에서 작성된 선의 원하는 위치를 더블 클릭하여 문/창문을 생성합니다.</td>
     </tr>
     <tr>
