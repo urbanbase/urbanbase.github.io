@@ -2,7 +2,7 @@
 layout: post
 title: "도면을 직접 그리고 바로 3D로 볼 수 있는 Live Sketch"
 date: 2019-02-11 16:43:59
-tags: livesketch urbanbase floorplan computervision machinelearning 3D_converting 3D_modeling urbanbasestudio 
+tags: livesketch urbanbase floorplan 3D_converting 3D_modeling urbanbasestudio 
 ---
 
 # Live Sketch (API, Interface)
@@ -52,22 +52,22 @@ Live Sketch는 사용자가 깊은 전문적인 지식이 없이도 스스로 �
 - Wall Editing 
   벽 구조물을 수정합니다.
 
-<table style="text-align: left;">
-  <tbody>
-    <tr style="width: 250px;">
-      <td style="width: 250px;">벽 생성</td>
-      <td>2D 평면도에서 Wall 편집 버튼이 활성화 되어있으면, 빈 공간을 클릭하여 벽생성을 시작하고, 다음 지점을 클릭하여 이어 나가는 방식으로 진행합니다. 종료지점에서 더블클릭을 하여 그리기를 중단합니다.</td>
-    </tr>
-    <tr>
-      <td>벽 이동</td>
-      <td>2D평면도 상에 그려진 선이나 점을 클릭하여 컨텍스트 메뉴를 띄운 후, 이동버튼을 누릅니다. 이 때 벽은 마우스에 스냅이 되고, 이동시킬 목표지점에서 클릭을 하면 벽이동이 완료됩니다.</td>
-    </tr>
-     <tr>
-      <td>벽 삭제</td>
-      <td>삭제하고자 하는 선이나 점을 클릭하여 컨텍스트 메뉴를 띄운 후, 삭제버튼을 누릅니다.</td>
-    </tr>
-  </tbody>
-</table>
+    <table style="text-align: left;">
+    <tbody>
+        <tr style="width: 250px;">
+        <td style="width: 250px;">벽 생성</td>
+        <td>2D 평면도에서 Wall 편집 버튼이 활성화 되어있으면, 빈 공간을 클릭하여 벽생성을 시작하고, 다음 지점을 클릭하여 이어 나가는 방식으로 진행합니다. 종료지점에서 더블클릭을 하여 그리기를 중단합니다.</td>
+        </tr>
+        <tr>
+        <td>벽 이동</td>
+        <td>2D평면도 상에 그려진 선이나 점을 클릭하여 컨텍스트 메뉴를 띄운 후, 이동버튼을 누릅니다. 이 때 벽은 마우스에 스냅이 되고, 이동시킬 목표지점에서 클릭을 하면 벽이동이 완료됩니다.</td>
+        </tr>
+        <tr>
+        <td>벽 삭제</td>
+        <td>삭제하고자 하는 선이나 점을 클릭하여 컨텍스트 메뉴를 띄운 후, 삭제버튼을 누릅니다.</td>
+        </tr>
+    </tbody>
+    </table>
 
 <br>
 
@@ -76,18 +76,18 @@ Live Sketch는 사용자가 깊은 전문적인 지식이 없이도 스스로 �
   작성한 벽 위에 문/창문을 배치합니다. 
 
 
-<table style="text-align: left;">
-<tbody>
-  <tr style="width: 250px;">
-    <td style="width: 250px;">문/창문 생성</td>
-    <td>2D 평면도에서 작성된 선의 원하는 위치를 더블 클릭하여 문/창문을 생성합니다.</td>
-  </tr>
-  <tr>
-    <td>문/창문 삭제</td>
-    <td>삭제하고자 하는 문/창문을 클릭하여 컨텍스트 메뉴의 삭제버튼을 누릅니다.</td>
-  </tr>
-</tbody>
-</table>
+    <table style="text-align: left;">
+    <tbody>
+    <tr style="width: 250px;">
+        <td style="width: 250px;">문/창문 생성</td>
+        <td>2D 평면도에서 작성된 선의 원하는 위치를 더블 클릭하여 문/창문을 생성합니다.</td>
+    </tr>
+    <tr>
+        <td>문/창문 삭제</td>
+        <td>삭제하고자 하는 문/창문을 클릭하여 컨텍스트 메뉴의 삭제버튼을 누릅니다.</td>
+    </tr>
+    </tbody>
+    </table>
 
 <br>
 <br>
