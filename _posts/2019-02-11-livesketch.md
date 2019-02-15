@@ -44,7 +44,8 @@ tags: livesketch urbanbase floorplan computervision machinelearning 3D_convertin
 
 <table style="text-align: left;">
   <tbody style="padding-left: 18px;">
-    <tr style="width: 200px;">
+    <tr style="width: 200px;"
+    >
       <td style="
     width: 200px;
     border-right-style: outset;
@@ -60,4 +61,44 @@ tags: livesketch urbanbase floorplan computervision machinelearning 3D_convertin
   </tbody>
 </table>
 
-
+test 2
+<table style="text-align: left;margin-top: 10px;margin-bottom: 10px;">
+  <tbody style="">
+    <tr style="width: 200px;border-top-style: inset;border-top-color: #e8e8e8;border-top-width: 1px;">
+      <td style="
+    width: 200px;
+    border-right-style: inset;
+    border-right-color: #e8e8e8;
+    border-right-width: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+">Edit Mode</td>
+      <td style="
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+">건축물의 2D 평면도를 그리고 문과 창을 배치합니다.</td>
+    </tr>
+    <tr>
+      <td style="
+    width: 200px;
+    border-right-style: inset;
+    border-right-color: #e8e8e8;
+    border-right-width: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+">View Mode</td>
+      <td style="
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+">작성한 평면도를 바탕으로 3D화 하여 확인합니다.</td>
+    </tr>
+  </tbody>
+</table>

@@ -6,11 +6,11 @@ tags: livesketch urbanbase floorplan 3D_converting 3D_modeling urbanbasestudio
 ---
 
 # Live Sketch (API, Interface)
-Live Sketch는 사용자가 웹상에서 직접 설계도면을 그리고 아이템들을 배치할 수 있는 Sketch 서비스입니다.
+`Live Sketch`는 사용자가 웹상에서 직접 설계도면을 그리고 아이템들을 배치할 수 있는 Sketch 서비스입니다.
 
 제작된 2D를 실시간으로 3D 변환해서 보여줌으로 사용자의 경험치를 극대화 시킵니다.
 기존에는 AutoCAD, SketchUp 등은 일반인들이 다루기 어려워 전문인력 고용을 통해 설계 도면을 제작을 했기에 비용, 시간, 인력의 소비가 불가피 하였습니다.
-하지만 Live Sketch를 통하여 일반사용자들이 웹상에서 쉽게 도면을 그리고 그대로 3D 모델링 된 건축물을 바로 볼 수 있으며 해당 도면상에 직접 아이템들을 배치하여 인테리어를 계획할 수 있게 되었습니다.
+하지만 `Live Sketch`를 통하여 일반사용자들이 웹상에서 쉽게 도면을 그리고 그대로 3D 모델링 된 건축물을 바로 볼 수 있으며 해당 도면상에 직접 아이템들을 배치하여 인테리어를 계획할 수 있게 되었습니다.
 
 <br>
 
