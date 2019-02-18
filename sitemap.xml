@@ -6,35 +6,39 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
 <url>
   <loc>https://urbanbase.github.io/</loc>
-  <lastmod>2019-02-18T01:40:58+00:00</lastmod>
+  <lastmod>2019-02-18T02:37:25+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://urbanbase.github.io/we/</loc>
-  <lastmod>2019-02-18T01:40:58+00:00</lastmod>
+  <lastmod>2019-02-18T02:37:25+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://urbanbase.github.io/dev/</loc>
-  <lastmod>2019-02-18T01:40:58+00:00</lastmod>
+  <lastmod>2019-02-18T02:37:25+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://urbanbase.github.io/tech/</loc>
-  <lastmod>2019-02-18T01:40:58+00:00</lastmod>
+  <lastmod>2019-02-18T02:37:25+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://urbanbase.github.io/2019/02/15/livesketch.html</loc>
+  <lastmod>2019-02-18T02:37:25+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://urbanbase.github.io/2019/02/11/autosketch.html</loc>
-  <lastmod>2019-02-18T01:40:58+00:00</lastmod>
+  <lastmod>2019-02-18T02:37:25+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://urbanbase.github.io/init/welcome.html</loc>
-  <lastmod>2019-02-18T01:40:58+00:00</lastmod>
+  <lastmod>2019-02-18T02:37:25+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
