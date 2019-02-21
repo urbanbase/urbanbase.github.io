@@ -113,7 +113,7 @@ tags: livesketch urbanbase floorplan 3D_converting 3D_modeling urbanbasestudio
 <br>
 <br>
 <h3>
-Auto Sketch 기술을 보유한 어반베이스는 3D 공간데이터 플랫폼입니다.
+Live Sketch 기술을 보유한 어반베이스는 3D 공간데이터 플랫폼입니다.
 </h3>
 <br>
 <h4>
