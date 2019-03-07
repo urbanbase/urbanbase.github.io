@@ -28,13 +28,13 @@ tags: 3DHomeDesign urbanbase urbanbasecore crane
 
 ## 3D Home Design Demo
 
-<h4> 벽지 변경 <h4>
+<h4> 벽지 변경 </h4>
 
 [![3D Home Design]({{ site.images \| relative_url }}/assets/tech(demo)/3. 3D HomeDesign (1).gif)]({{ site.images \| relative_url }}/assets/tech(demo)/3. 3D Home Design (1).gif)
 
-<h4> 가구 배치 <h4>
+<h4> 가구 배치 </h4>
 
-[![3D Home Design]({{ site.images \| relative_url }}/assets/tech(demo)/3. 3D Home Design (2).gif)]({{ site.images \| relative_url }}/assets/tech(demo)/3. 3D Home Design (2).gif)
+[![3D Home Design]({{ site.images \| relative_url }}/assets/tech(demo)/3. 3D HomeDesign (2).gif)]({{ site.images \| relative_url }}/assets/tech(demo)/3. 3D HomeDesign (2).gif)
 
 <h4> 3D Home Design를 직접 만나보세요. 
 <br>
