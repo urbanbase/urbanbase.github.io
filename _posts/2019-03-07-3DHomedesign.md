@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "3D 공간데이터로 즐기는 가상의 인테리어 3D HomeDesign"
+title: "3D로 즐기는 가상의 인테리어 3D Home Design"
 date: 2019-03-07 16:00:00
 tags: 3DHomeDesign urbanbase urbanbasecore crane
 ---
@@ -28,13 +28,13 @@ tags: 3DHomeDesign urbanbase urbanbasecore crane
 
 ## 3D Home Design Demo
 
-**벽지 변경**
+<h4> 벽지 변경 <h4>
 
-[![live sketch]({{ site.images \| relative_url }}/assets/tech(demo)/3. 3D Home Design (1).gif)]({{ site.images \| relative_url }}/assets/tech(demo)/3. 3D Home Design (1).gif)
+[![3D Home Design]({{ site.images \| relative_url }}/assets/tech(demo)/3. 3D HomeDesign (1).gif)]({{ site.images \| relative_url }}/assets/tech(demo)/3. 3D Home Design (1).gif)
 
-**가구 배치**
+<h4> 가구 배치 <h4>
 
-[![live sketch]({{ site.images \| relative_url }}/assets/tech(demo)/3. 33D Home Design (2).gif)]({{ site.images \| relative_url }}/assets/tech(demo)/3. 3D Home Design (2).gif)
+[![3D Home Design]({{ site.images \| relative_url }}/assets/tech(demo)/3. 3D Home Design (2).gif)]({{ site.images \| relative_url }}/assets/tech(demo)/3. 3D Home Design (2).gif)
 
 <h4> 3D Home Design를 직접 만나보세요. 
 <br>
@@ -94,7 +94,7 @@ Crane은 사용 용도에 따라 4가지 모드(Productive Viewer, Viewer, Edito
 <br>
 <br>
 <h3>
-3D Viewer 기술을 보유한 어반베이스는 3D 공간데이터 플랫폼입니다.
+3D Home Design 기술을 보유한 어반베이스는 3D 공간데이터 플랫폼입니다.
 </h3>
 <br>
 <h4>
