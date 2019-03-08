@@ -6,9 +6,4 @@ categories:
 cover:  "/assets/instacode.png"
 ---
 
-소개합니다 `어반베이스`
-
-## 소개
-
-
-소개소개소개소개소개소개소개
+준비중입니다.
