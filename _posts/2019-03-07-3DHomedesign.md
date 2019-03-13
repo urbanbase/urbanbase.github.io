@@ -7,7 +7,7 @@ tags: 3DHomeDesign urbanbase urbanbasecore crane
 
 # 3D Home Design (SDK, API)
 
-3D Home Design 기능은 사용자가 직접 매장에 방문하지 않고, 가상공간에서 손쉽게 인테리어를 체험할 수 있습니다.
+`3D Home Design` 기능은 사용자가 직접 매장에 방문하지 않고, 가상공간에서 손쉽게 인테리어를 체험할 수 있습니다.
 어반베이스가 기본적으로 제공하는 약 7000여개의 3D제품을 몇 번의 클릭과 이동만으로 원하는 3D 공간에 배치할 수 있고, 조도조절을 통해 시간에 따른 일조량도 미리 확인할 수 있습니다.
 
 이를 레퍼런스로 인테리어, 건축, 기계설비, 영화, 게임 등 다양한 산업군에서 도입을 검토중에 있습니다.
@@ -25,6 +25,8 @@ tags: 3DHomeDesign urbanbase urbanbasecore crane
 - 저비용 고효율
 
     무거운 가구나 가전을 옮기는 비용과 수고를 들이지 않고도 VR 서비스를 활용하여 제품을 손쉽게 이동, 배치하여 시뮬레이션이 가능 합니다.
+<br>
+<br>
 
 ## 3D Home Design Demo
 
@@ -40,7 +42,7 @@ tags: 3DHomeDesign urbanbase urbanbasecore crane
 <br>
 <a href="https://developer.urbanbase.com/demos/HomeDesignDemo.html" target="_blank" style="color: #0366d6;"> >3D Home Design 경험 하기</a> </h4>
 
-
+<br>
 <br>
 
 ## Crane 
@@ -98,7 +100,7 @@ Crane은 사용 용도에 따라 4가지 모드(Productive Viewer, Viewer, Edito
 </h3>
 <br>
 <h4>
-전 세계의 모든 공간정보를 하나의 플랫폼 안에서 자유롭게 활용할 수 있도록 도면 변환 기술 및 AR, VR 뷰어 기술이 담긴 API와 ADK를 제공하고 있습니다.<br>
+전 세계의 모든 공간정보를 하나의 플랫폼 안에서 자유롭게 활용할 수 있도록 도면 변환 기술 및 AR, VR 뷰어 기술이 담긴 API와 SDK를 제공하고 있습니다.<br>
 <br>
 <br>
 

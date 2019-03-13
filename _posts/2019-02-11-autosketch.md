@@ -2,7 +2,7 @@
 layout: post
 title: "실시간 도면 자동 변환 서비스 Auto Sketch"
 date: 2019-02-11 16:43:59
-tags: autosketch urbanbase floorplan computervision machinelearning 3D_converting 3D_modeling urbanbasestudio
+tags: autosketch urbanbase computervision machinelearning 3D_converting 3D_modeling urbanbasestudio
 ---
 
 # Auto Sketch (API, Engine)
@@ -68,7 +68,7 @@ Auto Sketch 기술을 보유한 어반베이스는 3D 공간데이터 플랫폼�
 </h3>
 <br>
 <h4>
-전 세계의 모든 공간정보를 하나의 플랫폼 안에서 자유롭게 활용할 수 있도록 도면 변환 기술 및 AR, VR 뷰어 기술이 담긴 API와 ADK를 제공하고 있습니다.<br>
+전 세계의 모든 공간정보를 하나의 플랫폼 안에서 자유롭게 활용할 수 있도록 도면 변환 기술 및 AR, VR 뷰어 기술이 담긴 API와 SDK를 제공하고 있습니다.<br>
 <br>
 <br>
 
