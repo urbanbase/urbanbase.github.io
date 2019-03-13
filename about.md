@@ -51,6 +51,12 @@ permalink: /we/
 <br>
 3D 객체들의 렌더링을 담당하는 <a href="https://urbanbase.github.io/2019/03/07/3DHomedesign.html" target="_blank" style="color: #0366d6;"> 3D Viewer</a>
 <br>
+3D 객체를 AR로 핸들링할 수 있는 <a href="https://urbanbase.github.io/2019/03/07/3DHomedesign.html" target="_blank" style="color: #0366d6;"> AR Viewer</a>
+<br>
+공간분석 AI 서비스 <a href="https://urbanbase.github.io/2019/03/07/3DHomedesign.html" target="_blank" style="color: #0366d6;"> Taker</a>
+<br>
+
+
 
 <a href="https://developer.urbanbase.com" target="_blank" style="color: #0366d6;">어반베이스에 대해 더 알고 싶으시다고요?</a>
 </center>
