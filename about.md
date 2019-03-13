@@ -55,8 +55,6 @@ permalink: /we/
 <br>
 공간분석 AI 서비스 <a href="https://urbanbase.github.io/2019/03/07/3DHomedesign.html" target="_blank" style="color: #0366d6;"> Taker</a>
 <br>
-
-
-
+<br>
 <a href="https://developer.urbanbase.com" target="_blank" style="color: #0366d6;">어반베이스에 대해 더 알고 싶으시다고요?</a>
 </center>
