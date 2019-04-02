@@ -1,6 +1,5 @@
 ---
 layout: post
-title:  "어반베이스 개발팀을 소개합니다"
 date:   2019-04-02 08:43:59
 categories: 
 cover:  "/assets/instacode.png"
