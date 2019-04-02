@@ -7,7 +7,8 @@ cover:  "/assets/instacode.png"
 ---
 
 
-[![CTO IMAGE]({{ site.images | relative_url }}/assets/images/CTO IMAGE.jpg)]({{ site.images | relative_url }}/assets/images/CTO IMAGE.jpg) <br>
+<!-- [![CTO IMAGE]({{ site.images | relative_url }}/assets/images/CTO IMAGE.jpg)]({{ site.images | relative_url }}/assets/images/CTO IMAGE.jpg) <br> -->
+<img src="/assets/images/CTO IMAGE.jpg" alt="CTO IMAGE" style="margin: inherit;">
 
 작년 여름 방현우 CTO가 어반베이스에 막 합류했을 때쯤, 인터뷰를 진행하던 기자분이 어떤 개발자상을 선호하냐고 물었습니다. <br>
 “오타쿠 같은 개발자를 원한다”고 하더군요. 읭? 그땐 사실 좀 의아했습니다. <br>
