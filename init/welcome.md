@@ -10,6 +10,8 @@ cover:  "/assets/instacode.png"
 <!-- [![CTO IMAGE]({{ site.images | relative_url }}/assets/images/CTO IMAGE.jpg)]({{ site.images | relative_url }}/assets/images/CTO IMAGE.jpg) <br> -->
 <img src="/assets/images/CTO IMAGE.jpg" alt="CTO IMAGE" style="margin: inherit;">
 
+<br>
+
 작년 여름 방현우 CTO가 어반베이스에 막 합류했을 때쯤, 인터뷰를 진행하던 기자분이 어떤 개발자상을 선호하냐고 물었습니다. <br>
 “오타쿠 같은 개발자를 원한다”고 하더군요. 읭? 그땐 사실 좀 의아했습니다. <br>
 오타쿠라니.. #왕고집 #마이웨이 #사회성부족 etc., 오타쿠에 대한 뭐 이런 진부한 편견을 가지고 있었거든요. <br> 그로부터 수개월이 지나 어느 정도 진열이 정비된 개발팀을 둘러보고 있노라니 방현우 CTO가 어떤 의미로 그런 말을 했는지 이제 좀 이해가 갑니다. 
