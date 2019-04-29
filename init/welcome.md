@@ -7,8 +7,7 @@ cover:  "/assets/instacode.png"
 ---
 
 
-<!-- [![CTO IMAGE]({{ site.images | relative_url }}/assets/images/CTO IMAGE.jpg)]({{ site.images | relative_url }}/assets/images/CTO IMAGE.jpg) <br> -->
-<img src="/assets/images/CTO IMAGE.jpg" alt="CTO IMAGE" style="margin: inherit;">
+
 
 <br>
 
@@ -17,6 +16,7 @@ cover:  "/assets/instacode.png"
 오타쿠라니.. #왕고집 #마이웨이 #사회성부족 etc., 오타쿠에 대한 뭐 이런 진부한 편견을 가지고 있었거든요. <br> 그로부터 수개월이 지나 어느 정도 진열이 정비된 개발팀을 둘러보고 있노라니 방현우 CTO가 어떤 의미로 그런 말을 했는지 이제 좀 이해가 갑니다. 
 <br>
 <br>
+
 
 **어반베이스 개발팀에는 오타쿠가 참 많습니다.** <br>
 쉴 때 ~~왜 하필~~ 깃허브를 가지고 논다는 머신러닝 개발자도 있고요. 미국에서 열리는 AWS 행사에 꼭 가겠다며 영어회화 학원을 다니기 시작한 API 개발자는 새롭게 배운 표현들을 활용해 만든 한문장들을 ~~굳이~~ 자기 페북에 인증하며 열정을 불태우고 있는 중이죠. 데모용으로 만든 ~~병맛~~ 호러 게임들을 타운홀에서 VR로 시연하던 3D 그래픽 개발자의 얼굴에서 세상 다 가진 것 같은 미소를 보기도 했고요(제 기억에 이분은 잠을 4시간 이상 자본적이 없다고 했..). 회사 출퇴근 서비스앱 UX가 불편하다며 자체 개편 서비스를 만들고는 마주칠 때마다 피드백 달라고 ~~귀찮게~~ 하는 프론트엔드 개발자도 있습니다.
