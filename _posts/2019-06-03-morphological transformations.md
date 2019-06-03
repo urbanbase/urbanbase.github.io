@@ -132,7 +132,7 @@ kernel = cv2.getStructuringElement(
 ![표 1.1]({{ site.images \| relative_url }}/assets/morphology transformation/table.png)
 
 <center> 
-표 1.1 구조 요소 생성 함수 중 커널의 형태에 따른 플래그
+<표 1.1> 구조 요소 생성 함수 중 커널의 형태에 따른 플래그
 </center>
 
 <br>
