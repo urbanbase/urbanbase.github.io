@@ -29,7 +29,7 @@ tags: ComputerVision OpenCV 모폴로지변환 morphological_transformations
 도면에는 수많은 정보가 포함되어 있어 검출하려는 벽 이외의 정보는 모두 노이즈가 됩니다. <그림 1.1>을 통해 벽 검출을 방해하는 다양한 요소들을 볼 수 있습니다.
 
 <figure>
-    <img data-action="zoom" src='{{ "/assets/morphology transformation/1.png" | relative_url }}' alt='<그림 1.1>'>
+    <img data-action="zoom" src='{{ "/assets/5_morphology transformation/1.png" | relative_url }}' alt='<그림 1.1>'>
     <figcaption><center> <그림 1.1> 벽의 검출을 방해하는 요소들 </center>
     </figcaption>
 </figure>
@@ -41,7 +41,7 @@ tags: ComputerVision OpenCV 모폴로지변환 morphological_transformations
 <br>
 
 <figure>
-    <img data-action="zoom" src='{{ "/assets/morphology transformation/2.png" | relative_url }}' alt='<그림 1.2>'>
+    <img data-action="zoom" src='{{ "/assets/5_morphology transformation/2.png" | relative_url }}' alt='<그림 1.2>'>
     <figcaption><center> <그림 1.2> 도면 원본 이미지 </center>
     </figcaption>
 </figure>
@@ -50,7 +50,7 @@ tags: ComputerVision OpenCV 모폴로지변환 morphological_transformations
 <br>
 
 <figure>
-    <img data-action="zoom" src='{{ "/assets/morphology transformation/3.png" | relative_url }}' alt='<그림 1.3>'>
+    <img data-action="zoom" src='{{ "/assets/5_morphology transformation/3.png" | relative_url }}' alt='<그림 1.3>'>
     <figcaption><center> <그림 1.3> 기본적인 전처리 과정 진행 </center>
     </figcaption>
 </figure>
@@ -59,7 +59,7 @@ tags: ComputerVision OpenCV 모폴로지변환 morphological_transformations
 <br>
 
 <figure>
-    <img data-action="zoom" src='{{ "/assets/morphology transformation/4.png" | relative_url }}' alt='<그림 1.4>'>
+    <img data-action="zoom" src='{{ "/assets/5_morphology transformation/4.png" | relative_url }}' alt='<그림 1.4>'>
     <figcaption><center> <그림 1.4> 모폴로지 변환을 적용해 노이즈 제거 </center>
     </figcaption>
 </figure>
@@ -220,7 +220,7 @@ dst = dilate(erode(src))
 <그림 1.5>를 통해 전처리가 진행된 이미지(그림 1.3)에서 열림 연산을 적용한 결과를 볼 수 있습니다.
 
 <figure>
-    <img data-action="zoom" src='{{ "/assets/morphology transformation/5.png" | relative_url }}' alt='<그림 1.5>'>
+    <img data-action="zoom" src='{{ "/assets/5_morphology transformation/5.png" | relative_url }}' alt='<그림 1.5>'>
     <figcaption><center> <그림 1.5> 3x3 직사각형 구조, 반복횟수 3회를 적용한 열림 연산 </center>
     </figcaption>
 </figure>
@@ -239,7 +239,7 @@ dst = erode(dilate(src))
 
 
 <figure>
-    <img data-action="zoom" src='{{ "/assets/morphology transformation/6.png" | relative_url }}' alt='<그림 1.6>'>
+    <img data-action="zoom" src='{{ "/assets/5_morphology transformation/6.png" | relative_url }}' alt='<그림 1.6>'>
     <figcaption><center> <그림 1.6> 3x3 직사각형 구조, 반복횟수 3회를 적용한 닫힘 연산 </center>
     </figcaption>
 </figure>
