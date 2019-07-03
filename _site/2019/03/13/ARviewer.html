@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>3D 객체를 AR로 핸들링할 수 있는 AR Viewer</title>
+  <meta name="description" content="AR Viewer (Library)">
+  
+  <meta name="author" content="Urbanbase">
+  <meta name="copyright" content="&copy; Urbanbase 2019">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="AR Viewer (Library)" />
+  <meta property="og:url" content="http://urbanbase.github.io" />
+  <meta property="og:site_name" content="URBANBASE TECH BLOG" />
+  <meta property="og:title" content="3D 객체를 AR로 핸들링할 수 있는 AR Viewer" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://urbanbase.github.io/assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="605" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="3D 객체를 AR로 핸들링할 수 있는 AR Viewer">
+  <meta name="twitter:description" content="AR Viewer (Library)">
+  <meta name="twitter:image" content="http://urbanbase.github.io/assets/logo.png">
+  <meta name="twitter:url" content="http://urbanbase.github.io">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://urbanbase.github.io/2019/03/13/ARviewer.html">
+  <link rel="alternate" type="application/rss+xml" title="URBANBASE TECH BLOG" href="http://urbanbase.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo_tech.jpg" alt="URBANBASE TECH BLOG">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        
+          
+          <li class="nav-link"><a href="/we/">We</a>
+          
+        
+          
+          <li class="nav-link"><a href="/dev/">Dev</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li class="nav-link"><a href="/tech/">Tech</a>
+          
+        
+          
+        
+          
+        
+      </ul>
+    </nav>
+    <div id="search">
+        <input id="search-input" type="search" placeholder="Search..." value="" />
+    </div>
+    <ul class="search__results" id="results-container"></ul>
+  </div>
+
+
+<script src="/dest/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+    SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '/search2.json',
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        noResultsText: '<li>No results found</li>',
+        limit: 15,
+        fuzzy: false,
+        exclude: ['Welcome']
+    })
+</script>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">3D 객체를 AR로 핸들링할 수 있는 AR Viewer</h1>
+      
+    </header>
+  </div>
+</div>
+
+<div class="recent_box">
+  <div class="recent_posts">
+    <div class="recent_title">
+      <strong style="font-size: 20px;">Recent Posts</strong>
+      <br>
+      
+      
+        
+          <a class="post" href="/dev/2019/07/02/June.html">데이터를 아름답게 표현하는 방법에 관하여 (ft.Keijiro Takahashi)</a>
+          <br>
+          
+        
+      
+        
+          <a class="post" href="/dev/2019/06/03/Morphological-Transformations.html">모폴로지 변환 활용해 도면의 벽 검출하기</a>
+          <br>
+          
+        
+      
+        
+          <a class="post" href="/tech/2019/04/02/Platform.html">[이론편] 플랫폼, 알고 개발하자</a>
+          <br>
+          
+        
+      
+        
+          <a class="post" href="/2019/03/13/Taker.html">공간분석 AI 서비스 Taker</a>
+          <br>
+          
+        
+      
+        
+          <a class="post" href="/2019/03/13/ARviewer.html">3D 객체를 AR로 핸들링할 수 있는 AR Viewer</a>
+          <br>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="recent_tags">
+    <div class="recent_title">
+      <strong style="font-size: 20px;">Tags</strong>
+      <br>
+      
+        
+        <a class="post" href="/tags/autosketch">autosketch</a>
+      
+        
+        <a class="post" href="/tags/urbanbase">urbanbase</a>
+      
+        
+        <a class="post" href="/tags/ComputerVision">ComputerVision</a>
+      
+        
+        <a class="post" href="/tags/machinelearning">machinelearning</a>
+      
+        
+        <a class="post" href="/tags/3Dconverting">3Dconverting</a>
+      
+        
+        <a class="post" href="/tags/3Dmodeling">3Dmodeling</a>
+      
+        
+        <a class="post" href="/tags/livesketch">livesketch</a>
+      
+        
+        <a class="post" href="/tags/floorplan">floorplan</a>
+      
+        
+        <a class="post" href="/tags/3DHomeDesign">3DHomeDesign</a>
+      
+        
+        <a class="post" href="/tags/urbanbasecore">urbanbasecore</a>
+      
+        
+        <a class="post" href="/tags/crane">crane</a>
+      
+        
+        <a class="post" href="/tags/3Dviewer">3Dviewer</a>
+      
+        
+        <a class="post" href="/tags/ARviewer">ARviewer</a>
+      
+        
+        <a class="post" href="/tags/urbanbaselens">urbanbaselens</a>
+      
+        
+        <a class="post" href="/tags/taker">taker</a>
+      
+        
+        <a class="post" href="/tags/urbanbasespace">urbanbasespace</a>
+      
+        
+        <a class="post" href="/tags/cnn">cnn</a>
+      
+        
+        <a class="post" href="/tags/deeplearning">deeplearning</a>
+      
+        
+        <a class="post" href="/tags/platform">platform</a>
+      
+        
+        <a class="post" href="/tags/OpenCV">OpenCV</a>
+      
+        
+        <a class="post" href="/tags/모폴로지변환">모폴로지변환</a>
+      
+        
+        <a class="post" href="/tags/morphological_transformations">morphological_transformations</a>
+      
+        
+        <a class="post" href="/tags/3D그래픽스">3D그래픽스</a>
+      
+        
+        <a class="post" href="/tags/Unity">Unity</a>
+      
+        
+        <a class="post" href="/tags/UniteSeoul2019">UniteSeoul2019</a>
+      
+        
+        <a class="post" href="/tags/KeijiroTakahashi">KeijiroTakahashi</a>
+      
+        
+        <a class="post" href="/tags/GeometryShader">GeometryShader</a>
+      
+    </div>
+  </div>
+</div>
+
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<div class="wrapper">
+<!-- 
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+  -->
+
+<section class="post-meta">
+  <div class="post-date">March 13, 2019</div>
+  <div class="post-categories">
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h1 id="ar-viewer-library">AR Viewer (Library)</h1>
+
+<p>구글 ARCore/SceneForm, 애플 ARKit를 기반으로 개발되었으며 바닥/벽면 인식을 통해 증강현실을 쉽게 구현할 수 있습니다.</p>
+
+<p><code class="highlighter-rouge">AR Viewer</code>에는 ARCore/ARKit에서 제공되지 않는 3D객체의 조작(이동,회전,확대), 화면캡쳐, 공유 등의 편리 기능을 추가적으로 제공합니다. 하나의 3D객체를 3D Viewer를 통해 WebVR로, <code class="highlighter-rouge">AR Viewer</code>를 통해 증강현실로 활용이 가능합니다.</p>
+
+<p><br />
+<br /></p>
+
+<h2 id="ar-viewer-demo">AR Viewer Demo</h2>
+<h4>AR Viewer 데모 영상 확인하기</h4>
+<p><strong>이미지를 클릭하면 영상으로 이동합니다.</strong></p>
+
+<p><a href="https://youtu.be/-_uafeGlerw" target="_blank"><img src="/assets/tech(demo)/4. AR Viewer.png" alt="ARviewer" /></a></p>
+
+<p><br />
+<br /></p>
+
+<h2 id="section">기술 설명</h2>
+<p>AR Viewer는 많은 사용자가 다양한 모바일 환경에서 Urbanbase의 3D 핵심 기술과 3D 모델들을 증강현실(Augmented Reality)에서 체험할 수 있게 도와줍니다. 단 몇 줄의 코드로 3D 모델링 파일을 불러올 수 있습니다.</p>
+<ul>
+  <li>특징
+    <ul>
+      <li>OS : Android 7.0 or later</li>
+      <li>지원 단말 : Samsung Galaxy S8, LG G6 or later</li>
+      <li>사용하는 언어 : Android</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="section-1">프로세스</h3>
+
+<p>Urbanbase에서 제공하는 라이브러리를 사용하면 AR 환경을 쉽게 구축할 수 있습니다.</p>
+
+<h4 id="android-library">Android Library</h4>
+<p><code class="highlighter-rouge">라이브러리 Import 하기</code>, <code class="highlighter-rouge">3D 모델 불러오기</code>, <code class="highlighter-rouge">라이브러리 업데이트 하기</code> 등 자세한 프로세스는 <a href="https://developer.urbanbase.com/docs/lens/TUTORIAL.html#android-library" target="_blank" style="color: #0366d6;"> Android Library</a>에서 확인할 수 있습니다.</p>
+
+<p><br /></p>
+
+<h4 id="ios-library">IOS Library</h4>
+
+<div style="width: 100%;height: 100px;font-size:20px;margin:100px 0;text-align: center;color: gray">Coming Soon</div>
+
+<p><br /></p>
+
+<h3 id="api-reference">API REFERENCE</h3>
+
+<p>AR Viewer의 <a href="https://developer.urbanbase.com/docs/lens/APIREFERENCE.html" target="_blank" style="color: #0366d6;"> API REFERENCE</a>를 확인할 수 있습니다.</p>
+
+<p><br />
+<br /></p>
+
+<hr />
+
+<p><br />
+<br /></p>
+<h3>
+AR Viewer 기술을 보유한 어반베이스는 3D 공간데이터 플랫폼입니다.
+</h3>
+<p><br /></p>
+<h4>
+전 세계의 모든 공간정보를 하나의 플랫폼 안에서 자유롭게 활용할 수 있도록 도면 변환 기술 및 AR, VR 뷰어 기술이 담긴 API와 SDK를 제공하고 있습니다.<br />
+<br />
+<br />
+
+<br />
+
+
+어반베이스 개발자 사이트 <a href="https://developer.urbanbase.com" target="_blank" style="color: #0366d6;"> 자세히 보기</a>
+</h4>
+<p><br /><br /><br /></p>
+
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tags/ARviewer">ARviewer</a>,&nbsp;<a href="/tags/urbanbase">urbanbase</a>,&nbsp;<a href="/tags/urbanbaselens">urbanbaselens</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+      <a href="//twitter.com/share?text=3D+%EA%B0%9D%EC%B2%B4%EB%A5%BC+AR%EB%A1%9C+%ED%95%B8%EB%93%A4%EB%A7%81%ED%95%A0+%EC%88%98+%EC%9E%88%EB%8A%94+AR+Viewer&url=http%3A%2F%2Furbanbase.github.io%2F2019%2F03%2F13%2FARviewer.html&via="
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+        <i class="fa fa-twitter-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+      <a href="//www.facebook.com/sharer.php?t=3D+%EA%B0%9D%EC%B2%B4%EB%A5%BC+AR%EB%A1%9C+%ED%95%B8%EB%93%A4%EB%A7%81%ED%95%A0+%EC%88%98+%EC%9E%88%EB%8A%94+AR+Viewer&u=http%3A%2F%2Furbanbase.github.io%2F2019%2F03%2F13%2FARviewer.html"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+        <i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+
+
+
+<section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'https-urbanbase-github-io';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">URBANBASE TECH BLOG</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+        
+        
+          <li class="nav-link"><a href="/we/">We</a>
+        
+        
+        
+          <li class="nav-link"><a href="/dev/">Dev</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          <li class="nav-link"><a href="/tech/">Tech</a>
+        
+        
+        
+          <li class="nav-link"><a href="/init/welcome.html"></a>
+        
+        
+        
+        
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          
+          <a href="https://urbanbase.com/contact">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">Urbanbase Mail</span>
+            
+          </a>
+        </li>
+
+        
+          
+        
+          
+          <li>
+            <a href="https://ko-kr.facebook.com/urbanbaseinc/" title="Friend me on Facebook">
+              <i class="fa fa-facebook"></i>
+              <span class="username">Urbanbase Facebook</span>
+            </a>
+          </li>
+          
+        
+          
+          <li>
+            <a href="https://github.com/urbanbase/" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">Urbanbase GitHub</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+        
+          
+          <li>
+            <a href="https://www.youtube.com/channel/UCjah6C5Z-s5yX8-Z10bRbDw" title="Subscribe on YouTube">
+              <i class="fa fa-youtube"></i>
+              <span class="username">Urbanbase YouTube</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">어반베이스는 전 세계의 모든 실내공간정보를<br> 하나의 플랫폼안에서 자유롭게 활용할 수 있는<br> 도면변환 기술 및 AR, VR 뷰어 서비스를 개발하고 있는<br> 3D 공간데이터 플랫폼입니다.
+</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+});
+
+</script>
+
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-73843404-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-73843404-16');
+</script>
+
+
+  </body>
+
+</html>

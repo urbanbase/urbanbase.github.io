@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>실시간 도면 자동 변환 서비스 Auto Sketch</title>
+  <meta name="description" content="Auto Sketch (API, Engine)Auto sketch는 세계 유일의 실시간 도면 자동 변환 서비스입니다.">
+  
+  <meta name="author" content="Urbanbase">
+  <meta name="copyright" content="&copy; Urbanbase 2019">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="Auto Sketch (API, Engine)Auto sketch는 세계 유일의 실시간 도면 자동 변환 서비스입니다." />
+  <meta property="og:url" content="http://urbanbase.github.io" />
+  <meta property="og:site_name" content="URBANBASE TECH BLOG" />
+  <meta property="og:title" content="실시간 도면 자동 변환 서비스 Auto Sketch" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://urbanbase.github.io/assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="605" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="실시간 도면 자동 변환 서비스 Auto Sketch">
+  <meta name="twitter:description" content="Auto Sketch (API, Engine)Auto sketch는 세계 유일의 실시간 도면 자동 변환 서비스입니다.">
+  <meta name="twitter:image" content="http://urbanbase.github.io/assets/logo.png">
+  <meta name="twitter:url" content="http://urbanbase.github.io">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://urbanbase.github.io/2019/02/11/autosketch.html">
+  <link rel="alternate" type="application/rss+xml" title="URBANBASE TECH BLOG" href="http://urbanbase.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo_tech.jpg" alt="URBANBASE TECH BLOG">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        
+          
+          <li class="nav-link"><a href="/we/">We</a>
+          
+        
+          
+          <li class="nav-link"><a href="/dev/">Dev</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li class="nav-link"><a href="/tech/">Tech</a>
+          
+        
+          
+        
+          
+        
+      </ul>
+    </nav>
+    <div id="search">
+        <input id="search-input" type="search" placeholder="Search..." value="" />
+    </div>
+    <ul class="search__results" id="results-container"></ul>
+  </div>
+
+
+<script src="/dest/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+    SimpleJekyllSearch({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        json: '/search2.json',
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        noResultsText: '<li>No results found</li>',
+        limit: 15,
+        fuzzy: false,
+        exclude: ['Welcome']
+    })
+</script>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">실시간 도면 자동 변환 서비스 Auto Sketch</h1>
+      
+    </header>
+  </div>
+</div>
+
+<div class="recent_box">
+  <div class="recent_posts">
+    <div class="recent_title">
+      <strong style="font-size: 20px;">Recent Posts</strong>
+      <br>
+      
+      
+        
+          <a class="post" href="/dev/2019/07/02/June.html">데이터를 아름답게 표현하는 방법에 관하여 (ft.Keijiro Takahashi)</a>
+          <br>
+          
+        
+      
+        
+          <a class="post" href="/dev/2019/06/03/Morphological-Transformations.html">모폴로지 변환 활용해 도면의 벽 검출하기</a>
+          <br>
+          
+        
+      
+        
+          <a class="post" href="/tech/2019/04/02/Platform.html">[이론편] 플랫폼, 알고 개발하자</a>
+          <br>
+          
+        
+      
+        
+          <a class="post" href="/2019/03/13/Taker.html">공간분석 AI 서비스 Taker</a>
+          <br>
+          
+        
+      
+        
+          <a class="post" href="/2019/03/13/ARviewer.html">3D 객체를 AR로 핸들링할 수 있는 AR Viewer</a>
+          <br>
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  </div>
+  <div class="recent_tags">
+    <div class="recent_title">
+      <strong style="font-size: 20px;">Tags</strong>
+      <br>
+      
+        
+        <a class="post" href="/tags/autosketch">autosketch</a>
+      
+        
+        <a class="post" href="/tags/urbanbase">urbanbase</a>
+      
+        
+        <a class="post" href="/tags/ComputerVision">ComputerVision</a>
+      
+        
+        <a class="post" href="/tags/machinelearning">machinelearning</a>
+      
+        
+        <a class="post" href="/tags/3Dconverting">3Dconverting</a>
+      
+        
+        <a class="post" href="/tags/3Dmodeling">3Dmodeling</a>
+      
+        
+        <a class="post" href="/tags/livesketch">livesketch</a>
+      
+        
+        <a class="post" href="/tags/floorplan">floorplan</a>
+      
+        
+        <a class="post" href="/tags/3DHomeDesign">3DHomeDesign</a>
+      
+        
+        <a class="post" href="/tags/urbanbasecore">urbanbasecore</a>
+      
+        
+        <a class="post" href="/tags/crane">crane</a>
+      
+        
+        <a class="post" href="/tags/3Dviewer">3Dviewer</a>
+      
+        
+        <a class="post" href="/tags/ARviewer">ARviewer</a>
+      
+        
+        <a class="post" href="/tags/urbanbaselens">urbanbaselens</a>
+      
+        
+        <a class="post" href="/tags/taker">taker</a>
+      
+        
+        <a class="post" href="/tags/urbanbasespace">urbanbasespace</a>
+      
+        
+        <a class="post" href="/tags/cnn">cnn</a>
+      
+        
+        <a class="post" href="/tags/deeplearning">deeplearning</a>
+      
+        
+        <a class="post" href="/tags/platform">platform</a>
+      
+        
+        <a class="post" href="/tags/OpenCV">OpenCV</a>
+      
+        
+        <a class="post" href="/tags/모폴로지변환">모폴로지변환</a>
+      
+        
+        <a class="post" href="/tags/morphological_transformations">morphological_transformations</a>
+      
+        
+        <a class="post" href="/tags/3D그래픽스">3D그래픽스</a>
+      
+        
+        <a class="post" href="/tags/Unity">Unity</a>
+      
+        
+        <a class="post" href="/tags/UniteSeoul2019">UniteSeoul2019</a>
+      
+        
+        <a class="post" href="/tags/KeijiroTakahashi">KeijiroTakahashi</a>
+      
+        
+        <a class="post" href="/tags/GeometryShader">GeometryShader</a>
+      
+    </div>
+  </div>
+</div>
+
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<div class="wrapper">
+<!-- 
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+  -->
+
+<section class="post-meta">
+  <div class="post-date">February 11, 2019</div>
+  <div class="post-categories">
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h1 id="auto-sketch-api-engine">Auto Sketch (API, Engine)</h1>
+<p><code class="highlighter-rouge">Auto sketch</code>는 세계 유일의 실시간 도면 자동 변환 서비스입니다.</p>
+
+<p>어반베이스는 특허받은 2D 도면의 3D 도면 변환 기술로 세계 최대의 3D 공간 DB를 구축했습니다. Auto desk CAD, SketchUp에 플러그인을 제공하여 확장성을 넓혀가고, Live sketch 기술을 고도화하여 사용자가 직접 그린 도면을 자유롭게 2D 또는 3D로 변환할 수 있는 서비스를 예정 중입니다.</p>
+
+<p><br />
+<br /></p>
+
+<h2 id="auto-sketch-demo-br">Auto Sketch Demo <br /></h2>
+<h4>Auto Sketch 데모 영상 확인하기</h4>
+
+<p><strong>이미지를 클릭하면 영상으로 이동합니다.</strong>
+<a href="https://youtu.be/sHmokPYTp2Q" target="_blank"><img src="/assets/tech(demo)/1. auto sketch (thumbnail).png" alt="autosketch" /></a>
+<br />
+<br />
+<br /></p>
+<h2 id="section">기술 설명</h2>
+
+<p><code class="highlighter-rouge">Auto Sketch</code>를 사용할 경우, 도면 이미지를 활용하여 <strong>다양한 3D 확장자(*.obj, *.dae 등)의 3D 모델링 파일</strong> 로 변환할 수 있습니다. <br />
+<code class="highlighter-rouge">2D-3D Converting</code> 기술로 인하여 직접 3D 모델링 파일을 제작하거나, 2D CAD 도면 (*.dwg) 등을 공유하지 않아도 시각적으로 바로 확인할 수 있습니다. <br />
+실물 모형 및 도면 파일은, 보안, 모형 및 파일 손상 등의 문제가 발생할 수 있지만 <code class="highlighter-rouge">Auto Sketch</code> 는 인터넷과 jpg 파일만 있으면 언제 어디서나 <strong>3D 모델링 결과를 확인 할 수 있습니다.</strong> <br />
+<br />
+<code class="highlighter-rouge">Auto Sketch</code>를 활용할 경우 <strong>파일 용량 감소, 보안상의 문제 해결, 비용 절감, 편의성 증대</strong>가 가능해집니다.
+<br />
+<br />
+<br /></p>
+<h2 id="section-1">프로세스</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><center>Before</center></th>
+      <th><center>After</center></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/assets/tech(demo)/1.auto sketch (before).jpg"><img src="/assets/tech(demo)/1. auto sketch (before).jpg" alt="before" /></a></td>
+      <td><a href="/assets/tech(demo)/1. auto sketch (after).png"><img src="/assets/tech(demo)/1. auto sketch (after).png" alt="after" /></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br />
+<br />
+기존에는 2D 도면에서 3D로 변환 시 치수 수정, 영역 분리, 개별 모델링 등 다소 복잡한 처리 과정을 거쳐야 했지만 <code class="highlighter-rouge">Auto Sketch</code>를 활용할 경우, 이미지 파일을 <strong>Drag and Drop</strong>하여 바로 결과를 확인할 수 있어 작업 처리 시간을 단축할 수 있습니다. <br />
+<br />
+또한 <code class="highlighter-rouge">Auto Sketch</code> 엔진은 각 구역의 특징을 분석하여 바닥재 및 벽재 등을 기본적으로 분석하여 제공해주며, <code class="highlighter-rouge">Computer Vision</code>, <code class="highlighter-rouge">Machine Learning</code>, <code class="highlighter-rouge">Auto Sketch</code> 알고리즘을 통하여 유의미한 의미를 가지는 3D 모델링 파일을 제공할 수 있습니다. 
+<br />
+<br />
+<br /></p>
+<h2 id="section-2">응용분야</h2>
+<h3 id="section-3">목업 제작</h3>
+<p><code class="highlighter-rouge">Auto Sketch</code>를 이용하여 실물 목업 제작 시 보여질 모습을 3D로 미리 확인해 볼 수 있으며 제작한 도면을 확인한 후 보완 및 수정이 용이 해 집니다.
+<br />
+<br /></p>
+<h3 id="section-4">응용 프로그램 빌드, 실행 및 테스트</h3>
+<p><code class="highlighter-rouge">Auto Sketch</code>에서 <strong>저용량 이미지 파일 (*.jpg, *.png, *.bmp) 등의 도면 이미지</strong>만 입력하면 <code class="highlighter-rouge">Computer Vision</code>, <code class="highlighter-rouge">Machine Learning</code> 등을 통하여 3D 모델링 파일로 불러올 수 있습니다.
+<br />
+<br /></p>
+<h3 id="section-5">실시간 다자간 온라인 화상 회의</h3>
+<p><code class="highlighter-rouge">Auto Sketch</code>를  Web으로 구현하여 실시간으로 도면 이미지를 <strong>3D 모델링 파일을 시각적으로 확인</strong>할 수 있습니다. 따라서 온라인 화상 회의를 통하여 공간적 한계가 사라지고 실물 목업 운반 등의 문제점을 해결 할 수 있습니다.
+<br />
+<br />
+<br /></p>
+
+<hr />
+<p><br />
+<br /></p>
+<h3>
+Auto Sketch 기술을 보유한 어반베이스는 3D 공간데이터 플랫폼입니다.
+</h3>
+<p><br /></p>
+<h4>
+전 세계의 모든 공간정보를 하나의 플랫폼 안에서 자유롭게 활용할 수 있도록 도면 변환 기술 및 AR, VR 뷰어 기술이 담긴 API와 SDK를 제공하고 있습니다.<br />
+<br />
+<br />
+
+<br />
+
+
+어반베이스 개발자 사이트 <a href="https://developer.urbanbase.com" target="_blank" style="color: #0366d6;"> 자세히 보기</a>
+</h4>
+<p><br /><br /><br /></p>
+
+</article>
+
+
+
+<section class="tags">
+  <strong>Tags:</strong> <a href="/tags/autosketch">autosketch</a>,&nbsp;<a href="/tags/urbanbase">urbanbase</a>,&nbsp;<a href="/tags/ComputerVision">ComputerVision</a>,&nbsp;<a href="/tags/machinelearning">machinelearning</a>,&nbsp;<a href="/tags/3Dconverting">3Dconverting</a>,&nbsp;<a href="/tags/3Dmodeling">3Dmodeling</a>
+</section>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+      <a href="//twitter.com/share?text=%EC%8B%A4%EC%8B%9C%EA%B0%84+%EB%8F%84%EB%A9%B4+%EC%9E%90%EB%8F%99+%EB%B3%80%ED%99%98+%EC%84%9C%EB%B9%84%EC%8A%A4+Auto+Sketch&url=http%3A%2F%2Furbanbase.github.io%2F2019%2F02%2F11%2Fautosketch.html&via="
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+        <i class="fa fa-twitter-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+      <a href="//www.facebook.com/sharer.php?t=%EC%8B%A4%EC%8B%9C%EA%B0%84+%EB%8F%84%EB%A9%B4+%EC%9E%90%EB%8F%99+%EB%B3%80%ED%99%98+%EC%84%9C%EB%B9%84%EC%8A%A4+Auto+Sketch&u=http%3A%2F%2Furbanbase.github.io%2F2019%2F02%2F11%2Fautosketch.html"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+        <i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+</section>
+
+
+
+
+<section class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_shortname = 'https-urbanbase-github-io';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">URBANBASE TECH BLOG</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+        
+        
+          <li class="nav-link"><a href="/we/">We</a>
+        
+        
+        
+          <li class="nav-link"><a href="/dev/">Dev</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          <li class="nav-link"><a href="/tech/">Tech</a>
+        
+        
+        
+          <li class="nav-link"><a href="/init/welcome.html"></a>
+        
+        
+        
+        
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          
+          <a href="https://urbanbase.com/contact">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">Urbanbase Mail</span>
+            
+          </a>
+        </li>
+
+        
+          
+        
+          
+          <li>
+            <a href="https://ko-kr.facebook.com/urbanbaseinc/" title="Friend me on Facebook">
+              <i class="fa fa-facebook"></i>
+              <span class="username">Urbanbase Facebook</span>
+            </a>
+          </li>
+          
+        
+          
+          <li>
+            <a href="https://github.com/urbanbase/" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">Urbanbase GitHub</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+        
+          
+          <li>
+            <a href="https://www.youtube.com/channel/UCjah6C5Z-s5yX8-Z10bRbDw" title="Subscribe on YouTube">
+              <i class="fa fa-youtube"></i>
+              <span class="username">Urbanbase YouTube</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">어반베이스는 전 세계의 모든 실내공간정보를<br> 하나의 플랫폼안에서 자유롭게 활용할 수 있는<br> 도면변환 기술 및 AR, VR 뷰어 서비스를 개발하고 있는<br> 3D 공간데이터 플랫폼입니다.
+</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+});
+
+</script>
+
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-73843404-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-73843404-16');
+</script>
+
+
+  </body>
+
+</html>
