@@ -130,7 +130,7 @@ kernel = cv2.getStructuringElement(
 또한, 고정점은 필수 매개변수가 아닙니다. 미리 고정점의 위치를 할당하지 않고 모폴로지 함수에서 고정점의 위치를 할당할 수 있습니다. 고정점을 할당하지 않는다면 조금 더 유동적인 커널을 생성할 수 있습니다. <표 1.1>은 커널의 형태에 대한 플래그를 정리한 것입니다.
 
 
-![표 1.1]({{ site.images \| relative_url }}/assets/morphology transformation/table.png)
+![표 1.1]({{ site.images \| relative_url }}/assets/5_morphology transformation/table.png)
 
 <center> 
 <표 1.1> 구조 요소 생성 함수 중 커널의 형태에 따른 플래그
