@@ -91,7 +91,7 @@ tags: ComputerVision OpenCV 모폴로지변환 morphological_transformations
 
 커널의 크기나 반복 횟수에 따라 밝은 영역이 늘어나 스펙클(speckle)이 커지며 객체 내부의 홀(holes)이 사라지는 특징이 있습니다. **노이즈 제거 후 줄어든 크기를 복구하고자 할 때 주로 사용하는 연산**입니다. 수식으로 표현한다면 다음과 같습니다.
 
-![팽창 수식]({{ site.images \| relative_url }}/assets/morphology transformation/math 1.png)
+![팽창 수식]({{ site.images \| relative_url }}/assets/5_morphology transformation/math1.png)
 
 <br>
 
@@ -101,7 +101,7 @@ tags: ComputerVision OpenCV 모폴로지변환 morphological_transformations
 
 커널의 크기나 반복 횟수에 따라 어두운 영역이 늘어나 스펙클(speckle)이 사라지며 객체 내부의 홀(holes)이 커집니다. 이 연산은 **노이즈 제거에 주로 사용**되며, 아래와 같은 수식으로 표현합니다.
 
-![침식 수식]({{ site.images \| relative_url }}/assets/morphology transformation/math 2.png)
+![침식 수식]({{ site.images \| relative_url }}/assets/5_morphology transformation/math2.png)
 
 <br>
 
