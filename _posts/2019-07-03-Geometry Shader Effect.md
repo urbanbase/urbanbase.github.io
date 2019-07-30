@@ -5,7 +5,6 @@ date: 2019-07-02 16:00:00
 categories: dev
 tags: 3DGraphics UniteSeoul2019 KeijiroTakahashi GeometryShader
 excerpt: "Unity의 Geometry Shader Effect 실무 적용기"
-cover: "/assets/thumbnail/GeometryShaderEffect.png"
 ---
 
 
