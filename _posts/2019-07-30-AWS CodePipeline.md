@@ -3,7 +3,7 @@ layout: post
 title: "AWS CodePipeline을 활용한 빌드/배포 자동화"
 date: 2019-07-02 16:00:00
 categories: dev
-tags: Serverless AWSCodePipeline
+tags: serverless AWSCodePipeline MSA
 excerpt: 
 cover: 
 ---
