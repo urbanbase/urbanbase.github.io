@@ -149,10 +149,7 @@ AR에 뜻이 있는 개발자분들이 AR 개발을 '시작'하는 건 사실 �
 1. 이커머스 앱 개발
 : 상품 카테고리, 서치엔진, 결제시스템 등을 갖춘 일반적인 이커머스 앱을 개발하기 위해서 400-500 시간 정도가 소요됩니다.
 2. AR 기능 탑재 
-: AR SDK를 통해 바닥 인식(World recognition), 모델 감지(Object detection), 3D 모델 상호작용(3D interactions) 등의 기본적인 기능부터 주변 환경의 움직임을 트래킹(Motion tracking)하고, 조도를 측정(Light estimation)하는 등 좀 더 고도화된 기능까지 구축할 수 있습니다.
-
-<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed//-_uafeGlerw' frameborder='0' allowfullscreen></iframe></div>
-
+: AR SDK를 통해 바닥 인식(World recognition), 모델 감지(Object detection), 3D 모델 상호작용(3D interactions) 등의 기본적인 기능부터 주변 환경의 움직임을 트래킹(Motion tracking)하고, 조도를 측정(Light estimation)하는 등 좀 더 고도화된 기능까지 구축할 수 있습니다. <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed//-_uafeGlerw' frameborder='0' allowfullscreen></iframe></div>
 3. 기타 기능 추가
 : AR 앱의 'must-haves'는 아니지만 유저들이 경험할 수 있는 요소들을 좀 더 다양화하기 위해 추가적으로 기능을 개발할 수 있습니다. 
 
