@@ -2,7 +2,7 @@
 layout: post
 title: "AR 개발 얼마면 되겠니?"
 date: 2019-08-06 10:00:00
-categories: dev
+categories: tech
 tags: AR
 excerpt: 
 cover: 
@@ -140,11 +140,13 @@ AR에 뜻이 있는 개발자분들이 AR 개발을 '시작'하는 건 사실 �
 ## 디자인(Design)
 
 1. 개발 범위 확정
-: AR의 기본 기능에 더해 캡처나 영상 녹화 기능, 클라우드 기능, 소셜네트워크 기능 등 내부 개발팀의 역량에 따라 어떤 기능을 어디까지 구현할 것인지 논의합니다.
-: iOS용, Android용 또는 둘다 할 것인지 결정합니다.
-2. UX/UI 디자이너 주도로 와이어프레임과 프로토타입 제작 
+- AR의 기본 기능에 더해 캡처나 영상 녹화 기능, 클라우드 기능, 소셜네트워크 기능 등 내부 개발팀의 역량에 따라 어떤 기능을 어디까지 구현할 것인지 논의합니다.
+- iOS용, Android용 또는 둘다 할 것인지 결정합니다.
+2. **UX/UI 디자이너 주도로 와이어프레임과 프로토타입 제작** 
 
 평균적으로 디자인 단계에서는 120-200 시간, 비용은 최소 약 2200만원에서 최대 3700만원(19.08.05 환율 기준) 드는 것으로 나타납니다.
+
+<br>
 
 ## 개발(Development)
 
@@ -157,7 +159,8 @@ AR에 뜻이 있는 개발자분들이 AR 개발을 '시작'하는 건 사실 �
     <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed//-_uafeGlerw' frameborder='0' allowfullscreen></iframe></div>
     
 3. 기타 기능 추가
-: AR 앱의 'must-haves'는 아니지만 유저들이 경험할 수 있는 요소들을 좀 더 다양화하기 위해 추가적으로 기능을 개발할 수 있습니다. 
+: AR 앱의 'must-haves'는 아니지만 유저들이 경험할 수 있는 요소들을 좀 더 다양화하기 위해 추가적으로 기능을 개발할 수 있습니다.
+
 개발 단계에서는 대략 1050-1300 시간이 걸리며, 비용은 최소 약 1억 2700만원에서 최대 1억 5800만원(19.08.05 환율 기준)까지 발생합니다.
 
 <br>
