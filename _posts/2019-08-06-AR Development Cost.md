@@ -153,8 +153,6 @@ AR에 뜻이 있는 개발자분들이 AR 개발을 '시작'하는 건 사실 �
 
 <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed//-_uafeGlerw' frameborder='0' allowfullscreen></iframe></div>
 
-<br>
-
 3. 기타 기능 추가
 : AR 앱의 'must-haves'는 아니지만 유저들이 경험할 수 있는 요소들을 좀 더 다양화하기 위해 추가적으로 기능을 개발할 수 있습니다. 
 
