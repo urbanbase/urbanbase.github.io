@@ -16,7 +16,7 @@ tags: livesketch urbanbase floorplan 3Dconverting 3Dmodeling
 
 ## Live Sketch Demo <br>
 
-[![live sketch]({{ site.images \| relative_url }}/assets/tech(demo)/2. live sketch.gif)]({{ site.images \| relative_url }}/assets/tech(demo)/2. live sketch.gif)
+[![live sketch]({{ site.images | relative_url }}/assets/tech(demo)/2. live sketch.gif)]({{ site.images | relative_url }}/assets/tech(demo)/2. live sketch.gif)
 
 <h4> Live Sketch를 직접 만나보세요. 
 <br>

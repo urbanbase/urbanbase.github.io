@@ -34,7 +34,7 @@ tags: 3DHomeDesign urbanbase urbanbasecore crane
 
 **이미지를 클릭하면 영상으로 이동합니다.**
 
-[![3DHomedesign]({{ site.images \| relative_url }}/assets/tech(demo)/3. 3D HomeDesign (thumbnail).png)](https://youtu.be/sHmokPYTp2Q){:target="_blank"}
+[![3DHomedesign]({{ site.images | relative_url }}/assets/tech(demo)/3. 3D HomeDesign (thumbnail).png)](https://youtu.be/sHmokPYTp2Q){:target="_blank"}
 
 <br>
 <br>

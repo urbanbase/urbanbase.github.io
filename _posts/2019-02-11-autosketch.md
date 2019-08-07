@@ -17,7 +17,7 @@ tags: autosketch urbanbase ComputerVision machinelearning 3Dconverting 3Dmodelin
 <h4>Auto Sketch 데모 영상 확인하기</h4>
 
 **이미지를 클릭하면 영상으로 이동합니다.**
-[![autosketch]({{ site.images \| relative_url }}/assets/tech(demo)/1. auto sketch (thumbnail).png)](https://youtu.be/sHmokPYTp2Q){:target="_blank"}
+[![autosketch]({{ site.images | relative_url }}/assets/tech(demo)/1. auto sketch (thumbnail).png)](https://youtu.be/sHmokPYTp2Q){:target="_blank"}
 <br>
 <br>
 <br>
@@ -35,7 +35,7 @@ tags: autosketch urbanbase ComputerVision machinelearning 3Dconverting 3Dmodelin
 
 | <center>Before  | <center>After | 
 |--------|-------|
-| [![before]({{ site.images \| relative_url }}/assets/tech(demo)/1. auto sketch (before).jpg)]({{ site.images \| relative_url }}/assets/tech(demo)/1.auto sketch (before).jpg)|[![after]({{ site.images \| relative_url }}/assets/tech(demo)/1. auto sketch (after).png)]({{ site.images \| relative_url }}/assets/tech(demo)/1. auto sketch (after).png)|
+| [![before]({{ site.images | relative_url }}/assets/tech(demo)/1. auto sketch (before).jpg)]({{ site.images | relative_url }}/assets/tech(demo)/1.auto sketch (before).jpg)|[![after]({{ site.images | relative_url }}/assets/tech(demo)/1. auto sketch (after).png)]({{ site.images | relative_url }}/assets/tech(demo)/1. auto sketch (after).png)|
 
 
 <br>

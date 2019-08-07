@@ -14,7 +14,7 @@ tags: ComputerVision OpenCV 모폴로지변환 morphological_transformations
 
 
 
-[![autosketch]({{ site.images \| relative_url }}/assets/tech(demo)/1. auto sketch (thumbnail).png)](https://youtu.be/sHmokPYTp2Q){:target="_blank"}
+[![autosketch]({{ site.images | relative_url }}/assets/tech(demo)/1. auto sketch (thumbnail).png)](https://youtu.be/sHmokPYTp2Q){:target="_blank"}
 **<center>이미지를 클릭하면 영상으로 이동합니다.</center>**
 
 <br>
@@ -91,7 +91,7 @@ tags: ComputerVision OpenCV 모폴로지변환 morphological_transformations
 
 커널의 크기나 반복 횟수에 따라 밝은 영역이 늘어나 스펙클(speckle)이 커지며 객체 내부의 홀(holes)이 사라지는 특징이 있습니다. **노이즈 제거 후 줄어든 크기를 복구하고자 할 때 주로 사용하는 연산**입니다. 수식으로 표현한다면 다음과 같습니다.
 
-![팽창 수식]({{ site.images \| relative_url }}/assets/5_morphology transformation/math1.png)
+![팽창 수식]({{ site.images | relative_url }}/assets/5_morphology transformation/math1.png)
 
 <br>
 
@@ -101,7 +101,7 @@ tags: ComputerVision OpenCV 모폴로지변환 morphological_transformations
 
 커널의 크기나 반복 횟수에 따라 어두운 영역이 늘어나 스펙클(speckle)이 사라지며 객체 내부의 홀(holes)이 커집니다. 이 연산은 **노이즈 제거에 주로 사용**되며, 아래와 같은 수식으로 표현합니다.
 
-![침식 수식]({{ site.images \| relative_url }}/assets/5_morphology transformation/math2.png)
+![침식 수식]({{ site.images | relative_url }}/assets/5_morphology transformation/math2.png)
 
 <br>
 
@@ -130,7 +130,7 @@ kernel = cv2.getStructuringElement(
 또한, 고정점은 필수 매개변수가 아닙니다. 미리 고정점의 위치를 할당하지 않고 모폴로지 함수에서 고정점의 위치를 할당할 수 있습니다. 고정점을 할당하지 않는다면 조금 더 유동적인 커널을 생성할 수 있습니다. <표 1.1>은 커널의 형태에 대한 플래그를 정리한 것입니다.
 
 
-![표 1.1]({{ site.images \| relative_url }}/assets/5_morphology transformation/table.png)
+![표 1.1]({{ site.images | relative_url }}/assets/5_morphology transformation/table.png)
 
 <center> 
 <표 1.1> 구조 요소 생성 함수 중 커널의 형태에 따른 플래그
