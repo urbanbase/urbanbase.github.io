@@ -116,7 +116,7 @@ AR에 뜻이 있는 개발자분들이 AR 개발을 '시작'하는 건 사실 �
 
 
 
-<br>더욱이 AR은 3D 모델을 현실로 이관하는 기술이기 때문에 **3D의 기본적인 지식 없이는 서비스의 퀄리티를 일정 수준 이상 높이는 데 한계**가 있을 수 밖에 없습니다. 저희 [AR Scale](https://www.youtube.com/watch?v=TSb_-_2XyCM&list=PLpbBpSvS-4kexGkThqF8zG0-JaHomRkF2)을 리드하고 계신 우석님과 얼마 전에 점심을 먹으면서 AR 개발할 때 가장 중요한 몇가지만 뽑아달라고 했더니, "3D..3D..3D?!" 라고 하시더라고요. 그래픽 엔지니어가 아닌데도 3D를 잘 아는 모바일 개발자가 있다면 대단한 능력자겠죠. 그말은 즉슨, 채용 시장에서 찾아뵙기 힘들다는 뜻.
+<br>더욱이 AR은 3D 모델을 현실로 이관하는 기술이기 때문에 **3D의 기본적인 지식 없이는 서비스의 퀄리티를 일정 수준 이상 높이는 데 한계**가 있을 수 밖에 없습니다. 저희 <a href="https://www.youtube.com/watch?v=TSb_-_2XyCM&list=PLpbBpSvS-4kexGkThqF8zG0-JaHomRkF2" target="_blank" style="color: #0366d6;"> AR Scale </a>을 리드하고 계신 우석님과 얼마 전에 점심을 먹으면서 AR 개발할 때 가장 중요한 몇가지만 뽑아달라고 했더니, "3D..3D..3D?!" 라고 하시더라고요. 그래픽 엔지니어가 아닌데도 3D를 잘 아는 모바일 개발자가 있다면 대단한 능력자겠죠. 그말은 즉슨, 채용 시장에서 찾아뵙기 힘들다는 뜻.
 
 **개발 기간과 비용 또한 만만치 않습니다.** 관련하여 최근에 미국에서 유의미한 자료가 하나 나왔는데요. AR‧VR 앱을 전문적으로 개발하는 Jasoren이란 곳에서 아마존 AR View 정도의 퀄리티로 AR 앱을 개발한다고 했을 때 소요되는 시간과 비용을 산출해 둔 자료 <a href="https://jasoren.com/how-much-does-it-cost-to-build-an-augmented-reality-app-like-amazon-ar-view/" target="_blank" style="color: #0366d6;"> How Much Does it Cost to Build an Augmented Reality App like Amazon AR View? </a> 입니다. 찾아보니 클라이언트만 140여개 정도 되는 꽤 큰 개발사로, 그간 AR 개발 및 세일즈 경험을 토대로 나온 자료가 아닐까 생각됩니다.
 
