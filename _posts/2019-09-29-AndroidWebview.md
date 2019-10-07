@@ -3,7 +3,7 @@ layout: post
 title: "모바일에서 3D Viewer 구축_안드로이드 웹뷰 편"
 date: 2019-09-29 10:00:00
 categories: dev
-tags: AndroidWebview 3Dviewer ARviewer sketchviewer
+tags: AndroidWebview 3Dviewer ARviewer sketchviewer 3Dcontents
 ---
 
 
@@ -292,7 +292,7 @@ Chrome Custom Tab을 사용해 보시기를 추천합니다. Chrome Custom Tab�
 **Source: https://developer.chrome.com/multidevice/android/customtabs*
 <br>
 
-와 같은 사항들을 어느 정도 커스터마이징 할 수 있습니다만, WebView 처럼 완전한 커스터마이징은 불가능합니다. 위에서 설명 드렸듯이, Chrome 브라우저는 surfaceView를 활용한 비동기적인 화면 그리기로 속도가 매우 빠른 편이기 때문에 3D 콘텐츠를 그리는 작업을 쉽게 보여주기 위해서 Chrome Custom Tab을 이용할 수 있습니다.
+위와 같은 사항들을 어느 정도 커스터마이징 할 수 있습니다만, WebView 처럼 완전한 커스터마이징은 불가능합니다. 위에서 설명 드렸듯이, Chrome 브라우저는 surfaceView를 활용한 비동기적인 화면 그리기로 속도가 매우 빠른 편이기 때문에 3D 콘텐츠를 그리는 작업을 쉽게 보여주기 위해서 Chrome Custom Tab을 이용할 수 있습니다.
 
 앱 상단바의 색상을 맞출 수 있고, 기본적인 뒤로가기 버튼을 커스터마이징 할 수 있고, 주소 검색란을 숨길 수 있습니다. 완벽한 커스터마이징은 되지 않지만, 앱 내에서 동작한다는 느낌을 줍니다.
 
