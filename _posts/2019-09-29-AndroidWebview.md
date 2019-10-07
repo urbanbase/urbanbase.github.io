@@ -39,7 +39,7 @@ WebView는 안드로이드 View를 상속 받은 컴포넌트이고, 안드로�
 
 Activity와 별개로 다른 스레드가 SurfaceView에 그림을 그리고, Window를 통과해 View를 그려주는 방식입니다. 여기서 이런 의문점이 들 수 있습니다.
 
-"왜 OS 단의 함수인 onDraw()가 SurfaceView를 쓰는 Chorme 브라우저보다 느릴까?"
+“왜 onDraw() 함수를 쓰는 WebView가 SurfaceView를 쓰는 Chorme 브라우저보다 느릴까?”
 <br>
 <br>
 <img width='700px' src='/assets/9_webview/Comparison_double_triple_buffering.svg'/>
@@ -69,98 +69,95 @@ https://github.com/hujiulong/vue-3d-model*<br>
 
 ```html
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-</head>
-<body style="background-color:#c8c8c8;">
-<div class="loader_wrapper" style="display:visible;">
-<div class="loader"  ></div>
+ <html>
 
-<div id="app" class="app" >
-<!-- -15px margin으로 뷰 꽉 채우기 -->
-<model-gltf class="model-gltf" style="margin-left:-15px; margin-right:-15px; "
-:background-color="bgColor" :background-alpha="bgAlpha"
-:scale="Scale"
-@on-load="onLoad"
-@on-progress="onProgress"
-:width=UbWindow.width  :height= UbWindow.height
-:position="Position"
-:rotation="Rotation"
-src="./model/pony_cartoon/scene.gltf"></model-gltf>
-</div>
-</div>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-3d-model/dist/vue-3d-model.umd.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://unpkg.com/vue-3d-model/dist/vue-3d-model.umd.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!-- <script src="../node_modules/jquery/dist/jquery.min.js"></script> -->
-<style>
-.loader {
-position:absolute;
-border: 8px solid #f3f3f3;
-border-radius: 50%;
-border-top: 8px solid #0CAEC2;
-width: 60px;
-height: 60px;
-margin-top: auto;
-margin-bottom: auto;
-vertical-align: middle;
-left:0;
-right:0;
-top:0;
-bottom:0;
-margin-left: auto;
-margin-right: auto;
--webkit-animation: spin 1s linear infinite; /* Safari */
-animation: spin 1s linear infinite;
-}
-
-@-webkit-keyframes spin {
-0% { -webkit-transform: rotate(0deg); }
-100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-0% { transform: rotate(0deg); }
-100% { transform: rotate(360deg); }
-}
-</style>
-
-<script>
-var totalModelCount = 1;
-var totalModelCountTmp = 0;
-new Vue({
-el: '#app',
-data: {
-UbWindow: {
-width: window.innerWidth,
-height: window.innerHeight
-},
-bgColor: '#c8c8c8',
-bgAlpha: 1,
-Scale: { x: 1, y: 1, z: 1 },
-Position: { x:0, y:0, z:0}
-},
-methods: {
-        onLoad ( event ) {
-        totalModelCountTmp++;
-            console.log("finsihh:" + totalModelCountTmp);
-            if (totalModelCountTmp >= totalModelCount) {
-            $('.loader').css('display','none');
-            $('.app').fadeIn(1000);
-            }
-        },
-        onProgress ( event ) {
-        console.log( event );   
-        }
+  <style>
+    /* ProgressBar 관련 */
+    .loader {
+     position: absolute;
+     border: 8px solid #f3f3f3;
+     border-radius: 50%;
+     border-top: 8px solid #0CAEC2;
+     width: 60px;
+     height: 60px;
+     margin-top: auto;
+     margin-bottom: auto;
+     vertical-align: middle;
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
+     margin-left: auto;
+     margin-right: auto;
+     -webkit-animation: spin 1s linear infinite;
+     /* Safari */
+     animation: spin 1s linear infinite;
     }
-});
-</script>
-</body>
+ 
+    @-webkit-keyframes spin {
+     0% {-webkit-transform: rotate(0deg);}
+     100% {-webkit-transform: rotate(360deg);}
+    }
+ 
+    @keyframes spin {
+     0% {transform: rotate(0deg);}
+     100% {transform: rotate(360deg);}
+    }
+   </style>
+ </head>
+
+ <body style="background-color:#c8c8c8; margin:0px;  ">
+  <div class="loader_wrapper" style="display:visible;">
+   <div class="loader"></div>
+
+   <div id="app" class="app">
+    <model-gltf class="model-gltf" :background-color="bgColor" :background-alpha="bgAlpha" :scale="Scale"
+     @on-load="onLoad" @on-progress="onProgress" :width=UbWindow.width :height=UbWindow.height :position="Position"
+     :rotation="Rotation" src="./model/pony_cartoon/scene.gltf"></model-gltf>
+   </div>
+  </div>
+
+  <script>
+   new Vue({
+    el: '#app',
+    data: {
+     UbWindow: {
+      width: window.innerWidth,
+      height: window.innerHeight
+     },
+     bgColor: '#c8c8c8',
+     bgAlpha: 1,
+     Scale: {
+      x: 1,
+      y: 1,
+      z: 1
+     },
+     Position: {
+      x: 0,
+      y: 0,
+      z: 0
+     }
+    },
+    methods: {
+     onLoad(event) {
+      $('.loader').css('display', 'none');
+      $('.app').fadeIn(1000);
+     },
+     onProgress(event) {
+      console.log(event);
+     }
+    }
+   });
+  </script>
+ </body>
 ```
 
 위의 HTML 파일을 서버에 올려서 사용해도 되고, Android 로컬 저장소인 Assets 폴더에 넣어서 사용해도 됩니다. 저는 후자를 택했습니다. script 태그의 자바스크립트 파일도 다운받은 후 안드로이드 로컬 저장소에 넣어서 인터넷 접속이 안되더라도 앱이 구동되도록 하였습니다.
@@ -228,10 +225,15 @@ override fun onCreate(savedInstanceState: Bundle?) {
         </tr>
         <tr>
         <td>allowUniversalAccessFromFileURLs</td>
-        <td>http 문서에서 특정 파일을 참조하는 태그들(img, link, script) 을 사용할 경우, W3C에서 권고하는 동일 출처 정책(Same-Origin Policy)을 따라야 합니다.
-        즉, 동일 도메인 내에서만 허용되는 것을 권고하기 때문에 asset 폴더의 html이 다른 폴더의 파일을 참조하면 권고 사항을 지키지 않았다고 에러가 나죠. <br>
-        하지만, allowFileAccess 함수를 통해서 허용이 가능합니다. <br>
-        참고로 http 문서에서 header(Access-Control-Allow-Origin: * 를 보신적이 있다면.. 네 이게 바로 동일 출처 정책을 풀어주는 것입니다.
+        <td>
+        - asset 폴더에 html 파일과, 3D 모델 파일들을 넣어놓았다면 해당 함수를 호출해야 에러가 나지 않습니다. 
+        <br>
+        <br>
+        - http 문서에서 참조하는 태그(img, link, script)를 사용할 경우, W3C에서 권고하는 동일 출처 정책(Same-Origin Policy)을 따라야 합니다. <br>
+        즉, 동일 도메인 내에서만 허용되는 것을 권고하기 때문에 asset 폴더의 html이 다른 폴더의 파일을 참조하면 권고 사항을 지키지 않았다고 에러가 나죠.
+        <br>
+        <br>
+        - 참고로 http 문서에서 header(Access-Control-Allow-Origin: * 를 보신적이 있다면, 이게 바로 동일 출처 정책을 풀어주는 것입니다.
         </td>
         </tr>
         <tr>
@@ -242,7 +244,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 <br>
 
-위의 함수로도 3D Viewer를 만드는 데 충분하지만 WebView의 다른 함수들도 혹시 몰라 정리해둡니다.
+위의 함수로도 3D Viewer를 만드는 데 충분하지만, WebView의 다른 유용한 함수들도 정리해 보겠습니다.
 
 <br>
 
@@ -273,7 +275,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 </table>
 
 <br>
-덧붙이자면, 간단한 HTML 페이지인 경우 setWebViewClient 만으로 충분하지만, 자바스크립트 다이얼로그, favicon 등의 기능이 들어간 페이지라면 WebChromeClient로 이벤트를 받을 수 있습니다.
+덧붙이자면, 간단한 HTML 페이지인 경우 setWebViewClient() 만으로 충분하지만, 자바스크립트 다이얼로그, favicon 등의 기능이 들어간 페이지라면 setWebChromeClient() 로 이벤트를 받을 수 있습니다.
 <br>
 
 <img width='200px' src='/assets/9_webview/webview.gif'>
