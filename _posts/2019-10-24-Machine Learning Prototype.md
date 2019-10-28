@@ -49,9 +49,6 @@ Tensorflow Object Detection API에서 튜토리얼로 제공되는 **Oxford-IIIT
 object detection에서 two stage 계열의 RCNN 모델 중 속도가 가장 빠른 모델입니다. two stage는 검출 영역을 생성하는 RPN stage와 검출 영역이 정확한 지 판단하는 classifier stage로 나누어져 있습니다. SSD와 YOLO 같은 one stage 계열 모델과 함께 사물 검출 분야에서 많이 사용되고 있는 모델입니다.<br>
 Faster R-CNN Resnet-101는 ImageNet 데이터베이스의 이미지를 사전 학습한 Resnet-101를 backbone 네트워크로 사용하는 Faster R-CNN 모델입니다.<br> 
 다른 모델로 학습하고 싶다면 Object Detection API에서 제공하는 모델 <a href="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md" target="_blank" style="color: #0366d6;">(detection_model_zoo)</a>에서 확인할 수 있습니다.
-
-
-
 <br><br>
 
 그럼 시작해볼까요?
@@ -69,7 +66,7 @@ Faster R-CNN Resnet-101는 ImageNet 데이터베이스의 이미지를 사전 �
 왜 Sagemaker가 아닌 다른 서비스를 갑자기 언급했는지 의아하시겠지만, 우리에게 익숙한 jupyter 노트북 환경에 무료로 Tesla K80 GPU를 12시간이나 사용할 수 있다니 안 써 볼 수가 없죠! 12시간보다 긴 학습 시간을 요구하는 모델일 경우에는 충분하지 않겠지만 간단한 학습을 할 때 유용하게 활용할 수 있습니다.
 
 ### 본격적으로 Object Detection API를 사용해봅시다!
-
+<br>
 
 ### 1) colab 환경 설정하기
 
@@ -258,7 +255,7 @@ SAMPLE_1_OF_N_EVAL_EXAMPLES=1
 <br>
 그럼 학습이 끝날 때까지 기다립니다...
 
-<img src="/assets/10_ML prototype/later_pic.jpg" width="40%" alt="later_pic">
+<img src="/assets/10_ML prototype/later_pic.jpg" width="60%" alt="later_pic">
 
 ...학습이 잘 끝났나요? <br>
 학습이 잘 되었다면 model_dir 인자로 지정한 경로에 checkpoint가 저장되어 있습니다.
@@ -269,8 +266,7 @@ SAMPLE_1_OF_N_EVAL_EXAMPLES=1
 성능 평가는 다음과 같습니다.
 <img src="/assets/10_ML prototype/metric.jpg" width="80%" height="30%" alt="metric">
 
-위 성능 결과는 COCO evaluation metrics를 사용합니다. 평가에 대한 정보는 [여기](https://blog.naver.com/PostView.nhn?blogId=phj8498&logNo=221294072146)를 참고해 주세요.<p> 
-이 튜토리얼에서는 생략했지만 colab에서 tensorboard를 통해서 학습이 어떻게 진행됐는지 확인이 가능하니 참고 바랍니다.
+위 성능 결과는 COCO evaluation metrics를 사용합니다. 평가에 대한 정보는 <a href="https://blog.naver.com/PostView.nhn?blogId=phj8498&logNo=221294072146" target="_blank" style="color: #0366d6;">여기</a>를 참고해 주세요. 이 튜토리얼에서는 생략했지만 colab에서 tensorboard를 통해서 학습이 어떻게 진행됐는지 확인이 가능하니 참고 바랍니다.
 <br>
 
 그럼 이제 배포를 하고 결과값을 확인해볼까요? 배포에는 Tensorflow Serving을 사용합니다.
@@ -378,7 +374,7 @@ export된 saved_model에 대한 정보를 볼 수 있습니다.
 !saved_model_cli show --dir '/content/gdrive/My Drive/models/research/pet_saved_model/1' --all
 ```
 
-<img src="/assets/10_ML prototype/exported_model.jpg" width="60%" alt="exported_model">
+<img src="/assets/10_ML prototype/exported_model.jpg" width="80%" alt="exported_model">
 
 <br>
 
@@ -401,6 +397,8 @@ Tensorflow Serving을 시작하고 모델을 로드합니다. Tensorflow Serving
 - rest_api_port: REST 요청을 받을 포트 번호를 씁니다. gRPC는 8500, REST는 8501을 주로 사용합니다.
 - model_name: REST 요청의 URL에 사용할 이름을 지정합니다.
 - model_base_path: 로드할 모델을 저장한 경로를 지정합니다.
+
+
 ```bash
 os.environ["MODEL_DIR"] = '/content/gdrive/My Drive/models/research/pet_saved_model'
 ```
@@ -418,7 +416,7 @@ nohup tensorflow_model_server \
 ```
 
 다음과 같은 결과가 나오면 잘 구동이 된 것입니다.
-<img src="/assets/10_ML prototype/server_log.jpg" width="60%" alt="server_log">
+<img src="/assets/10_ML prototype/server_log.jpg" alt="server_log">
 
 <br>
 
@@ -482,6 +480,8 @@ Object Detection API의 튜토리얼에 있는 시각화 코드로 검출 결과
 ### 1) Docker 설치
 
 > Docker는 애플리케이션을 신속하게 구축, 테스트 및 배포할 수 있는 소프트웨어 플랫폼입니다. Docker는 소프트웨어를 컨테이너라는 표준화된 유닛으로 패키징하며, 이 컨테이너에는 라이브러리, 시스템 도구, 코드, 런타임 등 소프트웨어를 실행하는 데 필요한 모든 것이 포함되어 있습니다. Docker를 사용하면 환경에 구애받지 않고 애플리케이션을 신속하게 배포 및 확장할 수 있으며 코드가 문제없이 실행될 것임을 확신할 수 있습니다.
+<br>
+
 > **Source: <a href="https://aws.amazon.com/ko/docker/" target="_blank" style="color: #0366d6;">AWS 공식, Docker란 무엇입니까?</a>* 
 
 도커는 Tensorflow Serving울 구동하는 가상 환경 이미지를 생성하고, Sagemaker는 EC2 인스턴스에서 배포 이미지를 서비스하는 방식으로 endpoint를 생성합니다.
@@ -494,9 +494,9 @@ Sagemaker가 Docker image를 실행하고 Tensorflow Serving을 구동할 수 �
 - nginx.conf: Sagemaker endpoint에 요청된 것을 docker image 상에서 구동된 Tensorflow Serving으로 보내는 역할을 합니다.
 - saved_model_pet_object_detection: Tensorflow Serving에 로드할 모델을 준비합니다.
 
-<p align="center">
-  <img src="/assets/10_ML prototype/serving_docker.jpg" width="60%" alt="docker_setting"></img>
-</p>
+<img src="/assets/10_ML prototype/serving_docker.jpg" alt="docker_setting">
+
+<br>
 
 *Dockerfile*
 
@@ -559,10 +559,13 @@ saved_model_pet_object_detection
 |   |   ├── variables.index
 |   └── saved_model.pb
 ```
+<br>
 
 ### 3) AWS Credentials
 
 AWS CLI를 활용해 local ECR로 Docker image를 업로드하기 위해서 지격 증명 파일의 정보를 구성합니다. 다음의 <a href="https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-chap-configure.html" target="_blank" style="color: #0366d6;">AWS CLI 구성</a>을 참고합니다.
+
+<br>
 
 ### 4) ECR 업로드
 AWS ECR(Amazon EC2 Container Registry)에 Docker Image를 업로드합니다. 먼저 ECR에 레포지토리를 만들고 제공되는 업로드의 각 과정을 복사&붙여넣기 하면 쉽게 진행할 수 있습니다. 
@@ -573,33 +576,39 @@ AWS ECR(Amazon EC2 Container Registry)에 Docker Image를 업로드합니다. �
 
 <img src="/assets/10_ML prototype/ecr-uploaded.jpg" alt="ecr-uploaded">
 
+<br>
+
 ### 5) Sagemaker에서 엔드포인트 만들기
 
 업로드가 완료된 ECR에서 Image URI를 복사한 후 Sagamaker 서비스에서 endpoint를 생성해보도록 하겠습니다. endpoint가 생성이 되면 과금이 발생합니다. 테스트가 끝나면 꼭 삭제합니다.
 
-<img src="/assets/10_ML prototype/sagemaker_main.jpg" width="80%" alt="sagemaker_main">
-
-1. Sagemaker의 메뉴 창, 추론(Inference) 메뉴의 모델(Models)에서 모델 생성(Create Model)을 합니다. <br>
-Container definition 1에서 ECR에서 생성한 이미지 URL을 적용합니다.
-
-<img src="/assets/10_ML prototype/container_definition.jpg" width="80%" alt="create_model">
-
-<img src="/assets/10_ML prototype/model_container.jpg" width="80%" alt="model-container">
-
-2. 엔트포인트 구성 메뉴에서 엔트포인트 구성(Create endpoint configuration)을 합니다.<br>
-Endpoint configuration name에 구성 이름을 정하고 Add model에서 모델 컨테이너를 연결합니다. Actions의 **Edit**에서 **Instance type**, **Elastic Inference**를 지정할 수 있습니다. 
-<img src="/assets/10_ML prototype/endpoint_configure.jpg" width="80%" alt="endpoint_configure">
-<img src="/assets/10_ML prototype/edit_production_variants.jpg" width="80%" alt="edit_production_variants">
-
-3. 엔트포인트를 생성합니다. <br>
-Endpoint name으로 이름을 지정하고, Endpoint configuration에서 앞에서 생성한 엔드포인트 구성을 선택합니다.
-  <img src="/assets/10_ML prototype/create_endpoint.jpg" width="80%" alt="create_endpoint">
+<img src="/assets/10_ML prototype/sagemaker_main.jpg" alt="sagemaker_main">
 
 <br>
- 엔드포인트가 InSerive 상태가 되면 배포 완료입니다! 이제 endpoint를 호출하여 추론을 할 수 있습니다.
 
+a. Sagemaker의 메뉴 창, 추론(Inference) 메뉴의 모델(Models)에서 모델 생성(Create Model)을 합니다.
+Container definition 1에서 ECR에서 생성한 이미지 URL을 적용합니다.
+
+<img src="/assets/10_ML prototype/container_definition.jpg" alt="create_model">
+<img src="/assets/10_ML prototype/model_container.jpg" alt="model-container">
+
+<br>
+
+b. 엔트포인트 구성 메뉴에서 엔트포인트 구성(Create endpoint configuration)을 합니다.
+Endpoint configuration name에 구성 이름을 정하고 Add model에서 모델 컨테이너를 연결합니다. Actions의 **Edit**에서 **Instance type**, **Elastic Inference**를 지정할 수 있습니다.
+
+<img src="/assets/10_ML prototype/endpoint_configure.jpg" alt="endpoint_configure">
+<img src="/assets/10_ML prototype/edit_production_variants.jpg" alt="edit_production_variants">
+
+<br>
+
+c. 엔트포인트를 생성합니다.
+Endpoint name으로 이름을 지정하고, Endpoint configuration에서 앞에서 생성한 엔드포인트 구성을 선택합니다.
+<img src="/assets/10_ML prototype/create_endpoint.jpg" alt="create_endpoint">
+엔드포인트가 InSerive 상태가 되면 배포 완료입니다! 이제 endpoint를 호출하여 추론을 할 수 있습니다.
 <img src="/assets/10_ML prototype/endpoint_inservice.jpg" alt="endpoint_inservice">
 
+<br>
 
 ### 6) endpoint 테스트 해보기
 
@@ -645,6 +654,8 @@ print(results)
 
 더 나아가서 Space에서는 AWS의 다른 서비스(lambda, API gateway)와 연결하여 서버리스 기반의 REST API로 서비스를 하고 있습니다. 이것에 대한 자세한 내용은 다음 기회에 다루어보도록 하겠습니다!
 
+<br>
+
 ### 7) endpoint 제거하기
 잊지 않고 delete 버튼으로 endpoint를 삭제합니다.
 
@@ -656,6 +667,7 @@ print(results)
 이렇게 클라우드 환경에서 머신러닝 서비스를 구성하면 복잡한 과정들이 많이 간소화되고 빠르게 프로토타입을 만들어 볼 수 있습니다.
 <br>
 <br>
+---
 
 #### 튜토리얼 colab 링크
 
