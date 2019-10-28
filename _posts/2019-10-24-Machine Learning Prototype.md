@@ -13,11 +13,7 @@ Space는 컴퓨터 비전 영역의 딥러닝을 활용하여 공간을 분류�
 <br>
 
 
-<figure>
-  <img src="/assets/10_ML prototype/about_sagemaker.jpg" alt="about_sagemaker">
-  <figcaption><center>about sagemaker</center>
-   </figcaption>
-</figure>
+<img src="/assets/10_ML prototype/about_sagemaker.jpg" alt="about_sagemaker">
 
 
 **Source:<a href="https://aws.amazon.com/ko/sagemaker/#" target="_blank" style="color: #0366d6;"> Sagemaker 공식</a>*
@@ -27,6 +23,7 @@ Space는 컴퓨터 비전 영역의 딥러닝을 활용하여 공간을 분류�
 
 Space의 경우 Sagemaker가 제공하는 기본 모델뿐만 아니라 Google의 Tensorflow Object Detection API를 활용하여 정확도를 더욱 높일 수 있는 모델을 검토했습니다. 그 과정에서 시행착오들이 있었는데요. 예를 들면, object detection은 다른 머신러닝 모델 대비 입출력의 데이터 형식이 복잡하다는 특징이 있죠.
 <br>
+
 이런 시행착오에서 배운 것들을 모아 모델 학습부터 배포까지 빠르게 프로토타입을 만들 수 있는 튜토리얼을 소개해보겠습니다. 그럼 시작 전에 어떤 모델과 데이터를 사용할 지 정리하겠습니다!
 <br>
 
@@ -102,8 +99,8 @@ if not os.path.exists('/content/gdrive'):
 
 ### 2) Tensorflow Object Detection API 환경 설정하기
 Object Detection API <a href="https://github.com/tensorflow/models/tree/master/research/object_detection" target="_blank" style="color: #0366d6;">github 레포지토리</a>에는 API를 실행할 때 필요한 환경 설정과 학습, 배포에 관련된 튜토리얼들이 잘 정리되어 있습니다.
-
 <br>
+
 <a href="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md" target="_blank" style="color: #0366d6;">설치 튜토리얼</a>을 따라 학습 환경 설정을 colab 환경에서 설정하겠습니다.
 <br>
 
