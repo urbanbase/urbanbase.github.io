@@ -490,7 +490,7 @@ Object Detection API의 튜토리얼에 있는 시각화 코드로 검출 결과
 > **Source: <a href="https://aws.amazon.com/ko/docker/" target="_blank" style="color: #0366d6;">AWS 공식, Docker란 무엇입니까?</a>* 
 
 도커는 Tensorflow Serving울 구동하는 가상 환경 이미지를 생성하고, Sagemaker는 EC2 인스턴스에서 배포 이미지를 서비스하는 방식으로 endpoint를 생성합니다.
-다음 [링크](https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html)를 참고하여 로컬 운영체제에 맞게 도커를 설치해주세요.
+다음 <a href="https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html" target="_blank" style="color: #0366d6;">링크</a>를 참고하여 로컬 운영체제에 맞게 도커를 설치해주세요.
 
 ### 2) dockerfile 구성하기
 Sagemaker가 Docker image를 실행하고 Tensorflow Serving을 구동할 수 있도록 필요한 파일을 구성합니다. 이 과정은 local에 임의의 폴더(여기서는 object-detection-tf-serving)를 만들어서 진행합니다.
