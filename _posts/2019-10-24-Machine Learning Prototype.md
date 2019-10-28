@@ -4,12 +4,8 @@ title: "클라우드 환경에서 머신러닝 서비스 프로토타입 빠르�
 date: 2019-10-24 10:00:00
 categories: dev
 tags: MachineLearningPrototype AWSSagemaker Tensorflow
-image: https://urbanbase.github.io/assets/10_ML%20prototype/oxford-pet.jpg
----
-<head>
-    <meta name="og:image" content="https://urbanbase.github.io/assets/10_ML%20prototype/oxford-pet.jpg">
-</head>
 
+---
 안녕하세요. 머신러닝 엔지니어 김수민입니다.
 어반베이스에서 Space의 머신러닝을 이용한 기술 개발을 하고 있습니다.
 
@@ -29,10 +25,10 @@ Space는 컴퓨터 비전 영역의 딥러닝을 활용하여 공간을 분류�
 
 데이터만 있다면 Sagemaker에서 제공하는 고성능 알고리즘을 사용하여 쉽게 학습해 볼 수 있습니다. 머신러닝 모델의 학습부터 서비스 배포까지 모든 관리 또한 가능하며, AWS의 ML 서비스는 물론 다른 서비스와 통합하여 빠르게 머신러닝 서비스 프로토타입을 만들어 볼 수 있습니다.
 
-Space의 경우 Sagemaker가 제공하는 기본 모델뿐만 아니라 Google의 Tensorflow Object Detection API를 활용하여 정확도를 더욱 높일 수 있는 모델을 검토했습니다. 그 과정에서 시행착오들이 있었는데요. 예를 들면, object detection은 다른 머신러닝 모델 대비 입출력의 데이터 형식이 복잡하다는 특징이 있죠. 
-<br><br>
+Space의 경우 Sagemaker가 제공하는 기본 모델뿐만 아니라 Google의 Tensorflow Object Detection API를 활용하여 정확도를 더욱 높일 수 있는 모델을 검토했습니다. 그 과정에서 시행착오들이 있었는데요. 예를 들면, object detection은 다른 머신러닝 모델 대비 입출력의 데이터 형식이 복잡하다는 특징이 있죠.
+<br>
 이런 시행착오에서 배운 것들을 모아 모델 학습부터 배포까지 빠르게 프로토타입을 만들 수 있는 튜토리얼을 소개해보겠습니다. 그럼 시작 전에 어떤 모델과 데이터를 사용할 지 정리하겠습니다!
-<br><br>
+<br>
 
 ## **Tensorflow Object Detection API**
 Tensorflow Object Detection API에서 튜토리얼로 제공되는 **Oxford-IIIT Pets dataset** 과 **faster_rnn_resnet_101_coco** 모델을 사용합니다.
@@ -44,37 +40,43 @@ Tensorflow Object Detection API에서 튜토리얼로 제공되는 **Oxford-IIIT
    </figcaption>
 </p>
 
-개와 고양이의 품종 별로 클래스 레이블이 있고, 각 이미지 데이터에는 짝으로 개와 고양이의 얼굴 영역과 segmention용 mask 레이블링을 한 데이터가 있습니다. <br>
-데이터셋을 다운받으면 images와 annotations 파일이 있는데, images는 이미지 데이터이고 annotations에는 사물 검출 학습에 필요한 검출 상자의 위치, 상자가 가리키는 클래스 정보 등을 담고 있는 xml 파일이 있습니다.
+개와 고양이의 품종 별로 클래스 레이블이 있고, 각 이미지 데이터에는 짝으로 개와 고양이의 얼굴 영역과 segmention용 mask 레이블링을 한 데이터가 있습니다. 
+<br>
 
+데이터셋을 다운받으면 images와 annotations 파일이 있는데, images는 이미지 데이터이고 annotations에는 사물 검출 학습에 필요한 검출 상자의 위치, 상자가 가리키는 클래스 정보 등을 담고 있는 xml 파일이 있습니다.
 <br>
 
 ### 2) Faster R-CNN Resnet-101
-object detection에서 two stage 계열의 RCNN 모델 중 속도가 가장 빠른 모델입니다. two stage는 검출 영역을 생성하는 RPN stage와 검출 영역이 정확한 지 판단하는 classifier stage로 나누어져 있습니다. SSD와 YOLO 같은 one stage 계열 모델과 함께 사물 검출 분야에서 많이 사용되고 있는 모델입니다.<br>
-Faster R-CNN Resnet-101는 ImageNet 데이터베이스의 이미지를 사전 학습한 Resnet-101를 backbone 네트워크로 사용하는 Faster R-CNN 모델입니다.<br> 
-다른 모델로 학습하고 싶다면 Object Detection API에서 제공하는 모델 <a href="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md" target="_blank" style="color: #0366d6;">(detection_model_zoo)</a>에서 확인할 수 있습니다.
-<br><br>
+object detection에서 two stage 계열의 RCNN 모델 중 속도가 가장 빠른 모델입니다. two stage는 검출 영역을 생성하는 RPN stage와 검출 영역이 정확한 지 판단하는 classifier stage로 나누어져 있습니다. SSD와 YOLO 같은 one stage 계열 모델과 함께 사물 검출 분야에서 많이 사용되고 있는 모델입니다.
+<br>
 
+Faster R-CNN Resnet-101는 ImageNet 데이터베이스의 이미지를 사전 학습한 Resnet-101를 backbone 네트워크로 사용하는 Faster R-CNN 모델입니다.
+<br> 
+
+다른 모델로 학습하고 싶다면 Object Detection API에서 제공하는 모델 <a href="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md" target="_blank" style="color: #0366d6;">(detection_model_zoo)</a>에서 확인할 수 있습니다.
+
+<br>
 그럼 시작해볼까요?
-<br><br>
+<br>
 
 ## Google Colaboratory
 
 그 전에 잠깐, 다른 클라우드 서비스인 colaboratory를 소개하겠습니다. 
 
-> Colaboratory는 설치가 필요 없으며 완전히 클라우드에서 실행되는 무료 Jupyter 노트 환경입니다.
-> Colaboratory를 사용하면 브라우저를 통해 무료로 코드를 작성 및 실행하고, 분석을 저장 및 공유하며, 강력한 컴퓨팅 리소스를 이용할 수 있습니다.
+> *"Colaboratory는 설치가 필요 없으며 완전히 클라우드에서 실행되는 무료 Jupyter 노트 환경입니다.
+> Colaboratory를 사용하면 브라우저를 통해 무료로 코드를 작성 및 실행하고, 분석을 저장 및 공유하며, 강력한 컴퓨팅 리소스를 이용할 수 있습니다."*
 
 **Source:<a href="https://colab.research.google.com/notebooks/welcome.ipynb?hl=ko" target="_blank" style="color: #0366d6;"> Colaboratory 공식</a>*
 
 왜 Sagemaker가 아닌 다른 서비스를 갑자기 언급했는지 의아하시겠지만, 우리에게 익숙한 jupyter 노트북 환경에 무료로 Tesla K80 GPU를 12시간이나 사용할 수 있다니 안 써 볼 수가 없죠! 12시간보다 긴 학습 시간을 요구하는 모델일 경우에는 충분하지 않겠지만 간단한 학습을 할 때 유용하게 활용할 수 있습니다.
 
-### 본격적으로 Object Detection API를 사용해봅시다!
-<br>
+<h4>본격적으로 Object Detection API를 사용해봅시다!</h4>
 
 ### 1) colab 환경 설정하기
 
-colab notebook을 생성하고 제일 처음으로 할 작업은 **GPU 환경으로 설정하기** 입니다.<br>
+colab notebook을 생성하고 제일 처음으로 할 작업은 **GPU 환경으로 설정하기** 입니다.
+<br>
+
 상단 메뉴의 **수정 > 노트 설정** 을 선택하고 **하드웨어 가속기 > GPU** 로 변경하면 GPU 환경의 런타임으로 변경됩니다.
 
 <p align="center">
@@ -96,9 +98,11 @@ from google.colab import drive
 if not os.path.exists('/content/gdrive'):
   drive.mount('/content/gdrive')
 ```
+<br>
 
 ### 2) Tensorflow Object Detection API 환경 설정하기
 Object Detection API <a href="https://github.com/tensorflow/models/tree/master/research/object_detection" target="_blank" style="color: #0366d6;">github 레포지토리</a>에는 API를 실행할 때 필요한 환경 설정과 학습, 배포에 관련된 튜토리얼들이 잘 정리되어 있습니다.
+
 <br>
 <a href="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md" target="_blank" style="color: #0366d6;">설치 튜토리얼</a>을 따라 학습 환경 설정을 colab 환경에서 설정하겠습니다.
 <br>
@@ -128,7 +132,8 @@ Object Detection API <a href="https://github.com/tensorflow/models/tree/master/r
 !cd cocoapi/PythonAPI; make; cp -r pycocotools /content/gdrive/'My Drive'/models/research/
 ```
 
-Tensorflow Object Detection API는 Protobuf를 모델을 설정할 때 사용합니다. Protobufs를 사용할 수 있도록 라이브러리를 컴파일해줍니다. <br>
+Tensorflow Object Detection API는 Protobuf를 모델을 설정할 때 사용합니다. Protobufs를 사용할 수 있도록 라이브러리를 컴파일해줍니다. 
+<br>
 컴파일할 경로인 `/content/gdrive/'My Drive'/models/research/`로 이동합니다.
 
 ```bash
@@ -188,7 +193,6 @@ ls *.record*
 <img src="/assets/10_ML prototype/tfrecord_results.jpg" width="60%" alt="tfrecord_results">
 
 <br>
-<br>
 
 ### 4) Pre-trained된 모델 다운받기
 coco 데이터셋으로 미리 학습된 모델을 사용하여 전이학습(trasfer learning)을 합니다. 새로운 모델로 학습할 때보다 이미지에 대한 분포를 더 많이 학습했기 때문에 효율적으로 학습할 수 있는 장점이 있습니다.
@@ -203,7 +207,6 @@ Object Detection API의 **detection model zoo** 페이지 <a href="https://githu
 !tar -xvf faster_rcnn_resnet101_coco_2018_01_28.tar.gz
 !cp faster_rcnn_resnet101_coco_2018_01_28/model.ckpt.* .
 ```
-<br>
 <br>
 
 ### 5) config 파일 수정하기
@@ -229,7 +232,6 @@ Tensorflow Object Detection API는 모델의 구조나 학습을 위한 파라�
 !sed -i “s|/content/models/research/pet_label_map.pbtxt|/content/models/research/object_detection/data/pet_label_map.pbtxt|g” faster_rcnn_resnet101_pets.config
 
 ```
-<br>
 <br>
 
 ### 6) 학습하기
@@ -279,7 +281,7 @@ SAMPLE_1_OF_N_EVAL_EXAMPLES=1
 
 ## Tensorflow Serving
 
-> 제품 환경을 위해 디자인 되었으며, 머신러닝 모델을 위해 유연하며 고성능의 서빙 시스템을 제공합니다. 텐서플로우 서빙을 통해 같은 서버 아키텍쳐와 API를 유지하는 동안, 새로운 알고리즘과 실험을 쉽게 배포할 수 있습니다.<br>
+> *"제품 환경을 위해 디자인 되었으며, 머신러닝 모델을 위해 유연하며 고성능의 서빙 시스템을 제공합니다. 텐서플로우 서빙을 통해 같은 서버 아키텍쳐와 API를 유지하는 동안, 새로운 알고리즘과 실험을 쉽게 배포할 수 있습니다."*<br>
 
 >**Source:<a href="https://www.tensorflow.org/tfx/serving/serving_basic" target="_blank" style="color: #0366d6;">Tensorflow Serving 공식</a>*
 
@@ -320,12 +322,14 @@ Tensorflow Serving은 SavedModel 포맷 \<sup>*</sup>의 saved_model.pb와 모�
 
 코드를 수정한 참고 <a href="https://gist.github.com/gauravkaila/7e05510cd2191c71059b93c3a9257350#file-exporter-py" target="_blank" style="color: #0366d6;">github</a>의 코드를 exporter_savedmodel.py로 저장하고 다음과 같이 수정합니다.
 
+```python
 > Line 72: change optimize_tensor_layout=True ==>  layout_optimizer=True
 >
 > Line 327-329:<p>
 > preprocessed_inputs, true_image_shapes = detection_model.preprocess(inputs)<p>
 > output_tensors = detection_model.predict(preprocessed_inputs, true_image_shapes)<p>
 > postprocessed_tensors = detection_model.postprocess(output_tensors, true_image_shapes)
+```
 
 Object Detection API가 저장되어 있는 `/content/gdrive/My Drive/models/research/object detection` 에 파일을 업로드합니다.
  
@@ -483,7 +487,7 @@ Object Detection API의 튜토리얼에 있는 시각화 코드로 검출 결과
 
 ### 1) Docker 설치
 
-> Docker는 애플리케이션을 신속하게 구축, 테스트 및 배포할 수 있는 소프트웨어 플랫폼입니다. Docker는 소프트웨어를 컨테이너라는 표준화된 유닛으로 패키징하며, 이 컨테이너에는 라이브러리, 시스템 도구, 코드, 런타임 등 소프트웨어를 실행하는 데 필요한 모든 것이 포함되어 있습니다. Docker를 사용하면 환경에 구애받지 않고 애플리케이션을 신속하게 배포 및 확장할 수 있으며 코드가 문제없이 실행될 것임을 확신할 수 있습니다.
+> *"Docker는 애플리케이션을 신속하게 구축, 테스트 및 배포할 수 있는 소프트웨어 플랫폼입니다. Docker는 소프트웨어를 컨테이너라는 표준화된 유닛으로 패키징하며, 이 컨테이너에는 라이브러리, 시스템 도구, 코드, 런타임 등 소프트웨어를 실행하는 데 필요한 모든 것이 포함되어 있습니다. Docker를 사용하면 환경에 구애받지 않고 애플리케이션을 신속하게 배포 및 확장할 수 있으며 코드가 문제없이 실행될 것임을 확신할 수 있습니다."*
 <br>
 
 > **Source: <a href="https://aws.amazon.com/ko/docker/" target="_blank" style="color: #0366d6;">AWS 공식, Docker란 무엇입니까?</a>* 
