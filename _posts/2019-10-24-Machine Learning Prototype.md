@@ -312,10 +312,10 @@ Tensorflow Serving은 Docker 기반으로 여러 플랫폼에서 유연하게 �
 
 ### 1) 수정된 `exporter.py` 만들기
 
-Tensorflow Serving은 SavedModel 포맷 \<sup>*</sup>의 saved_model.pb와 모델을 복구하기 위한 체크포인트 정보가 담긴 variable 파일이 필요합니다. Tensorflow Object Detection API의 `exporter.py`로 SavedModel을 추출할 때 그 기능이 없기 때문에 코드의 수정이 필요합니다.
+Tensorflow Serving은 SavedModel 포맷*의 saved_model.pb와 모델을 복구하기 위한 체크포인트 정보가 담긴 variable 파일이 필요합니다. Tensorflow Object Detection API의 `exporter.py`로 SavedModel을 추출할 때 그 기능이 없기 때문에 코드의 수정이 필요합니다.
 <br>
 
-*(\* [참고](https://www.tensorflow.org/guide/saved_model?hl=ko) SavedModel은 변수값과 상수를 포함하고 직렬화된 시그니처와 이를 실행하는 데 필요한 상태를 담은 디렉토리입니다.)*
+*(\* <a href="https://www.tensorflow.org/guide/saved_model?hl=ko" target="_blank" style="color: #0366d6;">참고</a> SavedModel은 변수값과 상수를 포함하고 직렬화된 시그니처와 이를 실행하는 데 필요한 상태를 담은 디렉토리입니다.)*
 
 코드를 수정한 참고 <a href="https://gist.github.com/gauravkaila/7e05510cd2191c71059b93c3a9257350#file-exporter-py" target="_blank" style="color: #0366d6;">github</a>의 코드를 exporter_savedmodel.py로 저장하고 다음과 같이 수정합니다.
 
@@ -443,7 +443,7 @@ import json
 import base64
 import request
 
-filepath = '/content/gdrive/My Drive/models/research/object_detection/test_images/test_2.jpeg'
+filepath = '/content/gdrive/My Drive/models/research/object_detection/test_images/<TEST_IMAGE>.jpeg'
 
 with open(filepath, "rb") as image:
   image_data = image.read()
