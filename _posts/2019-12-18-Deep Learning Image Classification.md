@@ -4,6 +4,7 @@ title: "PyTorch를 활용한 딥러닝 이미지 분류 모델 학습 및 배포
 date: 2019-12-17 10:00:00
 categories: dev
 tags: DeepLearning AWSSagemaker PyTorch
+cover: "/assets/thumbnail/12_DL_PyTorch.png"
 
 ---
  안녕하세요. 어반베이스 Machine Learning 개발자 백윤아입니다. 어반베이스에서는 공간 분석 서비스인 Space 개발을 담당하고 있습니다. Space는 컴퓨터 비전 영역의 딥러닝을 활용하여 공간을 분류하고, 공간에서 사물을 검출하며 공간의 특성을 분석하는 서비스를 제공합니다. 
