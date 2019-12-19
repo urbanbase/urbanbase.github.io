@@ -15,7 +15,7 @@ cover: "/assets/thumbnail/12_DL_PyTorch.png"
  2. Serverless API 개발 : Django Rest Framework를 이용한 RESTful API 개발 & Zappa를 이용해 AWS Lambda에 Django 올리기
 
 
-오늘은 딥러닝 모델 개발과정- **Amazon SageMaker에서 PyTorch를 활용한 딥러닝 이미지 분류 모델 학습 및 배포**과정에 대해 알아보겠습니다.
+오늘은 **AWS Sagemaker에서 간단한 딥러닝 이미지 분류기의 학습부터 배포까지의 과정**에 대해 알아보겠습니다.
 
 <br>
 
@@ -66,7 +66,7 @@ cat_data
 
 화면 상단에 있는 `New` 버튼을 누르고 아래와 같이 `conda_pytorch_p36` 을 선택하여 새로운 노트북을 생성합니다. Conda 패키지를 이용하여 Python3 PyTorch 환경이 설정되어 있는 노트북입니다. 
 
-<img src="/assets/12_DL image classification/create_notebook.jpg" alt="create_notebook">
+<img src="/assets/12_DL image classification/new_notebook.jpg" alt="new_notebook">
 
 
 노트북에서 Python과 PyTorch의 버전을 확인해보겠습니다.
