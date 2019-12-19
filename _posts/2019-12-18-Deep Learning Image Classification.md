@@ -3,15 +3,12 @@ layout: post
 title: "PyTorch를 활용한 딥러닝 이미지 분류 모델 학습 및 배포"
 date: 2019-12-17 10:00:00
 categories: dev
-tags: deeplearning AWSSagemaker PyTorch
+tags: DeepLearning AWSSagemaker PyTorch
 
 ---
-
-# AWS를 활용한 딥러닝 서비스 Severless API 개발 (Part 1)
-
  안녕하세요. 어반베이스 Machine Learning 개발자 백윤아입니다. 어반베이스에서는 공간 분석 서비스인 Space 개발을 담당하고 있습니다. Space는 컴퓨터 비전 영역의 딥러닝을 활용하여 공간을 분류하고, 공간에서 사물을 검출하며 공간의 특성을 분석하는 서비스를 제공합니다. 
 
- 이번 글에서는 Space AI의 API를 만들었던 과정에 대해 이야기 해보려고 합니다. AWS 클라우드를 활용하여 간단한 딥러닝 모델 학습부터 서버리스 API 구축까지에 대한 과정인데요. 전체 내용을 두 가지 파트로 나누자면, `1. 딥러닝 모델 개발`과 `2. Serverless API 개발`으로 나눌 수 있을 것 같습니다.
+ 이번 글에서는 Space의 API를 만들었던 과정에 대해 이야기 해보려고 합니다. AWS 클라우드를 활용하여 간단한 딥러닝 모델 학습부터 서버리스 API 구축까지에 대한 과정인데요. 전체 내용을 두 가지 파트로 나누자면, `1. 딥러닝 모델 개발`과 `2. Serverless API 개발`으로 나눌 수 있을 것 같습니다.
 
  1. 딥러닝 모델 개발 : Amazon SageMaker에서 PyTorch를 활용한 딥러닝 이미지 분류 모델 학습 및 배포
  2. Serverless API 개발 : Django Rest Framework를 이용한 RESTful API 개발 & Zappa를 이용해 AWS Lambda에 Django 올리기
@@ -24,10 +21,14 @@ tags: deeplearning AWSSagemaker PyTorch
 ## Amazon SageMaker에서 PyTorch를 활용한 딥러닝 이미지 분류 모델 학습 및 배포
 
 우선 간단한 이미지 분류기를 만들기 위해서 학습에 사용할 데이터가 필요합니다. 
-이번 튜토리얼에서는 최근 핫(?)한 딥러닝 프레임워크인 PyTorch를 사용하여 모델 학습을 해보려고 하는데, PyTorch에는 Computer Vision 분야를 위한 <a href="https://pytorch.org/docs/stable/torchvision/index.html#torchvision" target="_blank" style="color: #0366d6;">torchvision</a>이라는 패키지가 만들어져 있습니다. 여기에는 ImageNet이나 CIFAR10, MNIST 등과 같이 널리 사용되는 유명한 데이터셋(datasets)과 모델 아키텍처(models) 및 이미지용 데이터 변환기(transforms)가 포함되어 있습니다. 이 패키지를 사용하면 편리하게 대량의 이미지 데이터를 불러오고, 데이터 변환도 손쉽게 할 수 있습니다. 여기서는 **나만의 데이터셋**으로 세 종류의 고양이를 분류하는 모델을 만들기 위해서 `torchvision`의 `ImageFolder` 모듈을 사용합니다.
+
+이번 튜토리얼에서는 최근 핫(?)한 딥러닝 프레임워크인 PyTorch를 사용하여 모델 학습을 해보려고 하는데, PyTorch에는 Computer Vision 분야를 위한 <a href="https://pytorch.org/docs/stable/torchvision/index.html#torchvision" target="_blank" style="color: #0366d6;">torchvision</a>이라는 패키지가 만들어져 있습니다. 
+
+여기에는 ImageNet이나 CIFAR10, MNIST 등과 같이 널리 사용되는 유명한 데이터셋(datasets)과 모델 아키텍처(models) 및 이미지용 데이터 변환기(transforms)가 포함되어 있습니다. 이 패키지를 사용하면 편리하게 대량의 이미지 데이터를 불러오고, 데이터 변환도 손쉽게 할 수 있습니다. 여기서는 **나만의 데이터셋**으로 세 종류의 고양이를 분류하는 모델을 만들기 위해서 `torchvision`의 `ImageFolder` 모듈을 사용합니다.
 <br>
 
-## <사전 환경설정하기>
+## <사전환경설정>
+
 ### 1. Custom Dataset 구성하기
 
 데이터셋의 구성은 아래와 같습니다. root 디렉토리를 하나 생성하고, train/validation 디렉토리로 데이터를 나누어줍니다. 학습하고자하는 데이터셋의 레이블(Label)을 그 아래 디렉토리 이름으로 지정하고, 레이블 이름의 디렉토리 안에 그 레이블에 해당되는 이미지를 준비합니다. train data는 레이블당 각각 800장 내외, validation data는 레이블당 각각 200장 내외로 준비했습니다. 
@@ -764,7 +765,8 @@ print('Prediction: ', '     '.join('%4s' % classes[predicted[j]] for j in range(
 ```
 <img src="/assets/12_DL image classification/inference.png" alt="inference">
 
-잘 맞춘것도 있고, 그렇지 않은것도 있습니다. 아무래도 학습 데이터셋의 양이 2400장 정도로 매우 적기도 하고, 모델 신경망의 layer도 깊지가 않아서 학습이 어려웠나봅니다. 이런 상황에서 모델의 정확도를 높이기 위해 **전이 학습(Transfer Learning)** 을 이용할 수 있습니다! 
+잘 맞춘것도 있고, 그렇지 않은것도 있습니다. 아무래도 학습 데이터셋의 양이 2400장 정도로 매우 적기도 하고, 모델 신경망의 layer도 깊지가 않아서 학습이 어려웠나봅니다. 이런 상황에서 모델의 정확도를 높이기 위해 **전이 학습(Transfer Learning)** 을 이용할 수 있습니다!
+
 <br>
 
 ### 3. Transfer Learning 
@@ -836,6 +838,7 @@ Test set: Average loss: 0.1191, Accuracy: 535/597 (90%)
 
 고양이 품종을 잘 분류하고 있네요! 이 정도면 학습이 잘 된 것 같습니다~ 
 정확도를 더 올리기 위한 여러 가지 다른 방법들이 있지만, 이번 포스트에서는 여기서 마무리 하도록 하겠습니다.
+
 <br>
 
 ### 4. Endpoint 삭제하기
