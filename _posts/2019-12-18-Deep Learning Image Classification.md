@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "PyTorch를 활용한 딥러닝 이미지 분류 모델 학습 및 배포"
+title: "Sagemaker에서 PyTorch를 활용한 딥러닝 이미지 분류 모델 학습 및 배포"
 date: 2019-12-17 10:00:00
 categories: dev
 tags: DeepLearning AWSSagemaker PyTorch
