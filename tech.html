@@ -6,6 +6,59 @@ permalink: /tech/
 
 <div class="wrapper">
 
+  {% for category in site.categories %}
+      {% capture cat %}{{ category | first }}{% endcapture %}
+      {% if {{cat}} == "tech" %}
+      <h2 id="{{cat}}">{{ cat | capitalize }}</h2>
+      {% for desc in site.descriptions %}
+        {% if desc.cat == cat %}
+          <p class="desc"><em>{{ desc.desc }}</em></p>
+        {% endif %}
+      {% endfor %}
+      <ul class="posts-list">
+      {% for post in site.categories[cat] %}
+      <li>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <section class="post-excerpt" itemprop="description">
+          <p>{{ post.content | strip_html | truncatewords: 30 }}</p>
+        </section>
+        <section class="post-meta">
+          <div class="post-date">{{ post.date | date: "%B %-d, %Y" }}</div>
+          <div class="post-categories">
+          {% if post.categories.size > 0 %}in {% for cat in post.categories %}
+            {% if site.jekyll-archives %}
+            <a href="{{ site.baseurl }}/{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
+            {% comment %} <a href="{{ site.baseurl }}/category/{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %} {% endcomment %}
+            {% else %}
+            <a href="{{ site.baseurl }}/posts/#{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
+            {% endif %}
+          {% endfor %}{% endif %}
+          </div>
+        </section>
+      </li>
+
+      {% if forloop.last == false %}
+      <hr>
+      {% endif %}
+      
+      {% endfor %}
+      </ul>
+      {% if forloop.last == false %}<hr>{% endif %}
+    {% endif %}
+  {% endfor %}
+  
+  </div>
+  
+  <br>
+
+
+
+
+
+<!-- <div class="wrapper">
+
 {% for category in site.categories %}
     {% capture cat %}{{ category | first }}{% endcapture %}
     {% if {{cat}} == "tech" %}
@@ -31,4 +84,4 @@ permalink: /tech/
 
 </div>
 
-<br>
+<br> -->
