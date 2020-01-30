@@ -3,12 +3,12 @@ layout: post
 title: "유니티 스크립트 활용해 절차지향 모델링 기본요소 구성하기"
 date: 2020-01-22 10:00:00
 categories: dev
-tags: Unity ProceduralModeling 3DGraphics   
+tags: Unity 3DGraphics LiveSketch
 cover: "/assets/thumbnail/20_01_UnityScript_1.png"
 
 ---
 
-안녕하세요. 어반베이스 3D 그래픽스팀의 윤인하입니다. 어반베이스에서는 비전문가들도 손쉽게 건물 단면도를 모델링 할 수 있는 라이브 스케치(Live Sktech)라는 툴을 개발하고 있습니다. 
+안녕하세요. 어반베이스 3D 그래픽스팀의 윤인하입니다. 어반베이스에서는 비전문가들도 손쉽게 건물 단면도를 모델링 할 수 있는 라이브 스케치(Live Sketch)라는 툴을 개발하고 있습니다. 
 
 라이브 스케치를 활용하면, 캐드나 여타 3D모델링 툴(3DsMax, Maya, Blender, SolidWorks, Raino)과는 달리 고도의 학습 없이도 빠르고 쉽게 원하는 건물 단면도를 제작 할 수 있습니다. 
 
@@ -147,7 +147,6 @@ Unity에서 랜더링 할 수 있도록 GameObject를 만들고, MeshRenderer co
         MakeQuad(new Vector3(0, 0, 0), new Vector3(0, 0, 1), new Vector3(1, 0, 0), new Vector3(1, 0, 1));
     }
 ```
-제작한 메소드에 P1(0,0,0), P2(1,0,0), P3(1,0,1)의 세 점을 입력하여 폴리곤을 만듭니다.
 
 mesh의 triangle index 순서에서 중요한 것은, 세 점이 삼각형을 이루는지와 점배치의 회전방향입니다. 시작점이 어떠한 것인지는 상관없습니다. 위 method에서 예를 들면 (0,1,2,2,1,3)의 순서 뿐만 아니라 (2,0,1,2,1,3), (2,0,1,3,2,1) 등의 순서도 가능합니다.
 

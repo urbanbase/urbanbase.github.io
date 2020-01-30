@@ -2,7 +2,7 @@
 layout: post
 title: "3D로 즐기는 가상의 인테리어 3D Home Design"
 date: 2019-03-07 16:00:00
-tags: 3DHomeDesign urbanbase urbanbasecore crane
+tags: 3DHomeDesign
 ---
 
 # 3D Home Design (SDK, API)
