@@ -4,8 +4,6 @@ title: "AR 개발 얼마면 되겠니?"
 date: 2019-08-06 10:00:00
 categories: tech
 tags: AR
-excerpt: 
-cover: 
 ---
 
 
