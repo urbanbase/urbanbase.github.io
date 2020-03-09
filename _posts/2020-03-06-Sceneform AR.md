@@ -4,7 +4,7 @@ title: "[AR개발 Tip] Sceneform에서 바닥인식 벗어난 곳으로 Node 이
 date: 2020-03-06 10:00:00
 categories: dev
 tags: AR android
-cover: "/assets/thumbnail/20_02_Sceneform.png"
+cover: "/assets/thumbnail/20_02_Sceneform_1.png"
 
 ---
 
