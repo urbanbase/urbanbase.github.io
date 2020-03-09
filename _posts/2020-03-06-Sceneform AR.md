@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "[AR개발 Tip] Sceneform에서 멀리 있는 곳까지 제품 이동시키는 방법"
+title: "[AR개발 Tip] Sceneform에서 바닥인식 벗어난 곳으로 Node 이동 시키는 방법"
 date: 2020-03-06 10:00:00
 categories: dev
 tags: AR android
-cover: "/assets/thumbnail/.png"
+cover: "/assets/thumbnail/20_02_Sceneform.png"
 
 ---
 
@@ -263,14 +263,16 @@ public void onContinueTransformation(DragGesture gesture) {
 
 단순히 isPoseInPolygon 조건을 제거 한다고 해도, HitResult의 getHitPose()에서 얻어올수 있는 Pose 값이 제한적이어서 Node의 이동이 되지 않는 것이었습니다.
 
-Frame에서 hitTest(x, y)를 통해 가져오는 HitResult의 경우 바닥 인식을 통해 최소 Trackable(바닥 인식 취소 단위)로 인지가 된 영역에 대해서만 HitResult를 반환 해준다는 것을 확인하고, 바닥으로 인식 되지 않은 곳을 터치해도 터치한 x,y좌표에 대한 HitResult 값을 가져올 수는 없는지..
+Frame에서 hitTest(x, y)를 통해 가져오는 HitResult의 경우 바닥 인식을 통해 최소 Trackable(바닥 인식 취소 단위)로 인지가 된 영역에 대해서만 HitResult를 반환 해준다는 것을 확인!!
+
+바닥으로 인식 되지 않은 곳을 터치한 x,y좌표에 대해서 HitResult 값을 가져올 수는 없는지..
 
 <br>
 
 **추가 분석한 결과!**
 
 
-Sceneform에서 제공해주는 클래스로는 바닥 외에 터치한 x,y 좌표에 대한 HitResult를 가져올 방법이 없다는 사실에 또 한번 좌절... HitResult를 바탕으로 이동을 시켜야 하는데 HitResult를 가져올 수 없다니...ㅠㅠ
+Sceneform에서 제공해주는 클래스로는 바닥으로 인식한 영역 외에 터치한 x,y 좌표에 대한 HitResult를 가져올 방법이 없다는 사실에 또 한번 좌절... HitResult를 바탕으로 이동을 시켜야 하는데 HitResult를 가져올 수 없다니...ㅠㅠ
 
 <img src="/assets/20_02_Sceneform/interTT.jpeg" width="300px" alt="TT">
 
