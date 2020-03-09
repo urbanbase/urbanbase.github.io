@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[AR개발 Tip] Sceneform에서 바닥인식 벗어난 곳으로 Node 이동 시키는 방법"
+title: "[AR개발 Tip] Sceneform에서 바닥인식 벗어난 곳으로 Node 이동 시키기"
 date: 2020-03-06 10:00:00
 categories: dev
 tags: AR android
