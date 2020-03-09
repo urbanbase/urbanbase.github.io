@@ -3,7 +3,7 @@ layout: post
 title: "클라우드 환경에서 머신러닝 서비스 프로토타입 빠르게 만들어보기"
 date: 2019-10-24 10:00:00
 categories: dev
-tags: 
+tags: MachineLearning DeepLearning
 
 ---
 안녕하세요. 머신러닝 엔지니어 김수민입니다.

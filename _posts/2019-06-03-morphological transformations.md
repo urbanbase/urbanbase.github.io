@@ -3,7 +3,7 @@ layout: post
 title: "모폴로지 변환 활용해 도면의 벽 검출하기"
 date: 2019-06-03 00:00:00
 categories: dev
-tags: 
+tags: ComputerVision
 
 ---
 

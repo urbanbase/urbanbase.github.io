@@ -3,7 +3,7 @@ layout: post
 title: "유니티 스크립트 활용해 절차지향 모델링 기본요소 구성하기"
 date: 2020-01-22 10:00:00
 categories: dev
-tags: 
+tags: 3D Unity
 cover: "/assets/thumbnail/20_01_UnityScript_1.png"
 
 ---
