@@ -23,7 +23,7 @@ Android AR 개발을 하시는 많은 개발자 분들이 Google의 `ARCore`를 
 
 - <a href="https://developers.google.com/ar/develop/java/sceneform" target="_blank" style="color: #0366d6;"> Sceneform이란?</a>
 - ARCore에서 기술 장벽이 높은 OpenGL을 통해 직업 구현해야하는 렌더링, AR Session 관리 등을 쉽게 처리 할 수 있어서 개발자는 AR 앱 서비스 자체에 집중 할 수 있다.
-- 렌더링 엔진인 filament가 포함되어 있어 렌더링 퀄리티가 높다. (Sceneform 1.2.0 이상의 버전에서 적용 됨)
+- 렌더링 엔진인 filament가 포함되어 있어 렌더링 퀄리티가 높다. (Sceneform 1.10.0 이상의 버전에서 적용 됨)
 
 <br>
 
