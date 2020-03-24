@@ -15,6 +15,8 @@ Android AR 개발을 하시는 많은 개발자 분들이 Google의 `ARCore`를 
 이 때문에 Google에서는 AR 개발에 대한 진입 장벽을 낮추기 위해 `Sceneform` 이라는 멋진 녀석을 제공하고 있습니다. Sceneform을 사용하면 ARCore를 사용할 때보다 좀 더 쉽게 AR 개발을 할 수 있습니다.
 
 이번 포스트에서는 Sceneform을 사용하여 개발하던 중 고객사의 어려운 요구사항이 들어왔고, 그것을 해결했던 노하우를 공유하려 합니다.
+
+<br>
 <br>
 
 ## Why Use Sceneform?
@@ -22,7 +24,7 @@ Android AR 개발을 하시는 많은 개발자 분들이 Google의 `ARCore`를 
 일단 이 멋진 녀석 Sceneform이 어떤 것인지, 왜 사용하고 있는지 잠시 소개하겠습니다.
 
 - <a href="https://developers.google.com/ar/develop/java/sceneform" target="_blank" style="color: #0366d6;"> Sceneform이란?</a>
-- ARCore에서 기술 장벽이 높은 OpenGL을 통해 직업 구현해야하는 렌더링, AR Session 관리 등을 쉽게 처리 할 수 있어서 개발자는 AR 앱 서비스 자체에 집중 할 수 있다.
+- ARCore에서 기술 장벽이 높은 OpenGL을 통해 직접 구현해야하는 렌더링, AR Session 관리 등을 쉽게 처리 할 수 있어서 개발자는 AR 앱 서비스 자체에 집중 할 수 있다.
 - 렌더링 엔진인 filament가 포함되어 있어 렌더링 퀄리티가 높다. (Sceneform 1.10.0 이상의 버전에서 적용 됨)
 
 <br>
@@ -52,7 +54,7 @@ AR 기능의 가장 기본은 바닥을 찾는 것입니다. 바닥을 찾아야
 
 현재 우리가 사용중이며 Sceneform에서 가장 많이 사용하는 Node인 `TransformableNode` 를 살펴봅시다.
 
-<a href="https://developers.google.com/ar/reference/java/sceneform/reference/com/google/ar/sceneform/ux/TransformableNode" target="_blank" style="color: #0366d6;"> TransformableNode란?</a>
+TransformableNode란? (참조 : <a href="https://github.com/google-ar/sceneform-android-sdk" target="_blank" style="color: #0366d6;">Sceneform Github</a>)
 
 
 ```java
@@ -299,8 +301,7 @@ HitTestResult라는 클래스를 발견했습니다.
 HitTestResult 데이터는 Node에 한해서는 내가 어디를 선택했는지에 대한 AR상 위치를 가져올 수 있다는 것을 알아냈습니다. (노드의 특정 부분를 터치 했을 때 AR상 그 위치를 가져올 수 있음)
 Scene에서 터치한 곳에 해당되는 노드를 가져올 수 있는 기능을 활용해서 노드를 찾고 HitTestResult 에서 RayHit을 통해 Point 와 Distance 등을 가져올 수 있습니다.
 
-<a href="https://developers.google.com/ar/reference/java/sceneform/reference/com/google/ar/sceneform/Scene#hitTestAll(android.view.MotionEvent)" target="_blank" style="color: #0366d6;"> Scene.hitTestAll (source 참조) </a>
-
+Scene.hitTestAll (참조 : <a href="https://github.com/google-ar/sceneform-android-sdk" target="_blank" style="color: #0366d6;">Sceneform Github</a>)
 <br>
 
 이 데이터를 활용하는 것으로 방식을 변경하기로 합니다.
