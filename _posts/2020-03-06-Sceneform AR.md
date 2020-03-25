@@ -54,7 +54,7 @@ AR 기능의 가장 기본은 바닥을 찾는 것입니다. 바닥을 찾아야
 
 현재 우리가 사용중이며 Sceneform에서 가장 많이 사용하는 Node인 `TransformableNode` 를 살펴봅시다.
 
-TransformableNode란? (참조 : <a href="https://github.com/google-ar/sceneform-android-sdk/blob/master/sceneformux/ux/src/main/java/com/google/ar/sceneform/ux/BaseTransformableNode.java" target="_blank" style="color: #0366d6;">Sceneform Github</a>)
+TransformableNode란? (참조 : <a href="https://developers.google.com/sceneform/reference/com/google/ar/sceneform/ux/TransformableNode" target="_blank" style="color: #0366d6;">구글 개발자 사이트</a> & <a href="https://github.com/google-ar/sceneform-android-sdk/blob/master/sceneformux/ux/src/main/java/com/google/ar/sceneform/ux/BaseTransformableNode.java" target="_blank" style="color: #0366d6;">Sceneform Github</a>)
 
 
 ```java
@@ -301,7 +301,7 @@ HitTestResult라는 클래스를 발견했습니다.
 HitTestResult 데이터는 Node에 한해서는 내가 어디를 선택했는지에 대한 AR상 위치를 가져올 수 있다는 것을 알아냈습니다. (노드의 특정 부분를 터치 했을 때 AR상 그 위치를 가져올 수 있음)
 Scene에서 터치한 곳에 해당되는 노드를 가져올 수 있는 기능을 활용해서 노드를 찾고 HitTestResult 에서 RayHit을 통해 Point 와 Distance 등을 가져올 수 있습니다.
 
-Scene.hitTestAll (참조 : <a href="https://github.com/google-ar/sceneform-android-sdk/blob/master/sceneformsrc/sceneform/src/main/java/com/google/ar/sceneform/Scene.java" target="_blank" style="color: #0366d6;">Sceneform Github</a>)
+Scene.hitTestAll (참조 : <a href="https://developers.google.com/sceneform/reference/com/google/ar/sceneform/Scene#hitTestAll(android.view.MotionEvent)" target="_blank" style="color: #0366d6;">구글 개발자 사이트</a> & <a href="https://github.com/google-ar/sceneform-android-sdk/blob/master/sceneformsrc/sceneform/src/main/java/com/google/ar/sceneform/Scene.java" target="_blank" style="color: #0366d6;">Sceneform Github</a>)
 <br>
 
 이 데이터를 활용하는 것으로 방식을 변경하기로 합니다.
