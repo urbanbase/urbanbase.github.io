@@ -4,7 +4,6 @@ title: "아직도 Amazon GuardDuty 도입을 안 하셨다면?"
 date: 2020-11-01 10:00:00
 categories: dev
 tags: AR
-cover: ""
 
 ---
 
