@@ -3,9 +3,12 @@ layout: post
 title: "아직도 Amazon GuardDuty 도입을 안 하셨다면?"
 date: 2020-11-01 10:00:00
 categories: dev
-tags: AR
+tags: AWS server API
 
 ---
+
+<img src="/assets/20_11_AmazonGuardDuty/20_11_thumbnail.png" width="" alt="AmazonGuardDuty 1">
+<br>
 
 안녕하세요. API 개발팀장 최진욱입니다. 어반베이스에서는 Serverless 기반 RESTful API Architecture 설계 및 개발을 담당하고 있습니다. 여느 스타트업처럼 저희도 기술 사이드에 방점을 두고 서비스 퀄리티를 높이는 데 집중했었는데요, 서비스가 차츰 안정화되다 보니 보안 이슈가 중요해지더라고요. AWS에서 다양한 보안 위협 탐지 서비스를 제공하고 있는데, 저희는 그중에서 모든 리전에서 지원 가능한 GuardDuty 도입을 고려하게 됐습니다. 
 

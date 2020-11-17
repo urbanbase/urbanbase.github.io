@@ -3,10 +3,11 @@ layout: post
 title: "[AR개발 Tip] Sceneform에서 바닥인식 벗어난 곳으로 Node 이동 시키기"
 date: 2020-03-06 10:00:00
 categories: dev
-tags: AR
-cover: "/assets/thumbnail/20_02_Sceneform_1.png"
-
+tags: AR Application
 ---
+
+<img src="/assets/20_02_Sceneform/20_02_thumbnail.png" width="" alt="ARSceneform">
+<br>
 
 안녕하세요. 어반베이스 안드로이드 개발자 심재원입니다. 어반베이스에서는 ARViewer와 SpaceViewer의 개발을 담당하고 있습니다.
 

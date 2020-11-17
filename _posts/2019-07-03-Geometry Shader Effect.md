@@ -5,7 +5,8 @@ date: 2019-07-02 16:00:00
 categories: dev
 tags: 3D Unity
 ---
-
+<img src="/assets/6_3D graphics/6_thumbnail.png" width="" alt="Geometry Shader Effect">
+<br>
 
 안녕하세요. 3D 그래픽스 엔지니어 문현목 입니다. 
 <br>

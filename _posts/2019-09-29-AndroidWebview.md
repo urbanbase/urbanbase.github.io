@@ -3,9 +3,10 @@ layout: post
 title: "모바일에서 3D Viewer 구축하기_안드로이드 웹뷰 편"
 date: 2019-09-29 10:00:00
 categories: dev
-tags: 3D
+tags: 3D Application
 ---
-
+<img src="/assets/9_webview/9_thumbnail.png" width="" alt="Webview">
+<br>
 
 안녕하세요. 모바일 개발자 김부길입니다.<br> 
 어반베이스에서는 AR Viewer SDK, Sketch Viewer 개발을 담당하고 있습니다.

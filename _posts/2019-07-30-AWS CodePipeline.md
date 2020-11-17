@@ -5,7 +5,8 @@ date: 2019-07-02 16:00:00
 categories: dev
 tags: AWS server
 ---
-
+<img src="/assets/7_serverless/7_thumbnail.png" width="" alt="serverless">
+<br>
 
 안녕하세요. 백엔드 개발자 이정준입니다.<br>
 API를 개발하고 AWS를 활용한 서버 설계 및 관리를 담당하고 있습니다.

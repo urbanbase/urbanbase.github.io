@@ -4,8 +4,9 @@ title: "모폴로지 변환 활용해 도면의 벽 검출하기"
 date: 2019-06-03 00:00:00
 categories: dev
 tags: ComputerVision
-
 ---
+<img src="/assets/5_morphology transformation/5_thumbnail.png" width="" alt="morphology transformation">
+<br>
 
 안녕하세요. Computer Vision 개발자 윤대희입니다. 
 <br>

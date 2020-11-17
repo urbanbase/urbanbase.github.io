@@ -4,10 +4,9 @@ title: "유니티 스크립트 활용해 절차지향 모델링 기본요소 구
 date: 2020-01-22 10:00:00
 categories: dev
 tags: 3D Unity
-cover: "/assets/thumbnail/20_01_UnityScript_1.png"
-
 ---
-
+<img src="/assets/20_01_Procedural Modeling/20_01_thumbnail.png" width="" alt="ProceduralModeling">
+<br>
 안녕하세요. 어반베이스 3D 그래픽스팀의 윤인하입니다. 어반베이스에서는 비전문가들도 손쉽게 건물 단면도를 모델링 할 수 있는 라이브 스케치(Live Sketch)라는 툴을 개발하고 있습니다. 
 
 라이브 스케치를 활용하면, 캐드나 여타 3D모델링 툴(3DsMax, Maya, Blender, SolidWorks, Raino)과는 달리 고도의 학습 없이도 빠르고 쉽게 원하는 건물 단면도를 제작 할 수 있습니다. 

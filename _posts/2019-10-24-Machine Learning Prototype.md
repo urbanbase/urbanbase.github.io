@@ -4,8 +4,9 @@ title: "클라우드 환경에서 머신러닝 서비스 프로토타입 빠르�
 date: 2019-10-24 10:00:00
 categories: dev
 tags: MachineLearning DeepLearning
-
 ---
+<img src="/assets/10_ML prototype/10_thumbnail.png" width="" alt="Machinelearning">
+<br>
 안녕하세요. 머신러닝 엔지니어 김수민입니다.
 어반베이스에서 Space의 머신러닝을 이용한 기술 개발을 하고 있습니다.
 

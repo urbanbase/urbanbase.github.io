@@ -4,9 +4,10 @@ title: "Sagemaker에서 PyTorch를 활용한 딥러닝 이미지 분류 모델 �
 date: 2019-12-17 10:00:00
 categories: dev
 tags: DeepLearning MachineLearning
-cover: "/assets/thumbnail/12_DL_PyTorch.png"
-
 ---
+<img src="/assets/12_DL image classification/12_thumbnail.png" width="" alt="Deeplearning">
+<br>
+
  안녕하세요. 어반베이스 Machine Learning 개발자 백윤아입니다. 어반베이스에서는 공간 분석 서비스인 Space 개발을 담당하고 있습니다. Space는 컴퓨터 비전 영역의 딥러닝을 활용하여 공간을 분류하고, 공간에서 사물을 검출하며 공간의 특성을 분석하는 서비스를 제공합니다. 
 
  이번 글에서는 Space의 API를 만들었던 과정에 대해 이야기 해보려고 합니다. AWS 클라우드를 활용하여 간단한 딥러닝 모델 학습부터 서버리스 API 구축까지에 대한 과정인데요. 전체 내용을 두 가지 파트로 나누자면, `1. 딥러닝 모델 개발`과 `2. Serverless API 개발`으로 나눌 수 있을 것 같습니다.
