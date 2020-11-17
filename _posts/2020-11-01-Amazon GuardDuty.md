@@ -4,7 +4,7 @@ title: "아직도 Amazon GuardDuty 도입을 안 하셨다면?"
 date: 2020-11-01 10:00:00
 categories: dev
 tags: AWS server API
-
+cover: "/assets/20_11_AmazonGuardDuty/20_11_thumbnail.png"
 ---
 
 <img src="/assets/20_11_AmazonGuardDuty/20_11_thumbnail.png" width="" alt="AmazonGuardDuty 1">
