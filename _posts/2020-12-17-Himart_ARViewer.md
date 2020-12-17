@@ -4,9 +4,10 @@ title: "롯데하이마트 앱은 AR을 어떻게 도입하게 됐을까?"
 date: 2020-12-17 10:00:00
 categories: dev
 tags: AR Application
-cover: "/assets/20_12_/20_12_thumbnail.png"
+cover: "/assets/20_12_Himart_ARViewer/20_12_thumbnail.png"
 ---
 
+<img src="/assets/20_12_Himart_ARViewer/20_12_thumbnail.png" width="" alt="Himart_ARViewer">
 
 안녕하세요. 어반베이스 어플리케이션팀 팀장 이우석입니다. 
 저희팀은 AR뷰어(AR Viewer)를 개발하고 있는데요, AR Viewer는 Android와 iOS에서 AR(증강현실)을 쉽게 적용하고 사용할 수 있도록 만든 어반베이스의 SDK(Software Development Kit)입니다. 요즘 코로나로 인해 비대면/언택트 기술 도입에 대한 관심이 그 어느 때보다 높은 만큼 롯데하이마트가 어반베이스의 AR Viewer를 사용해 자사 앱에 AR 서비스를 적용한 과정을 소개하려 합니다.
@@ -32,7 +33,7 @@ cover: "/assets/20_12_/20_12_thumbnail.png"
 AR Viewer는 여타 SDK처럼 UI를 제외한 기능을 제공하고 있습니다. 따라서 UI 개발은 앱 파트에서 개발을 해야 하는데요.
 
 <div style="text-align : center;">
-<img width="450" src="https://ub-mobile.s3.ap-northeast-2.amazonaws.com/github_blog/airbnb-himart-caption.jpg" alt="">
+<img width="450" src="https://ub-mobile.s3.ap-northeast-2.amazonaws.com/github_blog/airbnb-himart-caption.jpg" alt="airbnb-himart-caption">
 </div>
 
 
@@ -73,12 +74,12 @@ AR Viewer는 여타 SDK처럼 UI를 제외한 기능을 제공하고 있습니�
 다행히 AR Foundation처럼 유니티에서 개발해야 할 필요는 없습니다만 샘플코드를 받아서 열어보니... 카메라 키고 제품 하나 배치하는 단순한 내용인데도 참조해야 할 파일들이 이렇게나 많습니다.
 
 <div style="text-align : center;">
-<img height="700" src="https://ub-mobile.s3.ap-northeast-2.amazonaws.com/github_blog/vuforia-project.jpg" alt="">
+<img height="700" src="https://ub-mobile.s3.ap-northeast-2.amazonaws.com/github_blog/vuforia-project.jpg" alt="vuforia-project">
 </div>
 
 반면, AR Viewer는 정말 이게 끝입니다.
 <div style="text-align : center;">
-<img height="500" src="https://ub-mobile.s3.ap-northeast-2.amazonaws.com/github_blog/arviewer-project.jpg" alt="">
+<img height="500" src="https://ub-mobile.s3.ap-northeast-2.amazonaws.com/github_blog/arviewer-project.jpg" alt="arviewer-project">
 </div>
 
 
@@ -134,7 +135,7 @@ public func setViewerMode(feature: ARViewer.FeatureType)
 제품을 AR로 배치하기 전에 360도 돌려보기를 체험할 수 있습니다. 한 사이드에서만 볼 수 있었던 모양이나 색상을 다양한 각도로 돌려보며 디테일하게 확인해볼 수 있습니다.
 
 <div style="text-align : center;">
-<img width="200" src="https://ub-mobile.s3.ap-northeast-2.amazonaws.com/github_blog/himart_3dviewer.gif" alt="">
+<img width="200" src="https://ub-mobile.s3.ap-northeast-2.amazonaws.com/github_blog/himart_3dviewer.gif" alt="himart_3dviewer">
 </div>
 
 
@@ -143,7 +144,7 @@ public func setViewerMode(feature: ARViewer.FeatureType)
 제품의 실측 사이즈를 바로 확인할 수 있습니다. 텍스트로 제품의 가로-세로-너비를 수치로 확인하는 것보다 AR 환경에서 사이즈를 확인하는 것이 훨씬 더 직관적입니다. 왠만한 사람들은 17cm가 어느 정도로 짧은지 47cm가 어느 정도 길이인지 잘 가늠하지 못하니까요.
 
 <div style="text-align : center;">
-<img width="200" src="https://ub-mobile.s3.ap-northeast-2.amazonaws.com/github_blog/himart_size.jpg" alt="">
+<img width="200" src="https://ub-mobile.s3.ap-northeast-2.amazonaws.com/github_blog/himart_size.jpg" alt="himart_size">
 </div>
 
 
@@ -152,7 +153,7 @@ public func setViewerMode(feature: ARViewer.FeatureType)
 마음에 드는 제품을 우리집 공간에 놓아볼 수 있습니다. 지금 공간과 제품의 디자인이 어울리는지 공간에 비해 제품이 큰지 작은지 등을 가늠해볼 수 있어요. 제품을 배치한 후에도 자유자재로 움직이며 조작 가능합니다.
 
 <div style="text-align : center;">
-<img width="200" src="https://ub-mobile.s3.ap-northeast-2.amazonaws.com/github_blog/himart_translation.gif" alt="">
+<img width="200" src="https://ub-mobile.s3.ap-northeast-2.amazonaws.com/github_blog/himart_translation.gif" alt="himart_translation">
 </div>
 
 
@@ -163,7 +164,7 @@ public func setViewerMode(feature: ARViewer.FeatureType)
 컬러 등 제품의 스타일을 바꿔보면서 확인할 수 있습니다. 벽지 디자인에 실버가 어울리는지 골드가 어울리는지 바로 바로 확인이 가능합니다.
 
 <div style="text-align : center;">
-<img width="200" src="https://ub-mobile.s3.ap-northeast-2.amazonaws.com/github_blog/himart_option.gif" alt="">
+<img width="200" src="https://ub-mobile.s3.ap-northeast-2.amazonaws.com/github_blog/himart_option.gif" alt="himart_option">
 </div>
 
 
@@ -176,7 +177,7 @@ public func setViewerMode(feature: ARViewer.FeatureType)
 
 ## 마치며
 
-AR을 개발하는 과정이 아직까지 순조롭지만은 않습니다. SDK와는 별개로 AR 기능 구현 수준이 완벽하게 올라오지 않았고, <a href="https://developers.google.com/,ar" target="_blank" style="color: #0366d6;"> ARCore</a>와 <a href="https://developer.apple.com/kr/augmented-reality/" target="_blank" style="color: #0366d6;"> ARKit</a>의 기능 지원에도 차이가 있다보니 분명 같은 제품인데도 안드로이드 앱과 아이폰 앱에서 똑같은 색상으로 보이지 않는 일도 있습니다. AR 기능을 사용하면 핸드폰이 뜨거워지기도 하고요.
+AR을 개발하는 과정이 아직까지 순조롭지만은 않습니다. SDK와는 별개로 AR 기능 구현 수준이 완벽하게 올라오지 않았고, <a href="https://developers.google.com/ar" target="_blank" style="color: #0366d6;"> ARCore</a>와 <a href="https://developer.apple.com/kr/augmented-reality/" target="_blank" style="color: #0366d6;"> ARKit</a>의 기능 지원에도 차이가 있다보니 분명 같은 제품인데도 안드로이드 앱과 아이폰 앱에서 똑같은 색상으로 보이지 않는 일도 있습니다. AR 기능을 사용하면 핸드폰이 뜨거워지기도 하고요.
 
 하지만 AR은 가장 주목받고 있는 언택트 기술인만큼 구글, 애플 등 글로벌 기업들이 앞다투어 AR 기술과 하드웨어 디바이스를 업데이트 하고 있고, 저희 어플리케이션팀 또한 AR Viwer 고도화에 박차를 가하고 있습니다. 머지않아 AR이 인공지능과 더불어 4차 산업의 주요 트렌드로 자리잡을 것으로 보이니 아직 도입을 망설이고 있다면 빨리 로켓에 올라 타시기를 바랍니다.
 
