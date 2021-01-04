@@ -4,8 +4,10 @@ title: "Geometry Shader Effect로 데이터 아름답게 표현하기"
 date: 2019-07-02 16:00:00
 categories: dev
 tags: 3D Unity
+cover: "/assets/6_3D_graphics/6_thumbnail.png"
+
 ---
-<img src="/assets/6_3D graphics/6_thumbnail.png" width="" alt="Geometry Shader Effect">
+<img src="/assets/6_3D_graphics/6_thumbnail.png" width="" alt="Geometry Shader Effect">
 <br>
 
 안녕하세요. 3D 그래픽스 엔지니어 문현목 입니다. 
@@ -24,14 +26,14 @@ tags: 3D Unity
 이틀간 세션 프로그램표입니다.
 
 *첫째날
-<img src="/assets/6_3D graphics/Schedule1.png">
+<img src="/assets/6_3D_graphics/Schedule1.png">
 <br>
 *둘째날
-<img src="/assets/6_3D graphics/Schedule2.png">
+<img src="/assets/6_3D_graphics/Schedule2.png">
 
 5개의 트랙으로 다양한 세션이 있었는데요. 제 몸을 복제해서 5개의 세션을 동시에 듣고 싶었으나 분신술을 할 수가 없어서.. 아쉽게도 팀원들과 세션을 나눠 들었습니다.
 <center>
-<img src="/assets/6_3D graphics/zzz.png">
+<img src="/assets/6_3D_graphics/zzz.png">
 </center>
 
 <br>
@@ -79,7 +81,7 @@ Unity Japan의 에반젤리스트로 일본 게임 산업에 10년 이상 있었
 <!-- <https://twitter.com/_kzr/status/1127888862460534784?lang=bg> -->
 <br>
 Unite Shanghai 2019에서 보여준 비파 연주를 VFX Graph와 RealSense로 표현한 영상 <a href="https://twitter.com/_kzr/status/1127888862460534784?lang=bg" target="_blank" style="color: #0366d6;"> (보러가기) </a>
-<img src="/assets/6_3D graphics/UniteShanghaiVFX.png">
+<img src="/assets/6_3D_graphics/UniteShanghaiVFX.png">
 
 
 
@@ -87,7 +89,7 @@ Unite Shanghai 2019에서 보여준 비파 연주를 VFX Graph와 RealSense로 �
 상하이 음악 아카데미에서 비파 선생님으로 계시는 분과 라이브 퍼포먼스를 했고, 실시간으로 이펙트를 표현했다고 하더라고요. Intel에서 나오는 RealSense라는 뎁스 카메라로부터 정보를 얻어서 VFX Graph에 입력, 파티클을 생성하도록 표현한 작업이라고 설명했습니다.
 
 <br>
-<img src="/assets/6_3D graphics/RealSenseAttribVFX.png">
+<img src="/assets/6_3D_graphics/RealSenseAttribVFX.png">
 <br>
 
 **\*VFX Graph에 대한 Unity Blog:** <br>
@@ -169,7 +171,7 @@ y = (0.4 - cos (x * 6.28) * 0.41) * (1 + 0.3 * sin(832 + x * 88) )
 </center>
 <br>
 
-<img src="/assets/6_3D graphics/extWave.png">
+<img src="/assets/6_3D_graphics/extWave.png">
 
 이런 모양의 그래프가 되네요. 
 
@@ -177,11 +179,11 @@ y = (0.4 - cos (x * 6.28) * 0.41) * (1 + 0.3 * sin(832 + x * 88) )
 
 Git으로 받은 StandardGeometryShader 프로젝트를 Unity에서 열어 Simple 씬을 열어봅니다. 플레이를 해보면 다음과 같이 나옵니다.
 
-<img src="/assets/6_3D graphics/SphereGeometry.png">
+<img src="/assets/6_3D_graphics/SphereGeometry.png">
 
 이제 우리 도면을 적용해보면 어떤 모습일지 궁금해지네요. 테스트로 사용하는 3D 도면 파일을 Unity에 가져와서 벽 영역에 해당하는 부분을 Sphere 오브젝트의 MeshFilter 콤포넌트에 적용해봅니다.
 
-<img src="/assets/6_3D graphics/TooMuch.png">
+<img src="/assets/6_3D_graphics/TooMuch.png">
 
 주황색 아웃라인으로 나오는 부분이 2D 벽 영역이 되고, 이것을 Geometry Shader에서 위와 같은 함수를 처리하여 표면에 수직인 방향으로 Extrusion 되는 것을 확인할 수 있습니다. 그런데 Y축 방향으로의 Extusion만 처리해주고 X,Z 축 방향의 확장은 막아보고 싶습니다. 그리고 움직임이 너무 복잡한 것 같으니 단순한 진동형태로 바꿔보고 싶습니다.
 
@@ -202,23 +204,23 @@ y = (0.4 - cos (x * 6.28) * 0.41)
 
 이 그래프를 보면 다음과 같습니다.
 
-<img src="/assets/6_3D graphics/extWaveSimple.png">
+<img src="/assets/6_3D_graphics/extWaveSimple.png">
 
 좀더 단순한 형태의 그래프로 바뀌었습니다. cos 함수 그래프를 약간 변형한 것이라고 보면 됩니다. 쉐이더 코드 부분도 sin 함수 부분을 주석처리하여 cos 함수로만 extrusion amount를 구하도록 변경 합니다.
 
 cos 함수만 이용해 extrusion amount를 구한 결과입니다.
 
-<img src="/assets/6_3D graphics/SimpleButAllDirection.png">
+<img src="/assets/6_3D_graphics/SimpleButAllDirection.png">
 
 ConstructNormal 함수를 보면 세 점을 이용하여 외적(cross product)을 통해 삼각형의 법선 벡터를 구하고 이 벡터의 크기를 1로 바꾸는 normalize 처리를 합니다. 여기서 Normal 방향을 녹색 화살표 방향(Y축)으로만 Normal 값이 나올 수 있도록 normalize 결과 벡터의 x성분과 z성분을 0으로 초기화 합니다. y성분만 남게 됩니다. 
 
 Y축 방향의 법선 벡터만 구해주는 ConstructNormal을 적용한 결과입니다.
 
-<img src="/assets/6_3D graphics/OnlyUpDirection.png">
+<img src="/assets/6_3D_graphics/OnlyUpDirection.png">
 
 아래는 플레이 한 것을 캡쳐한 것입니다. Y축 방향으로만 확장되었다가 줄어드는 것을 확인할 수 있습니다. 양수 방향과 음수 방향으로 모두 확장됩니다.
 
-<img src="/assets/6_3D graphics/captureGIF.gif">
+<img src="/assets/6_3D_graphics/captureGIF.gif">
 
 ComputeNormal 함수에서 normalize 된 벡터의 y 성분에서 음수의 경우 0으로 만들면 양수 방향으로만 확장되는 것을 확인할 수 있습니다.
 

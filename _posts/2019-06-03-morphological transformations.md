@@ -4,8 +4,10 @@ title: "모폴로지 변환 활용해 도면의 벽 검출하기"
 date: 2019-06-03 00:00:00
 categories: dev
 tags: ComputerVision
+cover: "/assets/5_morphology_transformation/5_thumbnail.png"
+
 ---
-<img src="/assets/5_morphology transformation/5_thumbnail.png" width="" alt="morphology transformation">
+<img src="/assets/5_morphology_transformation/5_thumbnail.png" width="" alt="morphology transformation">
 <br>
 
 안녕하세요. Computer Vision 개발자 윤대희입니다. 
@@ -30,7 +32,7 @@ tags: ComputerVision
 도면에는 수많은 정보가 포함되어 있어 검출하려는 벽 이외의 정보는 모두 노이즈가 됩니다. <그림 1.1>을 통해 벽 검출을 방해하는 다양한 요소들을 볼 수 있습니다.
 
 <figure>
-    <img data-action="zoom" src='{{ "/assets/5_morphology transformation/1.png" | relative_url }}' alt='<그림 1.1>'>
+    <img data-action="zoom" src='{{ "/assets/5_morphology_transformation/1.png" | relative_url }}' alt='<그림 1.1>'>
     <figcaption><center> <그림 1.1> 벽의 검출을 방해하는 요소들 </center>
     </figcaption>
 </figure>
@@ -42,7 +44,7 @@ tags: ComputerVision
 <br>
 
 <figure>
-    <img data-action="zoom" src='{{ "/assets/5_morphology transformation/2.png" | relative_url }}' alt='<그림 1.2>'>
+    <img data-action="zoom" src='{{ "/assets/5_morphology_transformation/2.png" | relative_url }}' alt='<그림 1.2>'>
     <figcaption><center> <그림 1.2> 도면 원본 이미지 </center>
     </figcaption>
 </figure>
@@ -51,7 +53,7 @@ tags: ComputerVision
 <br>
 
 <figure>
-    <img data-action="zoom" src='{{ "/assets/5_morphology transformation/3.png" | relative_url }}' alt='<그림 1.3>'>
+    <img data-action="zoom" src='{{ "/assets/5_morphology_transformation/3.png" | relative_url }}' alt='<그림 1.3>'>
     <figcaption><center> <그림 1.3> 기본적인 전처리 과정 진행 </center>
     </figcaption>
 </figure>
@@ -60,7 +62,7 @@ tags: ComputerVision
 <br>
 
 <figure>
-    <img data-action="zoom" src='{{ "/assets/5_morphology transformation/4.png" | relative_url }}' alt='<그림 1.4>'>
+    <img data-action="zoom" src='{{ "/assets/5_morphology_transformation/4.png" | relative_url }}' alt='<그림 1.4>'>
     <figcaption><center> <그림 1.4> 모폴로지 변환을 적용해 노이즈 제거 </center>
     </figcaption>
 </figure>
@@ -92,7 +94,7 @@ tags: ComputerVision
 
 커널의 크기나 반복 횟수에 따라 밝은 영역이 늘어나 스펙클(speckle)이 커지며 객체 내부의 홀(holes)이 사라지는 특징이 있습니다. **노이즈 제거 후 줄어든 크기를 복구하고자 할 때 주로 사용하는 연산**입니다. 수식으로 표현한다면 다음과 같습니다.
 
-![팽창 수식]({{ site.images | relative_url }}/assets/5_morphology transformation/math1.png)
+![팽창 수식]({{ site.images | relative_url }}/assets/5_morphology_transformation/math1.png)
 
 <br>
 
@@ -102,7 +104,7 @@ tags: ComputerVision
 
 커널의 크기나 반복 횟수에 따라 어두운 영역이 늘어나 스펙클(speckle)이 사라지며 객체 내부의 홀(holes)이 커집니다. 이 연산은 **노이즈 제거에 주로 사용**되며, 아래와 같은 수식으로 표현합니다.
 
-![침식 수식]({{ site.images | relative_url }}/assets/5_morphology transformation/math2.png)
+![침식 수식]({{ site.images | relative_url }}/assets/5_morphology_transformation/math2.png)
 
 <br>
 
@@ -131,7 +133,7 @@ kernel = cv2.getStructuringElement(
 또한, 고정점은 필수 매개변수가 아닙니다. 미리 고정점의 위치를 할당하지 않고 모폴로지 함수에서 고정점의 위치를 할당할 수 있습니다. 고정점을 할당하지 않는다면 조금 더 유동적인 커널을 생성할 수 있습니다. <표 1.1>은 커널의 형태에 대한 플래그를 정리한 것입니다.
 
 
-![표 1.1]({{ site.images | relative_url }}/assets/5_morphology transformation/table.png)
+![표 1.1]({{ site.images | relative_url }}/assets/5_morphology_transformation/table.png)
 
 <center> 
 <표 1.1> 구조 요소 생성 함수 중 커널의 형태에 따른 플래그
@@ -221,7 +223,7 @@ dst = dilate(erode(src))
 <그림 1.5>를 통해 전처리가 진행된 이미지(그림 1.3)에서 열림 연산을 적용한 결과를 볼 수 있습니다.
 
 <figure>
-    <img data-action="zoom" src='{{ "/assets/5_morphology transformation/5.png" | relative_url }}' alt='<그림 1.5>'>
+    <img data-action="zoom" src='{{ "/assets/5_morphology_transformation/5.png" | relative_url }}' alt='<그림 1.5>'>
     <figcaption><center> <그림 1.5> 3x3 직사각형 구조, 반복횟수 3회를 적용한 열림 연산 </center>
     </figcaption>
 </figure>
@@ -240,7 +242,7 @@ dst = erode(dilate(src))
 
 
 <figure>
-    <img data-action="zoom" src='{{ "/assets/5_morphology transformation/6.png" | relative_url }}' alt='<그림 1.6>'>
+    <img data-action="zoom" src='{{ "/assets/5_morphology_transformation/6.png" | relative_url }}' alt='<그림 1.6>'>
     <figcaption><center> <그림 1.6> 3x3 직사각형 구조, 반복횟수 3회를 적용한 닫힘 연산 </center>
     </figcaption>
 </figure>

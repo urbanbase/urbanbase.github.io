@@ -4,6 +4,8 @@ title: "AWS CodePipeline을 활용한 빌드/배포 자동화"
 date: 2019-07-02 16:00:00
 categories: dev
 tags: AWS server
+cover: "/assets/7_serverless/7_thumbnail.png"
+
 ---
 <img src="/assets/7_serverless/7_thumbnail.png" width="" alt="serverless">
 <br>

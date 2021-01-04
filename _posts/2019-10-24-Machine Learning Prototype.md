@@ -4,8 +4,10 @@ title: "클라우드 환경에서 머신러닝 서비스 프로토타입 빠르�
 date: 2019-10-24 10:00:00
 categories: dev
 tags: MachineLearning DeepLearning
+cover: "/assets/10_ML_prototype/10_thumbnail.png"
+
 ---
-<img src="/assets/10_ML prototype/10_thumbnail.png" width="" alt="Machinelearning">
+<img src="/assets/10_ML_prototype/10_thumbnail.png" width="" alt="Machinelearning">
 <br>
 안녕하세요. 머신러닝 엔지니어 김수민입니다.
 어반베이스에서 Space의 머신러닝을 이용한 기술 개발을 하고 있습니다.
@@ -14,7 +16,7 @@ Space는 컴퓨터 비전 영역의 딥러닝을 활용하여 공간을 분류�
 <br>
 
 
-<img src="/assets/10_ML prototype/about_sagemaker.jpg" alt="about_sagemaker">
+<img src="/assets/10_ML_prototype/about_sagemaker.jpg" alt="about_sagemaker">
 
 
 **Source:<a href="https://aws.amazon.com/ko/sagemaker/#" target="_blank" style="color: #0366d6;"> Sagemaker 공식</a>*
@@ -33,7 +35,7 @@ Tensorflow Object Detection API에서 튜토리얼로 제공되는 **Oxford-IIIT
 
 ### 1) Oxford-IIIT Pets dataset
 <p align="center">
-  <img src="/assets/10_ML prototype/oxford-pet.jpg" width="60%" alt="oxford-pet">
+  <img src="/assets/10_ML_prototype/oxford-pet.jpg" width="60%" alt="oxford-pet">
   <figcaption><center>oxford-pet</center>
    </figcaption>
 </p>
@@ -78,13 +80,13 @@ colab notebook을 생성하고 제일 처음으로 할 작업은 **GPU 환경으
 상단 메뉴의 **수정 > 노트 설정** 을 선택하고 **하드웨어 가속기 > GPU** 로 변경하면 GPU 환경의 런타임으로 변경됩니다.
 
 <p align="center">
-  <img src="/assets/10_ML prototype/gpu_setting.jpg" width="50%" alt="gpu_setting">
+  <img src="/assets/10_ML_prototype/gpu_setting.jpg" width="50%" alt="gpu_setting">
   <figcaption><center>gpu_setting</center>
    </figcaption>
 </p>
 
 두번째 작업은 파일을 읽고 쓰기 편하게 하기 위해 구글 클라우드의 드라이브를 마운트하는 작업입니다.
- <img src="/assets/10_ML prototype/mount_gdrive.jpg" alt="Mount">
+ <img src="/assets/10_ML_prototype/mount_gdrive.jpg" alt="Mount">
 
 
 왼쪽 슬라이드바에서 **파일 > 드라이브 마운트 (Files > MOUNT DRIVE) 아이콘**을 클릭하면 자동으로 코드 스니펫을 생성해줍니다. 셀 실행 시 나오는 링크를 누르고 권한을 허락하면, 드라이브를 마운드하는 키를 발급해줍니다. 이 키를 셀의 출력에 뜬 입력 창에 붙여넣기하면 끝입니다.
@@ -173,7 +175,7 @@ slim 폴더에 있는 setup.py를 설치합니다.
 !tar -xvf images.tar.gz
 !tar -xvf annotations.tar.gz
 ```
-  <img src="/assets/10_ML prototype/pbtxt.jpg" width="50%" alt="pbtxt">
+  <img src="/assets/10_ML_prototype/pbtxt.jpg" width="50%" alt="pbtxt">
 
 tfrecord 형식으로 빌드할 때 데이터셋의 레이블을 명시한 label map 파일이 필요합니다. 튜토리얼용 `pet_label_map.pbtxt`는 이미 `object_detection/data/`에 준비되어 있지만, 커스텀 데이터셋으로 학습을 하는 경우에는 Object Detection API의 pbtxt 파일 형식에 맞추어 준비합니다.
 그리고 나머지 데이터의 위치(`--data_dir`)와 빌드된 tfrecord 파일이 저장될 위치(`--output_dir`)를 지정해주고 명령을 실행합니다.
@@ -188,7 +190,7 @@ tfrecord 형식으로 빌드할 때 데이터셋의 레이블을 명시한 label
 ```bash
 ls *.record*
 ```
-<img src="/assets/10_ML prototype/tfrecord_results.jpg" width="60%" alt="tfrecord_results">
+<img src="/assets/10_ML_prototype/tfrecord_results.jpg" width="60%" alt="tfrecord_results">
 
 <br>
 
@@ -196,7 +198,7 @@ ls *.record*
 coco 데이터셋으로 미리 학습된 모델을 사용하여 전이학습(trasfer learning)을 합니다. 새로운 모델로 학습할 때보다 이미지에 대한 분포를 더 많이 학습했기 때문에 효율적으로 학습할 수 있는 장점이 있습니다.
 Object Detection API의 **detection model zoo** 페이지 <a href="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md#coco-trained-models" target="_blank" style="color: #0366d6;">COCO-trained-models</a> 항목에서 모델을 다운받거나 링크를 복사해서 드라이브에 바로 다운받을 수 있습니다.
 
-<img src="/assets/10_ML prototype/coco-trained-model.jpg" width="60%" alt="coco-trained-model">
+<img src="/assets/10_ML_prototype/coco-trained-model.jpg" width="60%" alt="coco-trained-model">
 
 필요한 모델인 faster_rcnn_resnet101_coco을 다운받습니다.
 
@@ -210,8 +212,8 @@ Object Detection API의 **detection model zoo** 페이지 <a href="https://githu
 ### 5) config 파일 수정하기
 Tensorflow Object Detection API는 모델의 구조나 학습을 위한 파라미터, 파이프라인을 모두 .config 파일로 관리합니다. 튜토리얼을 위한 템플릿 config 파일은 `object_detection/samples/configs` 폴더에 있습니다.
 
-  <img src="/assets/10_ML prototype/faster-coco-pet-config.jpg" width="60%" alt="faster-coco-pet-config">
-  <img src="/assets/10_ML prototype/pet-config-modified.jpg" width="60%" alt="pet-config-modified">
+  <img src="/assets/10_ML_prototype/faster-coco-pet-config.jpg" width="60%" alt="faster-coco-pet-config">
+  <img src="/assets/10_ML_prototype/pet-config-modified.jpg" width="60%" alt="pet-config-modified">
 
 파라미터들은 기본값을 쓰겠지만 12시간 안에 학습하도록 num_steps를 25000으로 바꾸겠습니다. Oxford-IIIT Pets dataset에는 총 7349개의 이미지가 있고, train dataset으로 70%를 사용합니다. 한 스탭에 사용하는 데이터 양을 뜻하는 batch_size가 1이기 때문에 지정한 25000번 동안 train dataset을 약 4번 반복(4 epoch)하면서 학습합니다.
 
@@ -259,16 +261,16 @@ SAMPLE_1_OF_N_EVAL_EXAMPLES=1
 <br>
 그럼 학습이 끝날 때까지 기다립니다...
 
-<img src="/assets/10_ML prototype/later_pic.jpg" width="60%" alt="later_pic">
+<img src="/assets/10_ML_prototype/later_pic.jpg" width="60%" alt="later_pic">
 
 ...학습이 잘 끝났나요? <br>
 학습이 잘 되었다면 model_dir 인자로 지정한 경로에 checkpoint가 저장되어 있습니다.
 
-<img src="/assets/10_ML prototype/model_ckpt.jpg" width="60%" alt="model_ckpt">
+<img src="/assets/10_ML_prototype/model_ckpt.jpg" width="60%" alt="model_ckpt">
 
 
 성능 평가는 다음과 같습니다.
-<img src="/assets/10_ML prototype/metric.jpg" width="80%" height="30%" alt="metric">
+<img src="/assets/10_ML_prototype/metric.jpg" width="80%" height="30%" alt="metric">
 
 위 성능 결과는 COCO evaluation metrics를 사용합니다. 평가에 대한 정보는 <a href="https://blog.naver.com/PostView.nhn?blogId=phj8498&logNo=221294072146" target="_blank" style="color: #0366d6;">여기</a>를 참고해 주세요. 이 튜토리얼에서는 생략했지만 colab에서 tensorboard를 통해서 학습이 어떻게 진행됐는지 확인이 가능하니 참고 바랍니다.
 <br>
@@ -286,7 +288,7 @@ SAMPLE_1_OF_N_EVAL_EXAMPLES=1
 Tensorflow Serving은 Docker 기반으로 여러 플랫폼에서 유연하게 구축이 가능한 장점이 있습니다. AWS에서도 Tensorflow 모델에 대한 배포 이미지로 Tensorflow Serving을 사용할 수 있도록 지원합니다.
 
 ### Tensorflow Serving 구조
-<img src="/assets/10_ML prototype/tf-serving-structure.jpg" alt="tf-serving-structure">
+<img src="/assets/10_ML_prototype/tf-serving-structure.jpg" alt="tf-serving-structure">
 
 - Servables
   -  클라이언트가 계산을 수행하는데 사용하는 기본 object(perform computation)
@@ -380,7 +382,7 @@ export된 saved_model에 대한 정보를 볼 수 있습니다.
 !saved_model_cli show --dir '/content/gdrive/My Drive/models/research/pet_saved_model/1' --all
 ```
 
-<img src="/assets/10_ML prototype/exported_model.jpg" width="80%" alt="exported_model">
+<img src="/assets/10_ML_prototype/exported_model.jpg" width="80%" alt="exported_model">
 
 <br>
 
@@ -422,14 +424,14 @@ nohup tensorflow_model_server \
 ```
 
 다음과 같은 결과가 나오면 잘 구동이 된 것입니다.
-<img src="/assets/10_ML prototype/server_log.jpg" alt="server_log">
+<img src="/assets/10_ML_prototype/server_log.jpg" alt="server_log">
 
 <br>
 
 ### 5) Tensorflow Serving에 추론 요청 보내기
 요청을 보내기 위한 이미지를 구글에서 가져옵니다.
 
-<img src="/assets/10_ML prototype/test_2.jpg" width="30%" alt="test image">
+<img src="/assets/10_ML_prototype/test_2.jpg" width="30%" alt="test image">
 
 그런 다음 학습한 모델이 잘 추론하는지 확인해보겠습니다.
 
@@ -464,13 +466,13 @@ print(json_response.text)
 
 다음과 같이 추론 결과가 반환됩니다!
 
-<img src="/assets/10_ML prototype/serving_result.jpg" alt="serving_result">
+<img src="/assets/10_ML_prototype/serving_result.jpg" alt="serving_result">
 
 Object Detection API의 튜토리얼에 있는 시각화 코드로 검출 결과를 시각화 할 수 있습니다.
 
 여기서는 결과 이미지만 보겠습니다. 나머지 자세한 코드는 아래에 링크된 colab notebook을 확인해주세요.
 
-<img src="/assets/10_ML prototype/inference_result.jpg" width="50%" alt="inference_result">
+<img src="/assets/10_ML_prototype/inference_result.jpg" width="50%" alt="inference_result">
 
 오! 높은 확률로 잘 검출한 것 같습니다! 이미지에는 안 보이지만 추론 결과를 보면 american_pitbull_terrior는 97% 의 확률이네요. 
 <br>
@@ -500,7 +502,7 @@ Sagemaker가 Docker image를 실행하고 Tensorflow Serving을 구동할 수 �
 - nginx.conf: Sagemaker endpoint에 요청된 것을 docker image 상에서 구동된 Tensorflow Serving으로 보내는 역할을 합니다.
 - saved_model_pet_object_detection: Tensorflow Serving에 로드할 모델을 준비합니다.
 
-<img src="/assets/10_ML prototype/serving_docker.jpg" alt="docker_setting">
+<img src="/assets/10_ML_prototype/serving_docker.jpg" alt="docker_setting">
 
 <br>
 
@@ -576,11 +578,11 @@ AWS CLI를 활용해 local ECR로 Docker image를 업로드하기 위해서 지�
 ### 4) ECR 업로드
 AWS ECR(Amazon EC2 Container Registry)에 Docker Image를 업로드합니다. 먼저 ECR에 레포지토리를 만들고 제공되는 업로드의 각 과정을 복사&붙여넣기 하면 쉽게 진행할 수 있습니다. 
 
-<img src="/assets/10_ML prototype/ecr_aws_cli.jpg" alt="ecr-aws-cli">
+<img src="/assets/10_ML_prototype/ecr_aws_cli.jpg" alt="ecr-aws-cli">
 
 업로드 되었습니다!
 
-<img src="/assets/10_ML prototype/ecr-uploaded.jpg" alt="ecr-uploaded">
+<img src="/assets/10_ML_prototype/ecr-uploaded.jpg" alt="ecr-uploaded">
 
 <br>
 
@@ -588,31 +590,31 @@ AWS ECR(Amazon EC2 Container Registry)에 Docker Image를 업로드합니다. �
 
 업로드가 완료된 ECR에서 Image URI를 복사한 후 Sagamaker 서비스에서 endpoint를 생성해보도록 하겠습니다. endpoint가 생성이 되면 과금이 발생합니다. 테스트가 끝나면 꼭 삭제합니다.
 
-<img src="/assets/10_ML prototype/sagemaker_main.jpg" alt="sagemaker_main">
+<img src="/assets/10_ML_prototype/sagemaker_main.jpg" alt="sagemaker_main">
 
 <br>
 
 a. Sagemaker의 메뉴 창, 추론(Inference) 메뉴의 모델(Models)에서 모델 생성(Create Model)을 합니다.
 Container definition 1에서 ECR에서 생성한 이미지 URL을 적용합니다.
 
-<img src="/assets/10_ML prototype/container_definition.jpg" alt="create_model">
-<img src="/assets/10_ML prototype/model_container.jpg" alt="model-container">
+<img src="/assets/10_ML_prototype/container_definition.jpg" alt="create_model">
+<img src="/assets/10_ML_prototype/model_container.jpg" alt="model-container">
 
 <br>
 
 b. 엔트포인트 구성 메뉴에서 엔트포인트 구성(Create endpoint configuration)을 합니다.
 Endpoint configuration name에 구성 이름을 정하고 Add model에서 모델 컨테이너를 연결합니다. Actions의 **Edit**에서 **Instance type**, **Elastic Inference**를 지정할 수 있습니다.
 
-<img src="/assets/10_ML prototype/endpoint_configure.jpg" alt="endpoint_configure">
-<img src="/assets/10_ML prototype/edit_production_variants.jpg" alt="edit_production_variants">
+<img src="/assets/10_ML_prototype/endpoint_configure.jpg" alt="endpoint_configure">
+<img src="/assets/10_ML_prototype/edit_production_variants.jpg" alt="edit_production_variants">
 
 <br>
 
 c. 엔트포인트를 생성합니다.
 Endpoint name으로 이름을 지정하고, Endpoint configuration에서 앞에서 생성한 엔드포인트 구성을 선택합니다.
-<img src="/assets/10_ML prototype/create_endpoint.jpg" alt="create_endpoint">
+<img src="/assets/10_ML_prototype/create_endpoint.jpg" alt="create_endpoint">
 엔드포인트가 InSerive 상태가 되면 배포 완료입니다! 이제 endpoint를 호출하여 추론을 할 수 있습니다.
-<img src="/assets/10_ML prototype/endpoint_inservice.jpg" alt="endpoint_inservice">
+<img src="/assets/10_ML_prototype/endpoint_inservice.jpg" alt="endpoint_inservice">
 
 <br>
 

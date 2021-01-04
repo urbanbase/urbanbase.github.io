@@ -3,6 +3,8 @@ layout: post
 title: "실시간 도면 자동 변환 서비스 Auto Sketch"
 date: 2019-02-11 16:43:59
 tags: ComputerVision MachineLearning
+cover: ""
+
 ---
 
 # Auto Sketch (API, Engine)
