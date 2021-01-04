@@ -7,112 +7,122 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>https://urbanbase.github.io/</loc>
+  <loc>https://tech.urbanbase.com/</loc>
   <lastmod>2019-03-13T09:38:50+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://urbanbase.github.io/we/</loc>
+  <loc>https://tech.urbanbase.com/we/</loc>
   <lastmod>2019-03-13T09:38:50+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://urbanbase.github.io/dev/</loc>
+  <loc>https://tech.urbanbase.com/dev/</loc>
   <lastmod>2019-03-13T09:38:50+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://urbanbase.github.io/tech/</loc>
+  <loc>https://tech.urbanbase.com/tech/</loc>
   <lastmod>2019-03-13T09:38:50+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://urbanbase.github.io/dev/2020/03/06/Sceneform-AR.html</loc>
+  <loc>https://tech.urbanbase.com/dev/2020/12/17/Himart_ARViewer.html</loc>
+  <lastmod>2021-01-04T07:21:32+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://tech.urbanbase.com/dev/2020/11/01/Amazon-GuardDuty.html</loc>
+  <lastmod>2021-01-04T07:21:32+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://tech.urbanbase.com/dev/2020/03/06/Sceneform-AR.html</loc>
   <lastmod>2020-03-10T06:59:20+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://urbanbase.github.io/dev/2020/01/22/Procedural-Modeling.html</loc>
+  <loc>https://tech.urbanbase.com/dev/2020/01/22/Procedural-Modeling.html</loc>
   <lastmod>2020-01-30T09:36:30+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://urbanbase.github.io/dev/2019/12/17/Deep-Learning-Image-Classification.html</loc>
+  <loc>https://tech.urbanbase.com/dev/2019/12/17/Deep-Learning-Image-Classification.html</loc>
   <lastmod>2019-12-24T00:37:16+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://urbanbase.github.io/dev/2019/11/25/AWS-S3-SPA.html</loc>
+  <loc>https://tech.urbanbase.com/dev/2019/11/25/AWS-S3-SPA.html</loc>
   <lastmod>2019-11-28T01:23:35+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://urbanbase.github.io/dev/2019/10/24/Machine-Learning-Prototype.html</loc>
+  <loc>https://tech.urbanbase.com/dev/2019/10/24/Machine-Learning-Prototype.html</loc>
   <lastmod>2019-10-28T11:07:12+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://urbanbase.github.io/dev/2019/09/29/AndroidWebview.html</loc>
+  <loc>https://tech.urbanbase.com/dev/2019/09/29/AndroidWebview.html</loc>
   <lastmod>2019-10-28T11:07:12+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://urbanbase.github.io/tech/2019/08/06/AR-Development-Cost.html</loc>
+  <loc>https://tech.urbanbase.com/tech/2019/08/06/AR-Development-Cost.html</loc>
   <lastmod>2019-08-12T09:23:14+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-<loc>https://urbanbase.github.io/dev/2019/07/02/AWS-CodePipeline.html</loc>
+<loc>https://tech.urbanbase.com/dev/2019/07/02/AWS-CodePipeline.html</loc>
 <lastmod>2019-07-31T05:04:58+00:00</lastmod>
 <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://urbanbase.github.io/dev/2019/07/02/Geometry-Shader-Effect.html</loc>
+  <loc>https://tech.urbanbase.com/dev/2019/07/02/Geometry-Shader-Effect.html</loc>
   <lastmod>2019-07-05T07:18:04+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://urbanbase.github.io/dev/2019/06/03/morphological-transformations.html</loc>
+  <loc>https://tech.urbanbase.com/dev/2019/06/03/morphological-transformations.html</loc>
   <lastmod>2019-06-03T09:40:13+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://urbanbase.github.io/tech/2019/04/02/Platform.html</loc>
+  <loc>https://tech.urbanbase.com/tech/2019/04/02/Platform.html</loc>
   <lastmod>2019-04-30T01:54:04+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://urbanbase.github.io/2019/03/13/Taker.html</loc>
+  <loc>https://tech.urbanbase.com/2019/03/13/Taker.html</loc>
   <lastmod>2019-03-13T09:38:50+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://urbanbase.github.io/2019/03/13/ARviewer.html</loc>
+  <loc>https://tech.urbanbase.com/2019/03/13/ARviewer.html</loc>
   <lastmod>2019-03-13T09:38:50+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://urbanbase.github.io/2019/03/07/3Dviewer.html</loc>
+  <loc>https://tech.urbanbase.com/2019/03/07/3Dviewer.html</loc>
   <lastmod>2019-03-13T09:38:50+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://urbanbase.github.io/2019/03/07/3DHomedesign.html</loc>
+  <loc>https://tech.urbanbase.com/2019/03/07/3DHomedesign.html</loc>
   <lastmod>2019-03-13T09:38:50+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://urbanbase.github.io/2019/02/15/livesketch.html</loc>
+  <loc>https://tech.urbanbase.com/2019/02/15/livesketch.html</loc>
   <lastmod>2019-03-13T09:38:50+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://urbanbase.github.io/init/welcome.html</loc>
+  <loc>https://tech.urbanbase.com/init/welcome.html</loc>
   <lastmod>2019-03-13T09:38:50+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://urbanbase.github.io/2019/02/11/autosketch.html</loc>
+  <loc>https://tech.urbanbase.com/2019/02/11/autosketch.html</loc>
   <lastmod>2019-03-13T09:38:50+00:00</lastmod>
   <priority>1.00</priority>
 </url>
