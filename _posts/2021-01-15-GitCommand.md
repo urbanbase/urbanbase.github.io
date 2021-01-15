@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "익숙해지면 좋을 깃(git) 명령어 모음집"
-date: 2020-12-17 10:00:00
+date: 2021-01-15 10:00:00
 categories: dev
 tags: Git
 cover: "/assets/21_01_GitCommand/21_01_thumbnail.png"
