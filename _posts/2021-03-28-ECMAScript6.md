@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Javascript] Class Function vs Factory Function 어떤 게 더 나은 선택일까?"
+title: "Class vs Factory Function 어떤 게 더 나은 선택일까?"
 date: 2021-03-28 10:00:00
 categories: dev
 tags: javascript ES6 API
@@ -35,7 +35,7 @@ class TodoModel {
   add() { console.log('add'); }
 }
 
-const todoModel = new TodoModel('inputData');
+const todoModel = new TodoModel('input');
 todoModel.addData();        // input addData
 ```
 
@@ -56,7 +56,7 @@ function TodoModel(data){
   });
 }
 
-const todoModel = TodoModel('inputData');
+const todoModel = TodoModel('input');
 todoModel.addData();        // input addData
 ```
 
