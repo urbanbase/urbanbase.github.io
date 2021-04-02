@@ -21,7 +21,7 @@ Class Function과 Factory Function의 차이를 알아보고, 어떤 Function을
 
 - Class Function
 
-```
+```javascript
 class TodoModel {
   constructor(data) {
     this.todos = [];
@@ -41,7 +41,7 @@ todoModel.addData();        // input addData
 
 - Factory Function
 
-```
+```javascript
 function TodoModel(data){
   const todos = [];
 
@@ -66,7 +66,8 @@ todoModel.addData();        // input addData
 캡슐화가 안되면 보안에 이슈가 생길 수 있습니다.  
 
 - Class Function
-```
+
+```javascript
 const todoModel = new TodoModel('input');
 console.log(todoModel.todos);       // []
 console.log(todoModel.data)         // input
@@ -74,7 +75,8 @@ todoModel.add();                    // add
 ```
 
 - Factory Function
-```
+
+```javascript
 const todoModel = TodoModel('input');
 console.log(todoModel.todos);       // undefined
 console.log(todoModel.data)         // undefined
@@ -86,7 +88,7 @@ todoModel.add();                    // todoModel.add is not a function
 
 - Private class fields
 
-```
+```javascript
 class TodoModel {
   #todos;
 
@@ -115,7 +117,7 @@ todoModel.add();                    // todoModel.add is not a function
 
 - Class Function
 
-```
+```javascript
 todoModel.add = function() {
   console.log('a new add');
 }
@@ -123,7 +125,8 @@ todoModel.add();            // a new add
 ```
 
 - Factory Function
-```
+
+```javascript
 todoModel.add = function() {
   console.log('a new add');
 }
@@ -136,7 +139,7 @@ Class Function에서는 함수를 변경할 수 있으나 Factory Function에서
 
 - static
 
-```
+```javascript
 class TodoModel {
   #todos;
 
@@ -165,7 +168,7 @@ class에서는 상속을 사용하지만 factory에서는 구성을 만들어 �
 
 - Class Function
 
-```
+```javascript
 class Person {
   eat() {
     console.log('I am eating');
@@ -200,7 +203,7 @@ ron.trick();      // I am doing a trick
 
 - Factory Function
 
-```
+```javascript
 const Person = () => {
   return {
     eat: () => {
@@ -260,7 +263,7 @@ this 문법을 사용할 때에는 컨텍스트 손실 문제가 발생할 수 �
 - 컨텍스트 손실 문제란?  
 context가 손실되는 문제로 아래 예시를 참고하시기 바랍니다.
 
-```
+```javascript
 class TodoModel {
     constructor(){
         this.todos = [];
