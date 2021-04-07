@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Class vs Factory Function, 더 나은 선택은?"
-date: 2021-03-28 10:00:00
+date: 2021-04-07 16:00:00
 categories: dev
 tags: javascript ES6 API
 cover: "/assets/21_03_ES6/21_03_ES6.png"
@@ -271,7 +271,7 @@ class TodoModel {
     
     reload(){ 
         setTimeout(function log() { 
-           console.log(this.todos);
+          console.log(this.todos);
         }, 0);
     }
 }
@@ -280,7 +280,9 @@ todoModel.reload();                   //undefined
 
 ### 6. 메모리 
 
-class가 factory 보다 효율적입니다.  
+class의 모든 메서드는 프로토 타입 객체에서 한번 생성되고 모든 인스턴스에서 공유됩니다.  
+그런데 수 많은 동일한 객체를 만들 때 factory 함수의 메모리 비용이 많이 필요합니다.  
+메모리 테스트 결과는 아래와 같습니다.  
 
 ```
 The memory cost (in Chrome)
@@ -301,5 +303,6 @@ The memory cost (in Chrome)
 
 - 참고 사이트   
     - [Class vs Factory function: exploring the way forward](https://medium.com/programming-essentials/class-vs-factory-function-exploring-the-way-forward-73258b6a8d15)
+    - [Factory Function Memory Test](https://plnkr.co/edit/4cxGfN?p=info&preview)
     - [Inheritance vs. Composition in JavaScript](https://js.plainenglish.io/inheritance-is-a-vs-composition-has-a-in-javascript-98fb96dfa0e6)
     - [MDN Web Docs Private class fileds](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
