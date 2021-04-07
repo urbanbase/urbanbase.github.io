@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Class vs Factory Function, 더 나은 선택은?"
-date: 2021-04-07 16:00:00
+date: 2021-04-06 16:00:00
 categories: dev
 tags: javascript ES6 API
 cover: "/assets/21_03_ES6/21_03_ES6.png"
@@ -21,7 +21,7 @@ Class Function과 Factory Function의 차이를 알아보고, 어떤 Function을
 
 - Class Function
 
-```javascript
+{% highlight javascript %}
 class TodoModel {
   constructor(data) {
     this.todos = [];
@@ -37,11 +37,11 @@ class TodoModel {
 
 const todoModel = new TodoModel('input');
 todoModel.addData();        // input addData
-```
+{% endhighlight %}
 
 - Factory Function
 
-```javascript
+{% highlight javascript %}
 function TodoModel(data){
   const todos = [];
 
@@ -58,7 +58,7 @@ function TodoModel(data){
 
 const todoModel = TodoModel('input');
 todoModel.addData();        // input addData
-```
+{% endhighlight %}
 
 ### 2. 캡슐화(Encapsulation)  
 
@@ -67,28 +67,28 @@ todoModel.addData();        // input addData
 
 - Class Function
 
-```javascript
+{% highlight javascript %}
 const todoModel = new TodoModel('input');
 console.log(todoModel.todos);       // []
 console.log(todoModel.data)         // input
 todoModel.add();                    // add
-```
+{% endhighlight %}
 
 - Factory Function
 
-```javascript
+{% highlight javascript %}
 const todoModel = TodoModel('input');
 console.log(todoModel.todos);       // undefined
 console.log(todoModel.data)         // undefined
 todoModel.add();                    // todoModel.add is not a function
-```
+{% endhighlight %}
 
 기본적으로 function은 캡슐화가 되지만 class는 캡슐화가 되지 않습니다.  
 그러나 nodejs 12.0.0 버전부터는 Private class fields를 사용하면 class도 캡슐화를 할 수 있습니다.  
 
 - Private class fields
 
-```javascript
+{% highlight javascript %}
 class TodoModel {
   #todos;
 
@@ -107,7 +107,7 @@ class TodoModel {
 const todoModel = new TodoModel('inputData');
 console.log(todoModel.todos);       // undefined
 todoModel.add();                    // todoModel.add is not a function
-```
+{% endhighlight %}
 
 ### 3. 불변성(Immutable)  
 
@@ -117,21 +117,21 @@ todoModel.add();                    // todoModel.add is not a function
 
 - Class Function
 
-```javascript
+{% highlight javascript %}
 todoModel.add = function() {
   console.log('a new add');
 }
 todoModel.add();            // a new add
-```
+{% endhighlight %}
 
 - Factory Function
 
-```javascript
+{% highlight javascript %}
 todoModel.add = function() {
   console.log('a new add');
 }
 todoModel.add();            // add
-```
+{% endhighlight %}
 
 Class Function에서는 함수를 변경할 수 있으나 Factory Function에서는 변경되지 않습니다.  
 이 부분은 static을 사용하면 개선할 수 있으나 인스턴스화 되지 않으므로 사용법에 주의해야 합니다.  
@@ -139,7 +139,7 @@ Class Function에서는 함수를 변경할 수 있으나 Factory Function에서
 
 - static
 
-```javascript
+{% highlight javascript %}
 class TodoModel {
   #todos;
 
@@ -159,7 +159,7 @@ TodoModel.add();            // add
 TodoModel.add = function() {
   console.log("a new add");
 }                           // Invalid left-hand side in assignment
-```
+{% endhighlight %}
 
 ### 4. 상속과 구성 (Composition and inheritance)  
 
@@ -168,7 +168,7 @@ class에서는 상속을 사용하지만 factory에서는 구성을 만들어 �
 
 - Class Function
 
-```javascript
+{% highlight javascript %}
 class Person {
   eat() {
     console.log('I am eating');
@@ -199,11 +199,11 @@ ron.eat();        // I am eating
 ron.breathe();    // I am breathing
 ron.swim();       // I am swimming
 ron.trick();      // I am doing a trick
-```
+{% endhighlight %}
 
 - Factory Function
 
-```javascript
+{% highlight javascript %}
 const Person = () => {
   return {
     eat: () => {
@@ -251,7 +251,7 @@ const ron = Muggle();
 ron.eat();            // I am eating
 ron.breathe();        // I am breathing
 ron.swim();           // I am swimming
-```
+{% endhighlight %}
 
 class는 상속을 받기 때문에 상속 받은 모든 method를 사용해야 하지만, factory는 구성을 하기 때문에 선별적으로 사용할 수 있습니다.  factory와 같이 사용하려면 새로운 class를 생성하거나 class person에서 swim()을 제거한 뒤 새로운 class로 상속 받아야 합니다.  
 
@@ -263,7 +263,7 @@ this 문법을 사용할 때에는 컨텍스트 손실 문제가 발생할 수 �
 - 컨텍스트 손실 문제란?  
 context가 손실되는 문제로 아래 예시를 참고하시기 바랍니다.
 
-```javascript
+{% highlight javascript %}
 class TodoModel {
     constructor(){
         this.todos = [];
@@ -276,7 +276,7 @@ class TodoModel {
     }
 }
 todoModel.reload();                   //undefined
-```
+{% endhighlight %}
 
 ### 6. 메모리 
 
