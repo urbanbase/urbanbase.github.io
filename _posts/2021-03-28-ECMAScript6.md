@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Class vs Factory Function, 더 나은 선택은?"
-date: 2021-04-06 16:00:00
+date: 2021-03-28 16:00:00
 categories: dev
 tags: javascript ES6 API
 cover: "/assets/21_03_ES6/21_03_ES6.png"
